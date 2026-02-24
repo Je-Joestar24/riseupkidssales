@@ -1,10 +1,16 @@
 {
-  "nav": {
-    "login": "Iniciar sesión"
-  },
+  "nav": { "login": "Iniciar sesión" },
   "hero": {
-    "title": "Metodología basada en inmersión natural",
-    "subtitle": "Tu hijo bilingüe en 1 año: una infancia donde el inglés es natural, vivido con comprensión, expresión y confianza."
+    "title": "Tu hijo bilingüe en 1 año, una infancia donde el inglés es natural.",
+    "badge": "Metodología basada en inmersión natural",
+    "titlePart1": "Tu hijo bilingüe en 1 año, ",
+    "titlePart2": "una infancia donde el inglés es natural.",
+    "subtitle": "Rise Up Kids involucra a los niños en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real. Es en la infancia que el lenguaje se vuelve natural, y el inglés se vive con comprensión, expresión y confianza para la vida.",
+    "features": {
+      "immersiveEnglish": { "title": "Inglés Inmersivo", "description": "Experiencias significativas con el idioma" },
+      "realTeachers": { "title": "Profesores Reales", "description": "Vivencia humana del lenguaje" },
+      "naturalLearning": { "title": "Aprendizaje Natural", "description": "Del entendimiento a la expresión" }
+    },
+    "cta": "Comenzar el Viaje de Mi Hijo"
   }
 }
-

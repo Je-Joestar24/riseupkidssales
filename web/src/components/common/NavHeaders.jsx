@@ -10,7 +10,7 @@ function NavHeaders() {
       position="sticky"
       elevation={3}
       sx={{
-        backgroundColor: 'background.paper',
+        backgroundColor: 'white',
         color: 'text.primary',
         boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
         zIndex: (theme) => theme.zIndex.appBar + 1,
@@ -28,7 +28,6 @@ function NavHeaders() {
             justifyContent: 'center',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
             flexDirection: 'column',
             marginTop: '20px',
           }}

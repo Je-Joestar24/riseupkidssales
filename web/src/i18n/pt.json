@@ -1,10 +1,16 @@
 {
-  "nav": {
-    "login": "Login"
-  },
+  "nav": { "login": "Login" },
   "hero": {
-    "title": "Metodologia baseada em imersão natural",
-    "subtitle": "Seu filho bilíngue em 1 ano — uma infância onde o inglês é natural, vivido com entendimento, expressão e confiança."
+    "title": "Seu filho bilíngue em 1 ano — uma infância onde o inglês é natural.",
+    "badge": "Metodologia baseada em imersão natural",
+    "titlePart1": "Seu filho bilíngue em 1 ano, ",
+    "titlePart2": "uma infância onde o inglês é natural.",
+    "subtitle": "Rise Up Kids envolve crianças em experiências significativas em inglês, dentro de uma estrutura intencional e progressiva que integra tecnologia inteligente, conteúdo imersivo e ensino humano real. É na infância que a linguagem se torna natural, e o inglês passa a ser vivido com compreensão, expressão e confiança para a vida.",
+    "features": {
+      "immersiveEnglish": { "title": "Inglês Imersivo", "description": "Experiências significativas com o idioma" },
+      "realTeachers": { "title": "Professores Reais", "description": "Vivência humana da linguagem" },
+      "naturalLearning": { "title": "Aprendizagem Natural", "description": "Do entendimento à expressão" }
+    },
+    "cta": "Quero ser uma Família Fundadora"
   }
 }
-

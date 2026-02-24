@@ -1,10 +1,16 @@
 {
-  "nav": {
-    "login": "Login"
-  },
+  "nav": { "login": "Login" },
   "hero": {
-    "title": "Methodology based on natural immersion",
-    "subtitle": "Your child bilingual in 1 year — a childhood where English is natural, lived with understanding, expression, and confidence."
+    "title": "Your child bilingual in 1 year — a childhood where English is natural.",
+    "badge": "Methodology based on natural immersion",
+    "titlePart1": "Your child bilingual in 1 year, ",
+    "titlePart2": "a childhood where English is natural.",
+    "subtitle": "Rise Up Kids engages children in meaningful English experiences, within a structured and progressive framework that integrates smart technology, immersive content, and real human teaching. It is in childhood that language becomes natural, and English is lived with understanding, expression, and confidence for life.",
+    "features": {
+      "immersiveEnglish": { "title": "Immersive English", "description": "Meaningful experiences with the language" },
+      "realTeachers": { "title": "Real Teachers", "description": "Human experience of language" },
+      "naturalLearning": { "title": "Natural Learning", "description": "From understanding to expression" }
+    },
+    "cta": "I Want to Be a Founding Family"
   }
 }
-
