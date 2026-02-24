@@ -1,0 +1,159 @@
+.app {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gridGlow {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(1200px 900px at 20% 25%, rgba(54, 92, 255, 0.22), transparent 55%),
+    radial-gradient(900px 700px at 80% 20%, rgba(255, 79, 167, 0.20), transparent 60%),
+    radial-gradient(1000px 800px at 60% 90%, rgba(79, 255, 214, 0.16), transparent 60%),
+    linear-gradient(180deg, rgba(246, 247, 251, 1), rgba(246, 247, 251, 0.6));
+}
+
+.blob {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(36px);
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  transform: translate3d(0, 0, 0);
+  animation: floaty 10s ease-in-out infinite;
+}
+
+.blob--a {
+  left: -160px;
+  top: -200px;
+  background: radial-gradient(circle at 30% 30%, rgba(54, 92, 255, 0.9), rgba(54, 92, 255, 0.0) 70%);
+}
+
+.blob--b {
+  right: -220px;
+  top: -240px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 79, 167, 0.85), rgba(255, 79, 167, 0.0) 72%);
+  animation-delay: -3s;
+}
+
+.blob--c {
+  left: 34%;
+  bottom: -420px;
+  width: 740px;
+  height: 740px;
+  background: radial-gradient(circle at 35% 35%, rgba(79, 255, 214, 0.7), rgba(79, 255, 214, 0.0) 75%);
+  animation-delay: -6s;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 22px, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
+
+.brandDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #365cff, #ff4fa7);
+  box-shadow: 0 10px 30px rgba(54, 92, 255, 0.25);
+}
+
+.titleAccent {
+  color: #365cff;
+}
+
+.pillars {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  max-width: 980px;
+}
+
+.pillarsItem {
+  grid-column: span 12;
+}
+
+@media (min-width: 700px) {
+  .pillarsItem {
+    grid-column: span 4;
+  }
+}
+
+.pillarsCard {
+  display: flex;
+  gap: 12px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border-color: rgba(0, 0, 0, 0.10);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.pillarsCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(54, 92, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(20, 26, 54, 0.12);
+}
+
+.pillarsIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(54, 92, 255, 0.10);
+  color: #365cff;
+}
+
+.pillarsIconAlt {
+  background: rgba(255, 79, 167, 0.10);
+  color: #ff4fa7;
+}
+
+.pillarsIconSoft {
+  background: rgba(79, 255, 214, 0.14);
+  color: #0aa888;
+}
+
+.pillarsText {
+  display: grid;
+  gap: 2px;
+}
