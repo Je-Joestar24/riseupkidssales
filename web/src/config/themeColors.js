@@ -18,6 +18,8 @@ export const themeColors = {
   bgGradient:
     'linear-gradient(to right bottom, rgb(98, 202, 202), rgb(133, 194, 185), rgb(98, 202, 202))',
   bgOrangeGradient: 'linear-gradient(to right, rgb(233, 138, 104), rgb(233, 138, 104))',
+  bgStudies: '#fde8de',
+  bgMethodology: '#f4edd8',
 
   // Text colors
   text: '#0f172a',

@@ -1,1 +1,89 @@
-{"nav":{"login":"Login"},"hero":{"title":"Your child bilingual in 1 year — a childhood where English is natural.","badge":"Methodology based on natural immersion","titlePart1":"Your child bilingual in 1 year, ","titlePart2":"a childhood where English is natural.","subtitle":"Rise Up Kids engages children in meaningful English experiences, within a structured and progressive framework that integrates smart technology, immersive content, and real human teaching. It is in childhood that language becomes natural, and English is lived with understanding, expression, and confidence for life.","features":{"immersiveEnglish":{"title":"Immersive English","description":"Meaningful experiences with the language"},"realTeachers":{"title":"Real Teachers","description":"Human experience of language"},"naturalLearning":{"title":"Natural Learning","description":"From understanding to expression"}},"cta":"I Want to Be a Founding Family"},"discover":{"title":"See how English becomes natural","subtitle":"Discover how children learn English naturally and joyfully","cta":"I Want to Be a Founding Family"},"extras":{"joy":"Joy","learning":"Learning","growth":"Growth","play":"Play","wonder":"Wonder"}}
+{
+    "nav": {
+        "login": "Login"
+    },
+    "hero": {
+        "title": "Your child bilingual in 1 year — a childhood where English is natural.",
+        "badge": "Methodology based on natural immersion",
+        "titlePart1": "Your child bilingual in 1 year, ",
+        "titlePart2": "a childhood where English is natural.",
+        "subtitle": "Rise Up Kids engages children in meaningful English experiences, within a structured and progressive framework that integrates smart technology, immersive content, and real human teaching. It is in childhood that language becomes natural, and English is lived with understanding, expression, and confidence for life.",
+        "features": {
+            "immersiveEnglish": {
+                "title": "Immersive English",
+                "description": "Meaningful experiences with the language"
+            },
+            "realTeachers": {
+                "title": "Real Teachers",
+                "description": "Human experience of language"
+            },
+            "naturalLearning": {
+                "title": "Natural Learning",
+                "description": "From understanding to expression"
+            }
+        },
+        "cta": "I Want to Be a Founding Family"
+    },
+    "discover": {
+        "title": "See how English becomes natural",
+        "subtitle": "Discover how children learn English naturally and joyfully",
+        "cta": "I Want to Be a Founding Family"
+    },
+    "extras": {
+        "joy": "Joy",
+        "learning": "Learning",
+        "growth": "Growth",
+        "play": "Play",
+        "wonder": "Wonder"
+    },
+    "studies": {
+        "chip": "WHAT SCIENCE SHOWS",
+        "title": "The early years shape the relationship with language",
+        "subtitlePart1": "From 0 to 10 years, the brain shows ",
+        "subtitleHighlight": "greater plasticity",
+        "subtitlePart2": " to absorb languages. When contact with language happens early, understanding develops more naturally and easily."
+    },
+    "methodology": {
+        "title": "Core + Exploration Methodology",
+        "subtitle": "Pillars that support natural English learning in childhood.",
+        "cards": {
+            "immersive": {
+                "title": "Immersive English",
+                "tag": "Core",
+                "description": "Constant and natural exposure to English through stories, music, and meaningful contexts."
+            },
+            "exploration": {
+                "title": "Exploration",
+                "tag": "Non-linear paths",
+                "description": "The child explores topics of interest while developing vocabulary and comprehension."
+            },
+            "integration": {
+                "title": "Integration",
+                "tag": "Holistic learning",
+                "description": "Natural connection between comprehension, expression, and confidence through meaningful practice."
+            }
+        }
+    },
+    "journey": {
+        "title": "How English grows in the child's journey",
+        "subtitle": "Language develops step by step — from comprehension to confident conversation.",
+        "cards": {
+            "comprehension": {
+                "title": "COMPREHENSION",
+                "description": "Immersive contact with English through meaningful experiences."
+            },
+            "interaction": {
+                "title": "INTERACTION",
+                "description": "Guided participation with teachers and language activities."
+            },
+            "expression": {
+                "title": "EXPRESSION",
+                "description": "Natural beginning of speech when the language foundation is ready."
+            },
+            "speaking": {
+                "title": "SPEAKING",
+                "description": "Flows naturally in a structured and safe progression."
+            }
+        }
+    }
+}

@@ -15,6 +15,7 @@ function NavHeaders() {
         boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
         zIndex: (theme) => theme.zIndex.appBar + 1,
         height: '250px',
+        borderRadius: '0px',
       }}
       role="banner"
       aria-label="Rise Up Kids navigation"

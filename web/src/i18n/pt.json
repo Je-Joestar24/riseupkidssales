@@ -1,1 +1,89 @@
-{"nav":{"login":"Login"},"hero":{"title":"Seu filho bilíngue em 1 ano — uma infância onde o inglês é natural.","badge":"Metodologia baseada em imersão natural","titlePart1":"Seu filho bilíngue em 1 ano, ","titlePart2":"uma infância onde o inglês é natural.","subtitle":"Rise Up Kids envolve crianças em experiências significativas em inglês, dentro de uma estrutura intencional e progressiva que integra tecnologia inteligente, conteúdo imersivo e ensino humano real. É na infância que a linguagem se torna natural, e o inglês passa a ser vivido com compreensão, expressão e confiança para a vida.","features":{"immersiveEnglish":{"title":"Inglês Imersivo","description":"Experiências significativas com o idioma"},"realTeachers":{"title":"Professores Reais","description":"Vivência humana da linguagem"},"naturalLearning":{"title":"Aprendizagem Natural","description":"Do entendimento à expressão"}},"cta":"Quero ser uma Família Fundadora"},"discover":{"title":"Veja como o inglês se torna natural","subtitle":"Descubra como crianças aprendem inglês de forma natural e divertida","cta":"Quero ser uma Família Fundadora"},"extras":{"joy":"Alegria","learning":"Aprendizagem","growth":"Crescimento","play":"Jogo","wonder":"Assombro"}}
+{
+    "nav": {
+        "login": "Login"
+    },
+    "hero": {
+        "title": "Seu filho bilíngue em 1 ano — uma infância onde o inglês é natural.",
+        "badge": "Metodologia baseada em imersão natural",
+        "titlePart1": "Seu filho bilíngue em 1 ano, ",
+        "titlePart2": "uma infância onde o inglês é natural.",
+        "subtitle": "Rise Up Kids envolve crianças em experiências significativas em inglês, dentro de uma estrutura intencional e progressiva que integra tecnologia inteligente, conteúdo imersivo e ensino humano real. É na infância que a linguagem se torna natural, e o inglês passa a ser vivido com compreensão, expressão e confiança para a vida.",
+        "features": {
+            "immersiveEnglish": {
+                "title": "Inglês Imersivo",
+                "description": "Experiências significativas com o idioma"
+            },
+            "realTeachers": {
+                "title": "Professores Reais",
+                "description": "Vivência humana da linguagem"
+            },
+            "naturalLearning": {
+                "title": "Aprendizagem Natural",
+                "description": "Do entendimento à expressão"
+            }
+        },
+        "cta": "Quero ser uma Família Fundadora"
+    },
+    "discover": {
+        "title": "Veja como o inglês se torna natural",
+        "subtitle": "Descubra como crianças aprendem inglês de forma natural e divertida",
+        "cta": "Quero ser uma Família Fundadora"
+    },
+    "extras": {
+        "joy": "Alegria",
+        "learning": "Aprendizagem",
+        "growth": "Crescimento",
+        "play": "Jogo",
+        "wonder": "Assombro"
+    },
+    "studies": {
+        "chip": "O QUE A CIÊNCIA MOSTRA",
+        "title": "Os primeiros anos moldam a relação com o idioma",
+        "subtitlePart1": "Dos 0 aos 10 anos, o cérebro apresenta ",
+        "subtitleHighlight": "maior plasticidade",
+        "subtitlePart2": " para absorver idiomas. Quando o contato com a linguagem acontece cedo, a compreensão se desenvolve com mais naturalidade e facilidade."
+    },
+    "methodology": {
+        "title": "Metodologia Core + Exploration",
+        "subtitle": "Pilares que sustentam a aprendizagem natural do inglês na infância.",
+        "cards": {
+            "immersive": {
+                "title": "Inglês Imersivo",
+                "tag": "Core",
+                "description": "Exposição constante e natural ao inglês através de histórias, música e contextos significativos."
+            },
+            "exploration": {
+                "title": "Exploration",
+                "tag": "Caminhos não-lineares",
+                "description": "A criança explora temas de seu interesse enquanto desenvolve vocabulário e compreensão."
+            },
+            "integration": {
+                "title": "Integração",
+                "tag": "Aprendizagem holística",
+                "description": "Conexão natural entre compreensão, expressão e confiança através da prática significativa."
+            }
+        }
+    },
+    "journey": {
+        "title": "Como o inglês cresce na jornada da criança",
+        "subtitle": "A linguagem se desenvolve passo a passo — da compreensão à conversação confiante.",
+        "cards": {
+            "comprehension": {
+                "title": "COMPREENSÃO",
+                "description": "Contato imersivo com o inglês por experiências significativas."
+            },
+            "interaction": {
+                "title": "INTERAÇÃO",
+                "description": "Participação guiada com professores e atividades de linguagem."
+            },
+            "expression": {
+                "title": "EXPRESSÃO",
+                "description": "Início natural da fala quando a base de linguagem está pronta."
+            },
+            "speaking": {
+                "title": "SPEAKING",
+                "description": "Flui naturalmente em uma progressão estruturada e segura."
+            }
+        }
+    }
+}

@@ -61,6 +61,8 @@ export const theme = createTheme({
       bgCard: colors.bgCard,
       bgOverlay: colors.bgOverlay,
       bgLogin: colors.bgLogin,
+      bgStudies: colors.bgStudies,
+      bgMethodology: colors.bgMethodology,
       bgGradient: colors.bgGradient,
       bgOrangeGradient: colors.bgOrangeGradient,
     },
