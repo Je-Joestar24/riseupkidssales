@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { useTranslation } from '../../hooks/useTranslation.js'
+import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const GRAY = 'rgb(75, 85, 99)'
 const TEAL = '#62caca'

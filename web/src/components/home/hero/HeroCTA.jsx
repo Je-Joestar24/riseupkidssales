@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import { useTranslation } from '../../hooks/useTranslation.js'
+import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const GOLD = '#f2af10'
 

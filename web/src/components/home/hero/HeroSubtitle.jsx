@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import { useTranslation } from '../../hooks/useTranslation.js'
+import { useTranslation } from '../../../hooks/useTranslation.js'
 
 export default function HeroSubtitle() {
   const { t } = useTranslation()

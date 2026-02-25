@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined'
-import { useTranslation } from '../../hooks/useTranslation.js'
+import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const TEAL = '#62caca'
 

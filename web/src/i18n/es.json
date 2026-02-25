@@ -1,16 +1,1 @@
-{
-  "nav": { "login": "Iniciar sesión" },
-  "hero": {
-    "title": "Tu hijo bilingüe en 1 año, una infancia donde el inglés es natural.",
-    "badge": "Metodología basada en inmersión natural",
-    "titlePart1": "Tu hijo bilingüe en 1 año, ",
-    "titlePart2": "una infancia donde el inglés es natural.",
-    "subtitle": "Rise Up Kids involucra a los niños en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real. Es en la infancia que el lenguaje se vuelve natural, y el inglés se vive con comprensión, expresión y confianza para la vida.",
-    "features": {
-      "immersiveEnglish": { "title": "Inglés Inmersivo", "description": "Experiencias significativas con el idioma" },
-      "realTeachers": { "title": "Profesores Reales", "description": "Vivencia humana del lenguaje" },
-      "naturalLearning": { "title": "Aprendizaje Natural", "description": "Del entendimiento a la expresión" }
-    },
-    "cta": "Comenzar el Viaje de Mi Hijo"
-  }
-}
+{"nav":{"login":"Iniciar sesión"},"hero":{"title":"Tu hijo bilingüe en 1 año, una infancia donde el inglés es natural.","badge":"Metodología basada en inmersión natural","titlePart1":"Tu hijo bilingüe en 1 año, ","titlePart2":"una infancia donde el inglés es natural.","subtitle":"Rise Up Kids involucra a los niños en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real. Es en la infancia que el lenguaje se vuelve natural, y el inglés se vive con comprensión, expresión y confianza para la vida.","features":{"immersiveEnglish":{"title":"Inglés Inmersivo","description":"Experiencias significativas con el idioma"},"realTeachers":{"title":"Profesores Reales","description":"Vivencia humana del lenguaje"},"naturalLearning":{"title":"Aprendizaje Natural","description":"Del entendimiento a la expresión"}},"cta":"Comenzar el Viaje de Mi Hijo"},"discover":{"title":"Mira cómo el inglés se vuelve natural","subtitle":"Descubre cómo los niños aprenden inglés de forma natural y alegre","cta":"Comenzar el Viaje de Mi Hijo"},"extras":{"joy":"Alegría","learning":"Aprendizaje","growth":"Crecimiento","play":"Juego","wonder":"Asombro"}}

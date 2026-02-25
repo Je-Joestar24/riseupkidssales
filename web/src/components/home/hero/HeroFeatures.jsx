@@ -1,5 +1,5 @@
 import { Grid, Paper, Typography } from '@mui/material'
-import { useTranslation } from '../../hooks/useTranslation.js'
+import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const FEATURE_KEYS = [
   { key: 'immersiveEnglish', color: '#62caca' },
