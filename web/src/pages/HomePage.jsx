@@ -9,6 +9,9 @@ import DiscoverMain from '../components/home/discover/DiscoverMain.jsx'
 import StudiesMain from '../components/home/studies/StudiesMain.jsx'
 import MethodologyMain from '../components/home/methodology/MethodologyMain.jsx'
 import JourneyMain from '../components/home/journey/JourneyMain.jsx'
+import ExperienceMain from '../components/home/experience/ExperienceMain.jsx'
+import InvitationMain from '../components/home/invitation/InvitationMain.jsx'
+import QuestionsMain from '../components/home/questions/QuestionsMain.jsx'
 
 function HomePage() {
   const { t } = useTranslation()
@@ -26,6 +29,11 @@ function HomePage() {
         <StudiesMain />
         <MethodologyMain />
         <JourneyMain />
+        <Box component="section" aria-label="Experience Rise Up Kids">
+          <ExperienceMain />
+        </Box>
+        <InvitationMain />
+        <QuestionsMain />
       </Box>
     </>
   )

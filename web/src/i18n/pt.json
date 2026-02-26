@@ -85,5 +85,73 @@
                 "description": "Flui naturalmente em uma progressão estruturada e segura."
             }
         }
+    },
+    "experience": {
+        "title": "O que está incluído",
+        "titleHighlight": "Experiência Rise Up Kids",
+        "subtitle": "Experiências imersivas onde a criança vive o inglês de forma natural, progressiva e confiante.",
+        "items": [
+            "Atividades guiadas para interação e consolidação da compreensão",
+            "Aulas ao vivo com professores treinados no método Rise Up Kids",
+            "Progressão estruturada do inglês da compreensão à fala",
+            "Envio de atividades de fala com feedback do professor",
+            "Storytime: histórias em inglês vividas com apoio visual e linguagem guiada",
+            "Ferramenta exclusiva Rise Up Kids para que a criança brinque com o inglês",
+            "Acompanhamento do progresso da criança ao longo da jornada",
+            "Conteúdo novo adicionado regularmente",
+            "Práticas de pronúncia guiadas",
+            "Esclarecimento de dúvidas dos pais sobre o uso do programa (24h, exceto domingos)",
+            "Acesso por 12 meses com renovação automática",
+            "Garantia de 14 dias"
+        ],
+        "footerPhysical": "Box físico disponível no Brasil.",
+        "footerDigital": "Versão digital completa para outros países."
+    },
+    "invitation": {
+        "badge": "CONVITE EXCLUSIVO",
+        "title": "Convite às Famílias Fundadoras",
+        "subtitle1": "Convidamos um grupo de famílias fundadoras para a primeira experiência Rise Up Kids.",
+        "subtitle2": "Para verificar se é adequado para seu filho(a), solicite as informações abaixo.",
+        "form": {
+            "nameLabel": "Nome do responsável",
+            "namePlaceholder": "Seu nome completo",
+            "emailLabel": "E-mail",
+            "emailPlaceholder": "seuemail@exemplo.com",
+            "whatsappLabel": "WhatsApp (opcional)",
+            "whatsappPlaceholder": "+55 11 99999-9999",
+            "ageLabel": "Idade da criança (anos)",
+            "agePlaceholder": "ex: 5 anos",
+            "submit": "Receber informações das Famílias Fundadoras"
+        },
+        "footer": "Limitado às primeiras famílias fundadoras"
+    },
+    "questions": {
+        "title": "Perguntas Frequentes",
+        "items": [
+            {
+                "question": "A partir de que idade meu filho pode começar?",
+                "answer": "O Rise Up Kids é ideal para crianças de 5 a 13 anos, fase de alta abertura para o desenvolvimento de idiomas.\n\nCrianças de 4 anos também podem participar com acompanhamento próximo dos pais."
+            },
+            {
+                "question": "Quanto tempo por dia é necessário?",
+                "answer": "O mais importante no Rise Up Kids é o contato frequente com o inglês, não longas sessões.\n\nA maioria das crianças interage com o idioma cerca de 20 a 30 minutos nos dias de uso, com pelo menos 5 contatos semanais, por meio de vídeos, atividades ou aulas ao vivo.\n\nEssa frequência permite que o inglês se torne natural ao longo do tempo."
+            },
+            {
+                "question": "Meu filho não sabe nada de inglês. É adequado?",
+                "answer": "Sim. O Rise Up Kids foi desenvolvido especialmente para iniciantes.\n\nA criança começa pela compreensão, com apoio visual e linguagem guiada, e progride naturalmente até a fala, respeitando seu ritmo individual."
+            },
+            {
+                "question": "Como acompanho o progresso?",
+                "answer": "Os pais acompanham a evolução da criança ao longo da jornada por meio das atividades realizadas, participação e orientações pedagógicas quando aplicável."
+            },
+            {
+                "question": "O box físico está disponível para minha região?",
+                "answer": "O box físico é um complemento opcional disponível atualmente para famílias no Brasil no momento da matrícula.\n\nEle é preparado conforme o início da jornada da criança e integra a experiência pedagógica do programa, não sendo vendido separadamente."
+            },
+            {
+                "question": "Qual é a garantia?",
+                "answer": "Você pode experimentar o programa digital Rise Up Kids por 14 dias.\n\nSe não fizer sentido para sua família, devolvemos o valor do programa digital dentro desse período."
+            }
+        ]
     }
 }

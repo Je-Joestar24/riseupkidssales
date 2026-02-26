@@ -85,5 +85,73 @@
                 "description": "Flows naturally in a structured and safe progression."
             }
         }
+    },
+    "experience": {
+        "title": "What's Included",
+        "titleHighlight": "Rise Up Kids Experience",
+        "subtitle": "Immersive experiences where children experience English naturally, progressively, and confidently.",
+        "items": [
+            "Guided activities for interaction and consolidation of comprehension",
+            "Live classes with teachers trained in the Rise Up Kids method",
+            "Structured progression of English from comprehension to speaking",
+            "Sending of speaking activities with teacher feedback",
+            "Storytime: lived English stories with visual support and guided language",
+            "Exclusive Rise Up Kids tool for children to play with English",
+            "Monitoring of the child's progress throughout the journey",
+            "New content added regularly",
+            "Guided pronunciation practice",
+            "Clarification of parents' doubts about the use of the program (24 hours a day, except Sundays)",
+            "Access for 12 months with automatic renewal",
+            "14-day guarantee"
+        ],
+        "footerPhysical": "Physical box available in Brazil.",
+        "footerDigital": "Complete digital version for other countries."
+    },
+    "invitation": {
+        "badge": "EXCLUSIVE INVITATION",
+        "title": "Invitation to Founding Families",
+        "subtitle1": "We invite a group of founding families to the first Rise Up Kids experience.",
+        "subtitle2": "To check if it's suitable for your child, please request the information below.",
+        "form": {
+            "nameLabel": "Parent/Guardian Name",
+            "namePlaceholder": "Your full name",
+            "emailLabel": "Email",
+            "emailPlaceholder": "your_email@example.com",
+            "whatsappLabel": "WhatsApp (optional)",
+            "whatsappPlaceholder": "+55 11 99999-9999",
+            "ageLabel": "Child's age (years)",
+            "agePlaceholder": "e.g., 5 years",
+            "submit": "Receive information from Founding Families"
+        },
+        "footer": "Limited to the first founding families"
+    },
+    "questions": {
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "question": "From what age can my child start?",
+                "answer": "Rise Up Kids is ideal for children aged 5 to 13, a phase of high openness to language development.\n\nChildren aged 4 can also participate with close parental supervision."
+            },
+            {
+                "question": "How much time per day is needed?",
+                "answer": "What matters most in Rise Up Kids is frequent contact with English, not long sessions.\n\nMost children interact with the language for about 20 to 30 minutes on days they use it, with at least 5 weekly contacts, through videos, activities, or live classes.\n\nThis frequency allows English to become natural over time."
+            },
+            {
+                "question": "My child doesn't know any English. Is it suitable?",
+                "answer": "Yes. Rise Up Kids was designed especially for beginners.\n\nThe child starts with comprehension, with visual support and guided language, and progresses naturally to speaking, at their own pace."
+            },
+            {
+                "question": "How do I track progress?",
+                "answer": "Parents follow the child's progress throughout the journey through completed activities, participation, and pedagogical guidance when applicable."
+            },
+            {
+                "question": "Is the physical box available for my region?",
+                "answer": "The physical box is an optional add-on currently available for families in Brazil at enrollment.\n\nIt is prepared according to the start of the child's journey and is part of the program's pedagogical experience; it is not sold separately."
+            },
+            {
+                "question": "What is the guarantee?",
+                "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't work for your family, we refund the digital program fee within that period."
+            }
+        ]
     }
 }
