@@ -153,5 +153,23 @@
                 "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't work for your family, we refund the digital program fee within that period."
             }
         ]
+    },
+    "cta": {
+        "title": "Don't let the development window pass",
+        "description": "Childhood is the most powerful time to build language, confidence, and curiosity. Give your child the opportunity to grow up bilingual with joy, security, and consistency.",
+        "button": "Start My Child's Journey"
+    },
+    "footer": {
+        "subtitle": "A childhood where English is natural, fun, and unforgettable.",
+        "product": "Product",
+        "howItWorks": "How It Works",
+        "support": "Support",
+        "contact": "Contact",
+        "contactEmail": "contact@riseup.kids",
+        "legal": "Legal",
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy",
+        "copyright": "© 2026 Rise Up Kids.",
+        "rightsReserved": "All rights reserved."
     }
 }

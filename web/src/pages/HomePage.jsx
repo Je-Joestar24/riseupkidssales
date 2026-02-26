@@ -12,6 +12,8 @@ import JourneyMain from '../components/home/journey/JourneyMain.jsx'
 import ExperienceMain from '../components/home/experience/ExperienceMain.jsx'
 import InvitationMain from '../components/home/invitation/InvitationMain.jsx'
 import QuestionsMain from '../components/home/questions/QuestionsMain.jsx'
+import CtaMain from '../components/home/cta/CtaMain.jsx'
+import FooterMain from '../components/home/footer/FooterMain.jsx'
 
 function HomePage() {
   const { t } = useTranslation()
@@ -34,6 +36,8 @@ function HomePage() {
         </Box>
         <InvitationMain />
         <QuestionsMain />
+        <CtaMain />
+        <FooterMain />
       </Box>
     </>
   )

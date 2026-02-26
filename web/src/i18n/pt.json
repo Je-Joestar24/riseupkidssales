@@ -153,5 +153,23 @@
                 "answer": "Você pode experimentar o programa digital Rise Up Kids por 14 dias.\n\nSe não fizer sentido para sua família, devolvemos o valor do programa digital dentro desse período."
             }
         ]
+    },
+    "cta": {
+        "title": "Não deixe a janela de desenvolvimento passar",
+        "description": "A infância é o momento mais poderoso para formar linguagem, confiança e curiosidade. Dê ao seu filho a oportunidade de crescer bilíngue com alegria, segurança e consistência.",
+        "button": "Quero ser uma Família Fundadora"
+    },
+    "footer": {
+        "subtitle": "Uma infância onde o inglês é natural, divertido e inesquecível.",
+        "product": "Produto",
+        "howItWorks": "Como Funciona",
+        "support": "Suporte",
+        "contact": "Contato",
+        "contactEmail": "contact@riseup.kids",
+        "legal": "Legal",
+        "termsOfUse": "Termos de Uso",
+        "privacyPolicy": "Política de Privacidade",
+        "copyright": "© 2026 Rise Up Kids.",
+        "rightsReserved": "Todos os direitos reservados."
     }
 }
