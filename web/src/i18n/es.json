@@ -171,5 +171,155 @@
         "privacyPolicy": "Política de privacidad",
         "copyright": "© 2026 Rise Up Kids.",
         "rightsReserved": "Todos los derechos reservados."
+    },
+    "privacySettings": {
+        "pageTitle": "Configuración de privacidad",
+        "subtitle": "El perfil de su hijo es privado y solo se comparte con usted y los educadores autorizados.",
+        "subtitleNote": "Rise Up Kids no vende ni comparte datos personales de niños con terceros.",
+        "childPrivacy": {
+            "title": "Privacidad del menor",
+            "p1": "La actividad de aprendizaje y el perfil de su hijo solo son visibles para usted y los educadores autorizados (Rise Up Kids o su escuela).",
+            "p2": "Si su hijo participa a través de una escuela, los educadores escolares autorizados también pueden ver el progreso del aprendizaje.",
+            "p3": "Al crear el perfil de su hijo, usted consiente la recopilación y el uso de sus datos de aprendizaje dentro de Rise Up Kids."
+        },
+        "media": {
+            "title": "Permisos de fotos y medios",
+            "intro": "Ocasionalmente, las actividades de aprendizaje pueden incluir fotos o videos de niños dentro de la plataforma Rise Up Kids.",
+            "checkboxPlatform": "Permitir que las fotos o videos de mi hijo se utilicen dentro de la plataforma de aprendizaje Rise Up Kids",
+            "checkboxPlatformHint": "Esto incluye actividades de aprendizaje visibles solo para usted y los educadores autorizados.",
+            "checkboxMarketing": "Permitir su uso en materiales o marketing de Rise Up Kids"
+        },
+        "email": {
+            "title": "Actualizaciones por correo",
+            "intro": "Elija qué actualizaciones desea recibir.",
+            "learningUpdates": "Actualizaciones de aprendizaje y mensajes importantes de Rise Up Kids",
+            "promotions": "Promociones o anuncios"
+        },
+        "profile": {
+            "title": "Perfil del menor",
+            "intro": "Puede eliminar el perfil de su hijo en cualquier momento. Esto elimina permanentemente sus datos de los sistemas de Rise Up Kids.",
+            "deleteButton": "Eliminar perfil del menor"
+        },
+        "dataProtection": {
+            "title": "Protección de datos",
+            "p1": "Rise Up Kids protege la información de los niños mediante sistemas seguros y acceso restringido.",
+            "p2": "Los datos del menor se almacenan de forma segura y solo son accesibles por personal autorizado que apoya la experiencia de aprendizaje de su hijo."
+        },
+        "policy": {
+            "title": "Política y consentimiento",
+            "intro": "El uso de Rise Up Kids y la participación de su hijo se rigen por nuestra Política de Privacidad.",
+            "viewPolicy": "Ver Política de Privacidad"
+        },
+        "footer": {
+            "line1": "La privacidad y seguridad de su hijo son nuestra prioridad.",
+            "line2": "Puede actualizar esta configuración en cualquier momento."
+        }
+    },
+    "privacyPolicy": {
+        "title": "Política de Privacidad",
+        "lastUpdated": "Última actualización: [fecha]",
+        "introP1Before": "La plataforma ",
+        "introP1Bold": "Rise Up Kids",
+        "introP1After": " valora la privacidad y la protección de datos de las familias y los niños participantes. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos la información personal en el contexto de la plataforma educativa Rise Up Kids.",
+        "introP2": "Al utilizar la plataforma, usted acepta esta Política.",
+        "backToHome": "Volver al Inicio",
+        "contactEmail": "contact@riseup.kids",
+        "s1Title": "1. Cumplimiento legal internacional",
+        "s1P1": "Rise Up Kids trata los datos personales de acuerdo con la legislación aplicable en materia de protección de datos, incluyendo la Lei Geral de Proteção de Dados de Brasil (LGPD), el Reglamento General de Protección de Datos de la Unión Europea (GDPR) y las normas internacionales de protección de datos de menores, como la Children's Online Privacy Protection Act (COPPA), cuando corresponda.",
+        "s1P2": "El tratamiento de datos se realiza de forma limitada, proporcionada y adecuada a los fines educativos del programa, con especial atención a la protección de los datos de los menores y a la actuación bajo la responsabilidad de los padres o tutores legales.",
+        "s2Title": "2. Quién controla los datos",
+        "s2P1": "Rise Up Kids actúa como responsable del tratamiento de los datos personales en el contexto de la plataforma. Cuando utilizamos proveedores técnicos para la operación del servicio, estos actúan como encargados del tratamiento, siguiendo instrucciones y estándares de seguridad adecuados.",
+        "s3Title": "3. Datos que recopilamos",
+        "s3P1": "Podemos recopilar información proporcionada por el responsable, como:",
+        "s3List": [
+            "Nombre del responsable",
+            "Correo electrónico",
+            "Información de pago, procesada por un proveedor de pagos seguro",
+            "País, idioma y preferencias",
+            "Nombre y edad del menor, o rango de edad",
+            "Datos de uso de la plataforma, como progreso, actividades completadas e interacciones educativas",
+            "Contenidos enviados voluntariamente por la familia, como actividades de expresión oral enviadas para retroalimentación"
+        ],
+        "s3P2": "Solo recopilamos los datos necesarios para proporcionar, operar y mejorar la experiencia educativa.",
+        "s4Title": "4. Datos de menores",
+        "s4P1": "Rise Up Kids es un servicio educativo destinado a menores, utilizado bajo la responsabilidad y autorización de los padres o tutores legales, en conformidad con la legislación aplicable de protección infantil.",
+        "s4P2": "Los datos de los menores se limitan a lo necesario para la personalización educativa, como nombre, edad o rango de edad y progreso en las actividades.",
+        "s4P3": "No pedimos a los menores que proporcionen información de contacto personal o datos sensibles. Si se identifica el envío indebido de datos personales por menores, estos podrán ser eliminados a solicitud del responsable.",
+        "s5Title": "5. Cómo usamos los datos",
+        "s5P1": "Los datos personales pueden utilizarse para:",
+        "s5List": [
+            "Crear y gestionar cuentas de acceso",
+            "Procesar suscripciones y pagos",
+            "Entregar contenidos y clases en vivo",
+            "Seguir el progreso educativo",
+            "Personalizar la experiencia según edad y nivel",
+            "Enviar comunicaciones operativas y de soporte",
+            "Mejorar la plataforma y corregir fallos",
+            "Cumplir obligaciones legales y prevenir fraudes"
+        ],
+        "s6Title": "6. Seguridad",
+        "s6P1": "Adoptamos medidas técnicas y organizativas para proteger los datos personales, incluyendo:",
+        "s6List": [
+            "Control de acceso restringido",
+            "Protección de infraestructura y servidores",
+            "Cifrado en tránsito cuando corresponda",
+            "Supervisión y registros de seguridad",
+            "Uso de proveedores tecnológicos de confianza"
+        ],
+        "s6P2": "Ningún sistema es totalmente inmune a riesgos, pero adoptamos prácticas continuas para la protección adecuada de la información.",
+        "s7Title": "7. Compartir datos",
+        "s7P1": "Rise Up Kids no vende datos personales.",
+        "s7P2": "Podemos compartir datos solo cuando sea necesario para la operación del servicio, por ejemplo con:",
+        "s7List": [
+            "Proveedores de pagos",
+            "Alojamiento e infraestructura",
+            "Herramientas técnicas esenciales para el funcionamiento de la plataforma",
+            "Servicios de comunicación operativa"
+        ],
+        "s7P3": "El intercambio se produce solo en la medida necesaria y con la protección adecuada.",
+        "s7P4": "También podremos divulgar datos cuando lo exija la ley o la autoridad competente.",
+        "s8Title": "8. Cookies y tecnologías similares",
+        "s8P1": "Podemos utilizar cookies y tecnologías similares para:",
+        "s8List": [
+            "Mantener la sesión y la autenticación",
+            "Recordar preferencias, como el idioma",
+            "Mejorar el rendimiento y la estabilidad",
+            "Comprender el uso de la plataforma para mejoras"
+        ],
+        "s8P2": "El usuario puede gestionar las cookies en el navegador. Algunas funciones pueden no funcionar correctamente sin cookies esenciales.",
+        "s9Title": "9. Retención de datos",
+        "s9P1": "Conservamos los datos personales durante el tiempo necesario para:",
+        "s9List": [
+            "Proporcionar el servicio contratado",
+            "Cumplir obligaciones legales y fiscales",
+            "Resolver disputas",
+            "Garantizar la seguridad y la prevención del fraude"
+        ],
+        "s9P2": "Después de ese período, los datos podrán ser eliminados o anonimizados, según corresponda.",
+        "s10Title": "10. Derechos del responsable",
+        "s10P1": "El tutor legal puede solicitar, cuando corresponda:",
+        "s10List": [
+            "Acceso a los datos personales",
+            "Corrección de la información",
+            "Eliminación de datos",
+            "Información sobre el uso y el tratamiento",
+            "Revocación del consentimiento cuando corresponda"
+        ],
+        "s10P2": "Las solicitudes pueden enviarse a:",
+        "s11Title": "11. Transferencia internacional",
+        "s11P1": "Rise Up Kids puede utilizar proveedores e infraestructura ubicados en diferentes países. Cuando se produzca una transferencia internacional de datos, adoptamos medidas para mantener niveles adecuados de protección y seguridad, de conformidad con la legislación aplicable.",
+        "s12Title": "12. Comunicaciones por correo",
+        "s12P1": "Podemos enviar comunicaciones relacionadas con el servicio, como:",
+        "s12List": [
+            "Confirmaciones de cuenta",
+            "Información de suscripción",
+            "Soporte",
+            "Actualizaciones importantes"
+        ],
+        "s12P2": "El responsable puede optar por no recibir comunicaciones no esenciales cuando corresponda.",
+        "s13Title": "13. Cambios en esta política",
+        "s13P1": "Rise Up Kids puede actualizar esta Política de Privacidad para reflejar mejoras, cambios legales o la evolución del servicio. La fecha de actualización se revisará en la parte superior del documento.",
+        "s14Title": "14. Contacto",
+        "s14P1": "Para preguntas sobre privacidad o datos personales:"
     }
 }
