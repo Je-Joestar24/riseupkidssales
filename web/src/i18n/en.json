@@ -215,6 +215,68 @@
             "line2": "You can update these settings at any time."
         }
     },
+    "checkout": {
+        "header": {
+            "logoAlt": "Rise Up Kids",
+            "ariaLabel": "Rise Up Kids checkout"
+        },
+        "select": {
+            "title": "Complete your enrollment",
+            "subtitle": "Choose the number of children and personalize your registration.",
+            "planTitle": "Choose Your Plan",
+            "numberOfChildren": "Number of Children",
+            "oneChild": "1 Child",
+            "twoChildren": "2 Children",
+            "moreChildren": "3 or more Children",
+            "childrenLabel": "Children",
+            "perYear": "per year",
+            "equivalentPerMonth": "Equivalent to R$63/month",
+            "annualCharge": "Annual charge",
+            "installmentAvailable": "Installment available",
+            "continue": "Continue",
+            "continueToPayment": "Continue to payment",
+            "taxesIncluded": "Taxes included.",
+            "securePayment": "Secure Payment",
+            "sslEncryption": "SSL Encryption",
+            "protectedData": "Protected Data"
+        },
+        "box": {
+            "title": "Rise Up Kids Box",
+            "perChild": "per child",
+            "addBoxLabel": "Add Rise Up Kids Box",
+            "description": "Exclusive physical materials to complement the immersion experience.",
+            "bullet1": "1 box per child (box for the 12 months)",
+            "bullet2": "Available in Brazil only",
+            "bullet3": "Physical product not refundable after shipping",
+            "caixa": "box",
+            "caixas": "boxes"
+        },
+        "footer": {
+            "contactPrompt": "Questions? Contact us at",
+            "copyright": "© 2026 Rise Up Kids. All rights reserved."
+        },
+        "summary": {
+            "title": "Order Summary",
+            "oneChild": "1 Child",
+            "total": "Total",
+            "securePayment": "Secure payment with protected data",
+            "subscriptionNote": "The subscription is annual and will renew automatically at the end of the period, unless cancelled in advance.",
+            "guaranteeTitle": "14-day guarantee",
+            "guaranteeP1": "Try the program for 14 days.",
+            "guaranteeP2": "If it doesn't work for your family, you can request a refund for the program.",
+            "guaranteeP3": "No risk. No pressure.",
+            "guaranteeFooter": "The physical box is not refundable after shipping.",
+            "includedTitle": "What's included:",
+            "includedItems": [
+                "12 months of program access",
+                "Live classes",
+                "Weekly Storytime",
+                "Interactive activities",
+                "Structured immersion curriculum",
+                "Safe community for children"
+            ]
+        }
+    },
     "privacyPolicy": {
         "title": "Privacy Policy",
         "lastUpdated": "Last updated: [date]",

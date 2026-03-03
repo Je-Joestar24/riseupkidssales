@@ -215,6 +215,68 @@
             "line2": "Puede actualizar esta configuración en cualquier momento."
         }
     },
+    "checkout": {
+        "header": {
+            "logoAlt": "Rise Up Kids",
+            "ariaLabel": "Checkout Rise Up Kids"
+        },
+        "select": {
+            "title": "Completa tu matrícula",
+            "subtitle": "Elige el número de niños y personaliza tu inscripción.",
+            "planTitle": "Elige tu plan",
+            "numberOfChildren": "Número de niños",
+            "oneChild": "1 Niño/a",
+            "twoChildren": "2 Niños/as",
+            "moreChildren": "3 o más niños/as",
+            "childrenLabel": "Niños/as",
+            "perYear": "por año",
+            "equivalentPerMonth": "Equivalente a R$63/mes",
+            "annualCharge": "Cobro anual",
+            "installmentAvailable": "Parcelamento disponible",
+            "continue": "Continuar",
+            "continueToPayment": "Continuar al pago",
+            "taxesIncluded": "Impuestos incluidos.",
+            "securePayment": "Pago seguro",
+            "sslEncryption": "Cifrado SSL",
+            "protectedData": "Datos protegidos"
+        },
+        "box": {
+            "title": "Rise Up Kids Box",
+            "perChild": "por niño/a",
+            "addBoxLabel": "Añadir Rise Up Kids Box",
+            "description": "Materiales físicos exclusivos para complementar la experiencia de inmersión.",
+            "bullet1": "1 box por niño/a (caja para los 12 meses)",
+            "bullet2": "Disponible solo en Brasil",
+            "bullet3": "Producto físico no reembolsable después del envío",
+            "caixa": "caja",
+            "caixas": "cajas"
+        },
+        "footer": {
+            "contactPrompt": "¿Dudas? Contáctanos en",
+            "copyright": "© 2026 Rise Up Kids. Todos los derechos reservados."
+        },
+        "summary": {
+            "title": "Resumen del pedido",
+            "oneChild": "1 Niño/a",
+            "total": "Total",
+            "securePayment": "Pago seguro con datos protegidos",
+            "subscriptionNote": "La suscripción es anual y se renovará automáticamente al final del período, salvo cancelación previa.",
+            "guaranteeTitle": "Garantía de 14 días",
+            "guaranteeP1": "Prueba el programa durante 14 días.",
+            "guaranteeP2": "Si no tiene sentido para tu familia, puedes solicitar el reembolso del programa.",
+            "guaranteeP3": "Sin riesgo. Sin presión.",
+            "guaranteeFooter": "El box físico no es reembolsable después del envío.",
+            "includedTitle": "Qué está incluido:",
+            "includedItems": [
+                "12 meses de acceso al programa",
+                "Clases en vivo",
+                "Storytime semanal",
+                "Actividades interactivas",
+                "Currículo estructurado de inmersión",
+                "Comunidad segura para niños"
+            ]
+        }
+    },
     "privacyPolicy": {
         "title": "Política de Privacidad",
         "lastUpdated": "Última actualización: [fecha]",
