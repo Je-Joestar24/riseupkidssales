@@ -2,13 +2,22 @@ import { Box, Typography } from '@mui/material'
 import LockIcon from '@mui/icons-material/Lock'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useCheckout } from '../../../hooks/useCheckout.js'
 
 const GUARANTEE_BG = 'rgb(244, 237, 216)'
 
+function getChildrenLabel(childCount, t) {
+  if (childCount === 1) return t('checkout.select.oneChild')
+  if (childCount === 2) return t('checkout.select.twoChildren')
+  return t('checkout.select.childrenCount').replace('{{count}}', childCount)
+}
+
 function SelectSummary() {
   const { t } = useTranslation()
+  const { childCount, planPricing, totalPricing } = useCheckout()
   const includedItems = t('checkout.summary.includedItems')
   const items = Array.isArray(includedItems) ? includedItems : []
+  const paymentNote = t('checkout.select.paymentNote')
 
   return (
     <Box
@@ -37,14 +46,19 @@ function SelectSummary() {
         {t('checkout.summary.title')}
       </Typography>
 
-      <Box sx={{ '& > * + *': { mt: 2 }, mb: 3, pb: 3, borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ mb: 3, pb: 3, borderBottom: 1, borderColor: 'divider' }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography component="span" sx={{ fontSize: '1rem', color: 'text.secondary', fontWeight: 600 }}>
-            {t('checkout.summary.oneChild')}
+            {getChildrenLabel(childCount, t)}
           </Typography>
-          <Typography component="span" sx={{ fontSize: '1.125rem', fontWeight: 600, color: 'secondary.main' }}>
-            R$750
-          </Typography>
+          <Box sx={{ textAlign: 'right' }}>
+            <Typography component="div" sx={{ fontSize: '1.125rem', fontWeight: 600, color: 'secondary.main' }}>
+              {planPricing.line1}
+            </Typography>
+            <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.disabled', fontWeight: 600 }}>
+              {planPricing.line2 ?? paymentNote}
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
@@ -62,9 +76,14 @@ function SelectSummary() {
         <Typography component="span" sx={{ fontSize: '1.25rem', fontWeight: 700 }}>
           {t('checkout.summary.total')}
         </Typography>
-        <Typography component="span" sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'secondary.main' }}>
-          R$750
-        </Typography>
+        <Box sx={{ textAlign: 'right' }}>
+          <Typography component="div" sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'secondary.main' }}>
+            {totalPricing.line1}
+          </Typography>
+          <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.disabled', fontWeight: 600 }}>
+            {totalPricing.line2 ?? paymentNote}
+          </Typography>
+        </Box>
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, fontSize: '0.75rem', color: 'text.secondary', pt: 0.5 }}>

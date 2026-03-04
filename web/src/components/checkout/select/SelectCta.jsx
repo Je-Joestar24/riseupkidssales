@@ -1,9 +1,34 @@
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useCheckout } from '../../../hooks/useCheckout.js'
+
+/**
+ * Builds /checkout/register URL with optional query params for child count and box.
+ * Used so reload or shared link restores plan selection.
+ */
+function getRegisterSearch(childCount, addBox) {
+  const params = new URLSearchParams()
+  if (childCount != null && Number(childCount) >= 1) {
+    params.set('children', String(childCount))
+  }
+  if (addBox) {
+    params.set('box', '1')
+  }
+  const search = params.toString()
+  return search ? `?${search}` : ''
+}
 
 function SelectCta() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const { childCount, addBox } = useCheckout()
+
+  const handleContinue = () => {
+    const search = getRegisterSearch(childCount, addBox)
+    navigate(`/checkout/register${search}`)
+  }
 
   return (
     <Button
@@ -13,6 +38,7 @@ function SelectCta() {
       disableElevation
       startIcon={null}
       endIcon={<ArrowForwardIcon sx={{ fontSize: 28 }} />}
+      onClick={handleContinue}
       sx={{
         mt: 3,
         py: 2,

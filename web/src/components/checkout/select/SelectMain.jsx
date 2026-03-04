@@ -3,6 +3,7 @@ import SelectSummary from './SelectSummary.jsx'
 import SelectCard from './SelectCard.jsx'
 import SelectCta from './SelectCta.jsx'
 import SelectProductFooter from './SelectProductFooter.jsx'
+import SelectFooter from './SelectFooter.jsx'
 
 /**
  * Two-column layout: main content (2 cols, max 735px) + order summary sidebar (1 col, max 347px).
@@ -19,6 +20,7 @@ function SelectMain() {
           <SelectCard />
           <SelectCta />
           <SelectProductFooter />
+          <SelectFooter />
         </Box>
       </Grid>
       <Grid item xs={12} md={4} sx={{ alignSelf: 'stretch' }}>

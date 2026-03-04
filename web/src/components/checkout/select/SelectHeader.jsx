@@ -20,7 +20,7 @@ function SelectHeader() {
         sx={{
           mb: 1,
           color: 'secondary.main',
-          fontSize: { xs: '1.875rem', md: '2.25rem' },
+          fontSize: { xs: '2.875rem', md: '4.25rem' },
           fontWeight: 700,
         }}
       >

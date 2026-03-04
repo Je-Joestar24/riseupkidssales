@@ -14,7 +14,7 @@ function CheckoutHeader() {
       aria-label={t('checkout.header.ariaLabel')}
       sx={{
         bgcolor: 'white',
-        boxShadow: 1,
+        boxShadow: 2,
         px: 2,
       }}
     >

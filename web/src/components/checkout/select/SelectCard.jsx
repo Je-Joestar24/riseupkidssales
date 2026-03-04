@@ -1,32 +1,27 @@
-import { useState } from 'react'
 import { Box, Typography, IconButton, InputBase } from '@mui/material'
 import RemoveIcon from '@mui/icons-material/Remove'
 import AddIcon from '@mui/icons-material/Add'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useCheckout } from '../../../hooks/useCheckout.js'
 import SelectProduct from './SelectProduct.jsx'
-import SelectBox from './SelectBox.jsx'
-
-const MIN_CHILDREN = 1
-const MAX_CHILDREN = 10
 
 function SelectCard() {
   const { t } = useTranslation()
-  const [childCount, setChildCount] = useState(1)
-
-  const handleDecrement = () => {
-    setChildCount((prev) => Math.max(MIN_CHILDREN, prev - 1))
-  }
-
-  const handleIncrement = () => {
-    setChildCount((prev) => Math.min(MAX_CHILDREN, prev + 1))
-  }
+  const {
+    childCount,
+    setChildCount,
+    incrementChildren,
+    decrementChildren,
+    minChildren,
+    maxChildren,
+  } = useCheckout()
 
   const handleInputChange = (e) => {
     const value = e.target.value
     if (value === '') return
     const num = parseInt(value, 10)
     if (!Number.isNaN(num)) {
-      setChildCount(Math.min(MAX_CHILDREN, Math.max(MIN_CHILDREN, num)))
+      setChildCount(Math.min(maxChildren, Math.max(minChildren, num)))
     }
   }
 
@@ -57,8 +52,8 @@ function SelectCard() {
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0 }}>
           <IconButton
-            onClick={handleDecrement}
-            disabled={childCount <= MIN_CHILDREN}
+            onClick={decrementChildren}
+            disabled={childCount <= minChildren}
             aria-label={t('checkout.select.numberOfChildren')}
             sx={{
               width: 40,
@@ -79,8 +74,8 @@ function SelectCard() {
             value={childCount}
             onChange={handleInputChange}
             inputProps={{
-              min: MIN_CHILDREN,
-              max: MAX_CHILDREN,
+              min: minChildren,
+              max: maxChildren,
               'aria-label': t('checkout.select.numberOfChildren'),
             }}
             sx={{
@@ -106,8 +101,8 @@ function SelectCard() {
             }}
           />
           <IconButton
-            onClick={handleIncrement}
-            disabled={childCount >= MAX_CHILDREN}
+            onClick={incrementChildren}
+            disabled={childCount >= maxChildren}
             aria-label={t('checkout.select.numberOfChildren')}
             sx={{
               width: 40,
@@ -125,8 +120,7 @@ function SelectCard() {
           </IconButton>
         </Box>
       </Box>
-      <SelectProduct childCount={childCount} />
-      <SelectBox childCount={childCount} />
+      <SelectProduct />
     </Box>
   )
 }

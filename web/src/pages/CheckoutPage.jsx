@@ -14,7 +14,7 @@ function CheckoutPage() {
       aria-label="Checkout - Complete sua matrícula"
       sx={{
         minHeight: '100vh',
-        bgcolor: CHECKOUT_PAGE_BG,
+        bgcolor:  'white',
       }}
     >
       <CheckoutHeader />
@@ -28,7 +28,6 @@ function CheckoutPage() {
       >
         <SelectHeader />
         <SelectMain />
-        <SelectFooter />
       </Box>
     </Box>
   )

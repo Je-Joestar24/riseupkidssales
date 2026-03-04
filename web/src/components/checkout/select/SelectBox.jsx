@@ -1,16 +1,14 @@
-import { useState } from 'react'
 import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useCheckout } from '../../../hooks/useCheckout.js'
 import boxImage from '../../../assets/images/box.png'
 
-const BOX_PRICE = 297
 const BOX_SUMMARY_BG = 'rgb(212, 230, 227)'
 
-function SelectBox({ childCount = 1 }) {
+function SelectBox() {
   const { t } = useTranslation()
-  const [checked, setChecked] = useState(false)
-  const boxTotal = BOX_PRICE * childCount
+  const { addBox, setAddBox, boxTotal, boxPriceDisplay } = useCheckout()
 
   return (
     <Box
@@ -69,7 +67,7 @@ function SelectBox({ childCount = 1 }) {
           }}
         >
           <Typography component="span" sx={{ fontSize: '2.25rem', color: 'secondary.main', fontWeight: 700 }}>
-            R$297
+            {boxPriceDisplay}
           </Typography>
           <Typography component="span" sx={{ fontSize: '1.125rem', color: 'text.secondary', fontWeight: 600 }}>
             {t('checkout.box.perChild')}
@@ -78,8 +76,8 @@ function SelectBox({ childCount = 1 }) {
         <FormControlLabel
           control={
             <Checkbox
-              checked={checked}
-              onChange={(e) => setChecked(e.target.checked)}
+              checked={addBox}
+              onChange={(e) => setAddBox(e.target.checked)}
               icon={
                 <Box
                   component="span"
@@ -139,7 +137,7 @@ function SelectBox({ childCount = 1 }) {
           <li>• {t('checkout.box.bullet2')}</li>
           <li>• {t('checkout.box.bullet3')}</li>
         </Box>
-        {checked && (
+        {addBox && boxTotal && (
           <Box
             sx={{
               mt: 2,
@@ -149,9 +147,7 @@ function SelectBox({ childCount = 1 }) {
             }}
           >
             <Typography sx={{ fontSize: '1.125rem', color: 'secondary.main', fontWeight: 600 }}>
-              {childCount === 1
-                ? `R$${BOX_PRICE}`
-                : `${childCount} ${t('checkout.box.caixas')}: R$${boxTotal}`}
+              {boxTotal.display}
             </Typography>
           </Box>
         )}
