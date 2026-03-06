@@ -29,6 +29,29 @@
         "subtitle": "Descubre cómo los niños aprenden inglés de forma natural y alegre",
         "cta": "Comenzar el Viaje de Mi Hijo"
     },
+    "families": {
+        "title": "Familias Fundadoras Rise Up Kids",
+        "subtitle": "Puedes estar entre las primeras familias en iniciar la jornada Rise Up Kids.",
+        "cards": {
+            "priorityFollowUp": {
+                "title": "Acompañamiento prioritario",
+                "description": "Acceso más cercano al equipo pedagógico durante la fase inicial del programa."
+            },
+            "frequentFeedback": {
+                "title": "Retroalimentación individual frecuente",
+                "description": "Orientación personalizada y seguimiento cercano de la evolución del niño."
+            },
+            "founderValueGuaranteed": {
+                "title": "Valor fundador garantizado",
+                "description": "Precio inicial preservado para hijos actuales y futuros, incluso tras reajustes."
+            },
+            "reducedInitialClasses": {
+                "title": "Clases iniciales reducidas",
+                "description": "Más atención individual en las primeras clases del programa."
+            }
+        },
+        "cta": "QUIERO A MI HIJO BILINGÜE"
+    },
     "extras": {
         "joy": "Alegría",
         "learning": "Aprendizaje",
@@ -101,8 +124,8 @@
             "Nuevo contenido añadido regularmente",
             "Práctica guiada de pronunciación",
             "Aclaración de dudas de los padres sobre el uso del programa (24 horas al día, excepto domingos)",
-            "Acceso por 12 meses con renovación automática",
-            "Garantía de 14 días"
+            "Materiales digitales para actividades prácticas incluidos.",
+            "Sistema de puntos y recompensas a lo largo del proceso de aprendizaje."
         ],
         "footerPhysical": "Disponible en formato físico en Brasil.",
         "footerDigital": "Versión digital completa para otros países."
@@ -147,10 +170,6 @@
             {
                 "question": "¿El box físico está disponible para mi región?",
                 "answer": "El box físico es un complemento opcional disponible actualmente para familias en Brasil en el momento de la matrícula.\n\nSe prepara según el inicio del recorrido del niño e integra la experiencia pedagógica del programa; no se vende por separado."
-            },
-            {
-                "question": "¿Cuál es la garantía?",
-                "answer": "Puedes probar el programa digital Rise Up Kids durante 14 días.\n\nSi no tiene sentido para tu familia, devolvemos el importe del programa digital dentro de ese período."
             }
         ]
     },
@@ -265,6 +284,25 @@
             "contactPrompt": "¿Dudas? Contáctanos en",
             "copyright": "© 2026 Rise Up Kids. Todos los derechos reservados."
         },
+        "success": {
+            "title": "¡Gracias!",
+            "message": "Tu pago se realizó correctamente. Ya puedes iniciar sesión en la app Rise Up Kids con tu cuenta.",
+            "verifying": "Verificando tu pago…",
+            "backToCheckout": "Volver al checkout",
+            "continueToApp": "Ir a Rise Up Kids",
+            "missingSession": "Sesión no encontrada.",
+            "welcomeTitle": "¡Bienvenido a Rise Up Kids! 💛",
+            "welcomeSubtitle": "Tu acceso ya está activo",
+            "tagline": "Te has unido a familias alrededor del mundo construyendo un futuro más brillante.",
+            "step1Title": "Paso 1 listo",
+            "step1Desc": "Tu primera jornada de aprendizaje te espera",
+            "step2Title": "Añade niños",
+            "step2Desc": "Configura perfiles para tus hijos",
+            "step3Title": "Gana recompensas",
+            "step3Desc": "Sigue el progreso y celebra los logros",
+            "startLearningNow": "Empezar a aprender ahora",
+            "guaranteeStarted": "¡Tu período de garantía de 14 días ha comenzado! Tienes hasta el {{date}} para solicitar un reembolso total."
+        },
         "register": {
             "step1": "Elige tu plan",
             "step2": "Configura tu cuenta",
@@ -274,6 +312,8 @@
         },
         "registerForm": {
             "guardianTitle": "Datos del responsable",
+            "nameLabel": "Nombre",
+            "namePlaceholder": "Tu nombre completo",
             "emailLabel": "Correo electrónico",
             "emailPlaceholder": "padres@email.com",
             "passwordLabel": "Contraseña",
@@ -291,7 +331,8 @@
             "termsLinkText": "Términos de Uso",
             "termsAgreeAfter": " y autorizo el cobro de la suscripción anual.",
             "submitButton": "Finalizar inscripción",
-            "protectedBy": "Protegido por Stripe"
+            "protectedBy": "Protegido por Stripe",
+            "onlyCardSupported": "Por el momento solo está disponible el pago con tarjeta (Stripe)."
         },
         "registerSummary": {
             "title": "Tu inscripción",

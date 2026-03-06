@@ -13,7 +13,7 @@ import {
   getBoxPricePerChild,
   getBoxPriceDisplay,
   MIN_CHILDREN,
-  MAX_CHILDREN,
+  MAX_CHILDREN_UI,
 } from '../services/checkoutService.js'
 
 /**
@@ -59,6 +59,7 @@ export function useCheckout() {
       line1: planPricing.line1,
       line2: planPricing.line2,
       amount: planPricing.amount,
+      discountFormatted: planPricing.discountFormatted ?? null,
     },
     totalPricing: {
       line1: totalPricing.line1,
@@ -69,9 +70,9 @@ export function useCheckout() {
       : null,
     boxPricePerChild,
     boxPriceDisplay: getBoxPriceDisplay(locale),
-    // constants
+    // constants (UI cap at 3; backend supports up to 10)
     minChildren: MIN_CHILDREN,
-    maxChildren: MAX_CHILDREN,
+    maxChildren: MAX_CHILDREN_UI,
   }
 }
 

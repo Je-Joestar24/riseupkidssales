@@ -6,7 +6,7 @@ import CheckoutHeader from '../components/common/CheckoutHeader.jsx'
 import RegisterHeader from '../components/checkout/register/RegisterHead.jsx'
 import RegisterMain from '../components/checkout/register/RegisterMain.jsx'
 import { setChildCount, setAddBox } from '../store/slices/checkoutSlice.js'
-import { MIN_CHILDREN, MAX_CHILDREN } from '../services/checkoutService.js'
+import { MIN_CHILDREN, MAX_CHILDREN_UI } from '../services/checkoutService.js'
 
 /**
  * Hydrate checkout store from URL search params (e.g. ?children=2&box=1).
@@ -21,7 +21,7 @@ function useCheckoutParams() {
     if (childrenParam != null && childrenParam !== '') {
       const n = Number(childrenParam)
       if (Number.isFinite(n)) {
-        const clamped = Math.min(MAX_CHILDREN, Math.max(MIN_CHILDREN, Math.floor(n)))
+        const clamped = Math.min(MAX_CHILDREN_UI, Math.max(MIN_CHILDREN, Math.floor(n)))
         dispatch(setChildCount(clamped))
       }
     }

@@ -7,12 +7,20 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
+  CircularProgress,
+  Alert,
 } from '@mui/material'
 import LockIcon from '@mui/icons-material/Lock'
 import CreditCardIcon from '@mui/icons-material/CreditCard'
 import ShieldIcon from '@mui/icons-material/Shield'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useCheckout } from '../../../hooks/useCheckout.js'
+import {
+  registerAndCreateCheckoutSession,
+  localeToRegion,
+  DEFAULT_TERMS_VERSION,
+} from '../../../services/checkoutService.js'
 
 const ORANGE = 'rgb(242, 175, 16)'
 const BORDER_DEFAULT = 'rgb(229, 231, 235)'
@@ -90,16 +98,45 @@ function PaymentOptionButton({ option, selected, title, subtitle, onSelect }) {
   )
 }
 
+const appUrl = () => import.meta.env.VITE_APP_URL || window.location.origin
+
 function RgisterForm() {
   const { t } = useTranslation()
+  const { childCount, addBox, locale } = useCheckout()
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [paymentMethod, setPaymentMethod] = useState('paypal')
+  const [paymentMethod, setPaymentMethod] = useState('card')
   const [termsAccepted, setTermsAccepted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: wire to checkout/API
+    setError(null)
+    if (paymentMethod !== 'card') {
+      setError(t('checkout.registerForm.onlyCardSupported') || 'Only card payment (Stripe) is available for now.')
+      return
+    }
+    setLoading(true)
+    try {
+      const base = appUrl()
+      const { url } = await registerAndCreateCheckoutSession({
+        name: name.trim() || undefined,
+        email: email.trim(),
+        password,
+        region: localeToRegion(locale),
+        childCount,
+        addBox,
+        termsVersion: DEFAULT_TERMS_VERSION,
+        successUrl: `${base}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancelUrl: `${base}/checkout/register`,
+      })
+      if (url) window.location.href = url
+    } catch (err) {
+      setError(err.message || 'Something went wrong')
+      setLoading(false)
+    }
   }
 
   const paymentTitles = {
@@ -126,6 +163,12 @@ function RgisterForm() {
         width: '100%',
       }}
     >
+      {error && (
+        <Alert severity="error" onClose={() => setError(null)} sx={{ mb: 2 }}>
+          {error}
+        </Alert>
+      )}
+
       {/* Guardian details */}
       <Box sx={{ mb: 4 }}>
         <Typography
@@ -140,6 +183,42 @@ function RgisterForm() {
           {t('checkout.registerForm.guardianTitle')}
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <Box>
+            <Typography
+              component="label"
+              htmlFor="register-name"
+              sx={{
+                display: 'block',
+                fontSize: '0.875rem',
+                color: 'text.secondary',
+                mb: 1,
+                fontWeight: 600,
+              }}
+            >
+              {t('checkout.registerForm.nameLabel') || 'Name'}
+            </Typography>
+            <TextField
+              id="register-name"
+              type="text"
+              placeholder={t('checkout.registerForm.namePlaceholder') || 'Your name'}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              fullWidth
+              autoComplete="name"
+              variant="outlined"
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '8px',
+                  fontSize: '1rem',
+                  backgroundColor: 'white',
+                  '& fieldset': { borderColor: BORDER_DEFAULT },
+                  '&.Mui-focused fieldset': { borderColor: ORANGE, borderWidth: '1px' },
+                },
+                '& .MuiOutlinedInput-input': { py: 1.5, px: 2, fontWeight: 600 },
+              }}
+            />
+          </Box>
           <Box>
             <Typography
               component="label"
@@ -343,8 +422,8 @@ function RgisterForm() {
         fullWidth
         variant="contained"
         size="large"
-        startIcon={<LockIcon />}
-        disabled={!termsAccepted}
+        startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <LockIcon />}
+        disabled={!termsAccepted || loading}
         sx={{
           mt: 4,
           py: 2,

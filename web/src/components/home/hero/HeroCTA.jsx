@@ -1,4 +1,5 @@
 import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const GOLD = '#f2af10'
@@ -7,6 +8,8 @@ export default function HeroCTA() {
   const { t } = useTranslation()
   return (
     <Button
+      component={Link}
+      to="/checkout"
       variant="contained"
       size="large"
       disableElevation

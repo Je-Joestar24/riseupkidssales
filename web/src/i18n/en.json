@@ -29,6 +29,29 @@
         "subtitle": "Discover how children learn English naturally and joyfully",
         "cta": "I Want to Be a Founding Family"
     },
+    "families": {
+        "title": "Rise Up Kids Founding Families",
+        "subtitle": "You can be among the first families to start the Rise Up Kids journey.",
+        "cards": {
+            "priorityFollowUp": {
+                "title": "Priority follow-up",
+                "description": "Closer access to the pedagogical team during the initial phase of the program."
+            },
+            "frequentFeedback": {
+                "title": "Frequent individual feedback",
+                "description": "Personalized guidance and close follow-up on your child's progress."
+            },
+            "founderValueGuaranteed": {
+                "title": "Founder value guaranteed",
+                "description": "Initial price preserved for current and future children, even after adjustments."
+            },
+            "reducedInitialClasses": {
+                "title": "Reduced initial classes",
+                "description": "More individual attention in the program's first classes."
+            }
+        },
+        "cta": "I WANT MY CHILD BILINGUAL"
+    },
     "extras": {
         "joy": "Joy",
         "learning": "Learning",
@@ -101,8 +124,8 @@
             "New content added regularly",
             "Guided pronunciation practice",
             "Clarification of parents' doubts about the use of the program (24 hours a day, except Sundays)",
-            "Access for 12 months with automatic renewal",
-            "14-day guarantee"
+            "Digital materials for hands-on activities included.",
+            "Points and rewards system throughout the learning journey."
         ],
         "footerPhysical": "Physical box available in Brazil.",
         "footerDigital": "Complete digital version for other countries."
@@ -147,10 +170,6 @@
             {
                 "question": "Is the physical box available for my region?",
                 "answer": "The physical box is an optional add-on currently available for families in Brazil at enrollment.\n\nIt is prepared according to the start of the child's journey and is part of the program's pedagogical experience; it is not sold separately."
-            },
-            {
-                "question": "What is the guarantee?",
-                "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't work for your family, we refund the digital program fee within that period."
             }
         ]
     },
@@ -265,6 +284,25 @@
             "contactPrompt": "Questions? Contact us at",
             "copyright": "© 2026 Rise Up Kids. All rights reserved."
         },
+        "success": {
+            "title": "Thank you!",
+            "message": "Your payment was successful. You can now log in to the Rise Up Kids app with your account.",
+            "verifying": "Verifying your payment…",
+            "backToCheckout": "Back to checkout",
+            "continueToApp": "Continue to Rise Up Kids",
+            "missingSession": "Missing session.",
+            "welcomeTitle": "Welcome to Rise Up Kids! 💛",
+            "welcomeSubtitle": "Your access is already active",
+            "tagline": "You've joined families around the world building a brighter future.",
+            "step1Title": "Step 1 Ready",
+            "step1Desc": "Your first learning journey awaits",
+            "step2Title": "Add Children",
+            "step2Desc": "Set up profiles for your children",
+            "step3Title": "Earn Rewards",
+            "step3Desc": "Track progress and celebrate wins",
+            "startLearningNow": "Start Learning Now",
+            "guaranteeStarted": "Your 14-day guarantee period has started! You have until {{date}} to request a full refund."
+        },
         "register": {
             "step1": "Choose your plan",
             "step2": "Configure your account",
@@ -274,6 +312,8 @@
         },
         "registerForm": {
             "guardianTitle": "Guardian details",
+            "nameLabel": "Name",
+            "namePlaceholder": "Your full name",
             "emailLabel": "Email",
             "emailPlaceholder": "parents@email.com",
             "passwordLabel": "Password",
@@ -291,7 +331,8 @@
             "termsLinkText": "Terms of Use",
             "termsAgreeAfter": " and authorize the annual subscription charge.",
             "submitButton": "Complete enrollment",
-            "protectedBy": "Protected by Stripe"
+            "protectedBy": "Protected by Stripe",
+            "onlyCardSupported": "Only card payment (Stripe) is available at this time."
         },
         "registerSummary": {
             "title": "Your enrollment",

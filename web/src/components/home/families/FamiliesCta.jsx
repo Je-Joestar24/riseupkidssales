@@ -4,35 +4,45 @@ import { useTranslation } from '../../../hooks/useTranslation.js'
 
 const CHECKOUT_PATH = '/checkout'
 
-export default function DiscoverCta({ onClick, href, children }) {
+export default function FamiliesCta({ onClick, href }) {
   const { t } = useTranslation()
-  const label = children ?? t('discover.cta')
+  const label = t('families.cta')
+  const to = href ?? CHECKOUT_PATH
   const buttonSx = {
     bgcolor: '#f2af10',
     color: 'white',
-    px: 4,
-    py: 2.5,
-    fontSize: '1.5rem',
-    borderRadius: 2,
+    px: 6,
+    py: 3,
+    fontSize: '1.875rem',
+    borderRadius: 3,
+    fontWeight: 700,
+    boxShadow: '0 10px 40px rgba(242,175,16,0.3)',
     '&:hover': {
       bgcolor: '#e09e0e',
       opacity: 0.9,
+      boxShadow: '0 15px 50px rgba(242,175,16,0.4)',
     },
   }
 
   if (onClick && !href) {
     return (
-      <Box sx={{ textAlign: 'center', mt: 5 }}>
-        <Button type="button" onClick={onClick} sx={buttonSx} variant="contained" disableElevation>
+      <Box sx={{ textAlign: 'center', mt: 8 }}>
+        <Button
+          type="button"
+          onClick={onClick}
+          sx={buttonSx}
+          variant="contained"
+          disableElevation
+          aria-label={label}
+        >
           {label}
         </Button>
       </Box>
     )
   }
 
-  const to = href ?? CHECKOUT_PATH
   return (
-    <Box sx={{ textAlign: 'center', mt: 5 }}>
+    <Box sx={{ textAlign: 'center', mt: 8 }}>
       <Button
         component={Link}
         to={to}

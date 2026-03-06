@@ -46,6 +46,7 @@ function SelectSummary() {
         {t('checkout.summary.title')}
       </Typography>
 
+      {/* Plan line: "N Crianças" | 12x R$... / ou R$... à vista */}
       <Box sx={{ mb: 3, pb: 3, borderBottom: 1, borderColor: 'divider' }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography component="span" sx={{ fontSize: '1rem', color: 'text.secondary', fontWeight: 600 }}>
@@ -55,13 +56,14 @@ function SelectSummary() {
             <Typography component="div" sx={{ fontSize: '1.125rem', fontWeight: 600, color: 'secondary.main' }}>
               {planPricing.line1}
             </Typography>
-            <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.disabled', fontWeight: 600 }}>
+            <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
               {planPricing.line2 ?? paymentNote}
             </Typography>
           </Box>
         </Box>
       </Box>
 
+      {/* Total row: "Total" | 12x R$... / ou R$... à vista */}
       <Box
         sx={{
           display: 'flex',
@@ -80,7 +82,7 @@ function SelectSummary() {
           <Typography component="div" sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'secondary.main' }}>
             {totalPricing.line1}
           </Typography>
-          <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.disabled', fontWeight: 600 }}>
+          <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
             {totalPricing.line2 ?? paymentNote}
           </Typography>
         </Box>

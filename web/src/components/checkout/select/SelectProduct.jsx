@@ -129,6 +129,19 @@ function SelectProduct() {
               {priceLine2}
             </Typography>
           </Box>
+          {planPricing.discountFormatted && (
+            <Box sx={{ mb: 2 }}>
+              <Typography
+                sx={{
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  color: 'secondary.main',
+                }}
+              >
+                {planPricing.discountFormatted}
+              </Typography>
+            </Box>
+          )}
           <Box sx={{ mb: 2 }}>
             <Typography sx={{ fontSize: '0.75rem', color: SPECIAL_VALUE_COLOR, fontWeight: 600 }}>
               {t('checkout.select.specialValue')}

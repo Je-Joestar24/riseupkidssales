@@ -6,6 +6,7 @@ import HeroSection from '../components/home/hero/HeroSection.jsx'
 import ExtrasList from '../components/home/extras/ExtrasList.jsx'
 import '../assets/css/App.css'
 import DiscoverMain from '../components/home/discover/DiscoverMain.jsx'
+import FamiliesMain from '../components/home/families/FamiliesMain.jsx'
 import StudiesMain from '../components/home/studies/StudiesMain.jsx'
 import MethodologyMain from '../components/home/methodology/MethodologyMain.jsx'
 import JourneyMain from '../components/home/journey/JourneyMain.jsx'
@@ -28,6 +29,7 @@ function HomePage() {
         </Box>
         <ExtrasList />
         <DiscoverMain />
+        <FamiliesMain />
         <StudiesMain />
         <MethodologyMain />
         <JourneyMain />
