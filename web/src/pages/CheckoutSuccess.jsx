@@ -28,6 +28,19 @@ export default function CheckoutSuccess() {
   const [status, setStatus] = useState('loading') // 'loading' | 'success' | 'error'
 
   useEffect(() => {
+    const provider = searchParams.get('provider')
+    const isPayPal =
+      provider === 'paypal' ||
+      (typeof window !== 'undefined' && window.sessionStorage?.getItem('checkout_provider') === 'paypal')
+
+    if (isPayPal) {
+      try {
+        sessionStorage.removeItem('checkout_provider')
+      } catch (_) {}
+      setStatus('success')
+      return
+    }
+
     if (!sessionId || sessionId.trim() === '') {
       navigate('/checkout/register', { replace: true })
       return
@@ -43,9 +56,9 @@ export default function CheckoutSuccess() {
       })
 
     return () => { cancelled = true }
-  }, [sessionId, navigate])
+  }, [sessionId, searchParams, navigate])
 
-  if (!sessionId || status === 'loading') {
+  if (status === 'loading') {
     return (
       <Box
         sx={{

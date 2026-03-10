@@ -20,9 +20,20 @@ export default function DiscoverHeader() {
       </Typography>
       <Typography
         component="p"
-        sx={{ fontSize: '1.5rem', color: 'text.secondary' }}
+        sx={{
+          fontSize: '1.5rem',
+          color: 'rgb(55, 65, 81)',
+          fontWeight: 600,
+          mb: 2,
+        }}
       >
         {t('discover.subtitle')}
+      </Typography>
+      <Typography
+        component="p"
+        sx={{ fontSize: '1.25rem', color: 'rgb(75, 85, 99)', fontWeight: 600 }}
+      >
+        {t('discover.subtitle2')}
       </Typography>
     </Box>
   );

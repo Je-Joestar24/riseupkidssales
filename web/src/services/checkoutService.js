@@ -4,6 +4,8 @@
  * Backend supports 1–10 kids; UI is currently capped at MAX_CHILDREN_UI (3).
  */
 
+import axios from 'axios'
+
 export const MIN_CHILDREN = 1
 /** Backend/config max; pricing data supports 1–10 */
 export const MAX_CHILDREN = 10
@@ -243,6 +245,38 @@ export function localeToRegion(locale) {
   return map[locale] || 'us'
 }
 
+/** Locale to PayPal/backend currency (BRL, USD, EUR) for tier strings */
+export function localeToCurrency(locale) {
+  const map = { pt: 'BRL', en: 'USD', es: 'EUR' }
+  return map[locale] || 'USD'
+}
+
+/**
+ * Register parent only; returns JWT for use with PayPal or other authenticated flows.
+ * @param {Object} opts - name, email, password
+ * @returns {Promise<{ token: string }>}
+ */
+export async function registerParent({ name, email, password }) {
+  const base = getApiBaseUrl()
+  const res = await fetch(`${base}/auth/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name || email?.replace(/@.*/, '') || 'Guardian',
+      email,
+      password,
+      role: 'parent',
+    }),
+  })
+  const data = await res.json().catch(() => ({}))
+  if (!res.ok) {
+    throw new Error(data.message || data.error || 'Registration failed')
+  }
+  const token = data.data?.token
+  if (!token) throw new Error('No token after registration')
+  return { token }
+}
+
 /**
  * Register parent then create Stripe session and return redirect URL.
  * Use when user submits the register form with card payment.
@@ -303,4 +337,74 @@ export async function getCheckoutSessionDetails(sessionId) {
   const data = await res.json().catch(() => ({}))
   if (!res.ok) throw new Error(data.message || 'Invalid session')
   return { user: data.user, token: data.token }
+}
+
+// ——— PayPal one-time checkout (yearly plan) ———
+// Backend: POST /paypal/create-order (body: { tier }) → { orderID }
+//         POST /paypal/capture-order (body: { orderID }) → capture and activate subscription
+// Tier format: "1_child_USD" | "2_children_BRL" | "3_children_EUR" (see backend paypalFamilyPlanPrices.json).
+
+/** Build PayPal tier string from child count and currency. Matches backend paypalFamilyPlanPrices.json keys.
+ * @param {number} childCount - 1–3 (or up to MAX_CHILDREN)
+ * @param {string} [currency='USD'] - USD, BRL, EUR
+ * @param {boolean} [useYearly=false] - Use yearly tier (e.g. when Pay in 4 is not available in region). Same price, different tier key.
+ * @returns {string} e.g. "1_child_USD" or "1_child_yearly_BRL"
+ */
+export function getPaypalTier(childCount, currency = 'USD', useYearly = false) {
+  const n = Math.min(MAX_CHILDREN, Math.max(MIN_CHILDREN, Number(childCount) || 1))
+  const key = n === 1 ? '1_child' : `${n}_children`
+  const tierKey = useYearly ? `${key}_yearly` : key
+  const cur = (currency || 'USD').toUpperCase()
+  return `${tierKey}_${cur}`
+}
+
+/**
+ * Create a PayPal order for the given tier. Requires authenticated parent (Bearer token).
+ * Use in PayPalButtons createOrder callback.
+ * @param {Object} opts
+ * @param {string} opts.token - JWT (Bearer)
+ * @param {string} opts.tier - e.g. "1_child_USD", "2_children_BRL"
+ * @returns {Promise<{ orderID: string }>}
+ */
+export async function createPaypalOrder({ token, tier }) {
+  const base = getApiBaseUrl()
+  const res = await axios.post(
+    `${base}/paypal/create-order`,
+    { tier: tier?.trim() },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      timeout: 15000,
+    }
+  )
+  const data = res.data
+  if (!data?.orderID) throw new Error('No orderID returned from create-order')
+  return { orderID: data.orderID }
+}
+
+/**
+ * Capture a PayPal order and activate subscription. Requires authenticated parent (Bearer token).
+ * Use in PayPalButtons onApprove callback.
+ * @param {Object} opts
+ * @param {string} opts.token - JWT (Bearer)
+ * @param {string} opts.orderID - PayPal order ID from approval
+ * @returns {Promise<{ success: boolean, message?: string }>}
+ */
+export async function capturePaypalOrder({ token, orderID }) {
+  const base = getApiBaseUrl()
+  const res = await axios.post(
+    `${base}/paypal/capture-order`,
+    { orderID: orderID?.trim() },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      timeout: 15000,
+    }
+  )
+  const data = res.data
+  return { success: Boolean(data?.success), message: data?.message }
 }

@@ -7,7 +7,7 @@
         "badge": "Metodología basada en inmersión natural",
         "titlePart1": "Tu hijo bilingüe en 1 año, ",
         "titlePart2": "una infancia donde el inglés es natural.",
-        "subtitle": "Rise Up Kids involucra a los niños en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real. Es en la infancia que el lenguaje se vuelve natural, y el inglés se vive con comprensión, expresión y confianza para la vida.",
+        "subtitle": "Rise Up Kids involucra a los niños (a partir de 5 años) en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real, para que el inglés sea comprendido, vivido y expresado con confianza.",
         "features": {
             "immersiveEnglish": {
                 "title": "Inglés Inmersivo",
@@ -27,7 +27,8 @@
     "discover": {
         "title": "Mira cómo el inglés se vuelve natural",
         "subtitle": "Descubre cómo los niños aprenden inglés de forma natural y alegre",
-        "cta": "Comenzar el Viaje de Mi Hijo"
+        "subtitle2": "Programa inmersivo de inglés online para niños de 5 a 13 años.",
+        "cta": "Quiero a mi hijo bilingüe"
     },
     "families": {
         "title": "Familias Fundadoras Rise Up Kids",
@@ -325,14 +326,23 @@
             "paymentCardDesc": "Visa, Mastercard, Amex",
             "paymentPayPal": "PayPal",
             "paymentPayPalDesc": "Pagar con PayPal",
+            "paypalPlanOptionPayIn4": "Pagar en 4",
+            "paypalPlanOptionYearly": "Pagar anual",
+            "paypalPlanLabel": "Opción de pago PayPal",
+            "payLaterNotAvailableInCountry": "Pago en 4 no disponible en tu país.",
             "paymentPagSeguro": "PagSeguro",
             "paymentPagSeguroDesc": "Pagar con PagSeguro",
             "termsAgreeBefore": "Acepto los ",
             "termsLinkText": "Términos de Uso",
             "termsAgreeAfter": " y autorizo el cobro de la suscripción anual.",
             "submitButton": "Finalizar inscripción",
+            "continueToPayPal": "Continuar a PayPal",
+            "completePaymentAbove": "Completa el pago arriba",
+            "completeWithPayPal": "Completa el pago con el botón PayPal abajo.",
             "protectedBy": "Protegido por Stripe",
-            "onlyCardSupported": "Por el momento solo está disponible el pago con tarjeta (Stripe)."
+            "protectedByPayPal": "Pago seguro con PayPal",
+            "pagseguroComingSoon": "PagSeguro próximamente.",
+            "onlyCardSupported": "Paga con tarjeta (Stripe) o PayPal."
         },
         "registerSummary": {
             "title": "Tu inscripción",

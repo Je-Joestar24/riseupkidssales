@@ -7,7 +7,7 @@
         "badge": "Methodology based on natural immersion",
         "titlePart1": "Your child bilingual in 1 year, ",
         "titlePart2": "a childhood where English is natural.",
-        "subtitle": "Rise Up Kids engages children in meaningful English experiences, within a structured and progressive framework that integrates smart technology, immersive content, and real human teaching. It is in childhood that language becomes natural, and English is lived with understanding, expression, and confidence for life.",
+        "subtitle": "Rise Up Kids engages children (ages 5+) in meaningful English experiences, within an intentional and progressive framework that integrates smart technology, immersive content, and real human teaching—so English is understood, lived, and expressed with confidence.",
         "features": {
             "immersiveEnglish": {
                 "title": "Immersive English",
@@ -27,7 +27,8 @@
     "discover": {
         "title": "See how English becomes natural",
         "subtitle": "Discover how children learn English naturally and joyfully",
-        "cta": "I Want to Be a Founding Family"
+        "subtitle2": "Immersive online English program for children ages 5 to 13.",
+        "cta": "I Want My Child Bilingual"
     },
     "families": {
         "title": "Rise Up Kids Founding Families",
@@ -325,14 +326,23 @@
             "paymentCardDesc": "Visa, Mastercard, Amex",
             "paymentPayPal": "PayPal",
             "paymentPayPalDesc": "Pay with PayPal",
+            "paypalPlanOptionPayIn4": "Pay in 4",
+            "paypalPlanOptionYearly": "Pay yearly",
+            "paypalPlanLabel": "PayPal payment option",
+            "payLaterNotAvailableInCountry": "Pay in 4 is not available in your country.",
             "paymentPagSeguro": "PagSeguro",
             "paymentPagSeguroDesc": "Pay with PagSeguro",
             "termsAgreeBefore": "I agree to the ",
             "termsLinkText": "Terms of Use",
             "termsAgreeAfter": " and authorize the annual subscription charge.",
             "submitButton": "Complete enrollment",
+            "continueToPayPal": "Continue to PayPal",
+            "completePaymentAbove": "Complete payment above",
+            "completeWithPayPal": "Complete your payment with the PayPal button below.",
             "protectedBy": "Protected by Stripe",
-            "onlyCardSupported": "Only card payment (Stripe) is available at this time."
+            "protectedByPayPal": "Secure payment with PayPal",
+            "pagseguroComingSoon": "PagSeguro coming soon.",
+            "onlyCardSupported": "Pay with card (Stripe) or PayPal."
         },
         "registerSummary": {
             "title": "Your enrollment",

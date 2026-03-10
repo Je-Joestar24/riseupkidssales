@@ -10,12 +10,18 @@ export default function DiscoverCta({ onClick, href, children }) {
   const buttonSx = {
     bgcolor: '#f2af10',
     color: 'white',
-    px: 4,
-    py: 2.5,
+    px: '40px',
+    py: '24px',
     fontSize: '1.5rem',
-    borderRadius: 2,
+    fontWeight: 700,
+    borderRadius: '16px',
+    textTransform: 'none',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '12px',
     '&:hover': {
-      bgcolor: '#e09e0e',
+      bgcolor: '#f2af10',
       opacity: 0.9,
     },
   }

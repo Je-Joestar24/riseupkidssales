@@ -1,4 +1,5 @@
 import { Box } from '@mui/material'
+import heroSrc from '../../../assets/images/hero.png'
 
 const DECORATIONS = [
     { top: 40, left: 40, emoji: '⭐', size: '3rem' },
@@ -8,9 +9,6 @@ const DECORATIONS = [
 ]
 
 export default function HeroImage() {
-    const heroSrc =
-        'https://images.unsplash.com/photo-1586503452950-997923af27f9?w=1080&q=80'
-
     return (
         <Box
             sx={{
@@ -48,13 +46,14 @@ export default function HeroImage() {
                 <Box
                     component="img"
                     src={heroSrc}
-                    alt="Happy child learning"
+                    alt="Children smiling together"
                     sx={{
                         position: 'relative',
                         zIndex: 1,
-                        maxWidth: '100%',
                         height: 'auto',
-                        borderRadius: 3
+                        borderRadius: 3,
+                        width: '85%',
+                        objectFit: 'cover',
                     }}
                 />
             </Box>

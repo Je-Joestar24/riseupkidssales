@@ -28,6 +28,7 @@ export default function HeroCTA() {
           opacity: 0.9,
           boxShadow: `0 15px 50px rgba(242, 175, 16, 0.4)`,
         },
+        mb: 8
       }}
     >
       {t('hero.cta')}
