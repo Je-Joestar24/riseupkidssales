@@ -35,31 +35,6 @@ export default function ExperienceMain() {
           }}
         >
           <ExperienceList />
-          <Box
-            sx={{
-              mt: 4,
-              pt: 4,
-              borderTop: '2px solid',
-              borderColor: '#d4e6e3',
-            }}
-          >
-            <Typography
-              component="p"
-              sx={{
-                fontSize: '1.125rem',
-                color: 'grey.700',
-                lineHeight: 1.6,
-              }}
-            >
-              <Box component="span" sx={{ fontWeight: 700, color: 'secondary.main' }}>
-                {t('experience.footerPhysical')}
-              </Box>
-              <br />
-              <Box component="span" sx={{ fontWeight: 600,fontSize: '1rem' }}>
-                {t('experience.footerDigital')}
-              </Box>
-            </Typography>
-          </Box>
         </Box>
       </Container>
     </Box>

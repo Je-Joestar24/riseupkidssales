@@ -131,6 +131,75 @@
         "footerPhysical": "Box físico disponível no Brasil.",
         "footerDigital": "Versão digital completa para outros países."
     },
+    "develop": {
+        "title": "Dentro da experiência Rise Up Kids",
+        "subtitle": "A criança desenvolve muito mais do que um idioma.",
+        "cards": {
+            "curiosity": {
+                "title": "Curiosidade ativa",
+                "desc": "O inglês desperta interesse, exploração e prazer em descobrir."
+            },
+            "persistence": {
+                "title": "Persistência gentil",
+                "desc": "A criança continua praticando com confiança, mesmo quando ainda está aprendendo."
+            },
+            "growth": {
+                "title": "Mentalidade de crescimento",
+                "desc": "A criança sente-se segura para explorar, errar e continuar aprendendo."
+            },
+            "autonomy": {
+                "title": "Autonomia em desenvolvimento",
+                "desc": "A criança participa, explora e avança com crescente independência."
+            }
+        }
+    },
+    "english": {
+        "title": "A Jornada do Inglês no Rise Up Kids",
+        "subtitle": "Como as crianças realmente aprendem",
+        "year1": {
+            "title": "Ano 1",
+            "subtitle": "Compreender e se expressar",
+            "lead": "Primeiro, a criança entende. Depois, começa a se comunicar.",
+            "italic": "Seu filho aprende o \"esqueleto\" do inglês, como as frases funcionam e como se comunicar com sentido.",
+            "bullets": [
+                "Ouve em contexto significativo",
+                "Participa de atividades interativas",
+                "Repete naturalmente o que aprende",
+                "Começa a falar com confiança"
+            ],
+            "outcomes": [
+                "Entende inglês naturalmente",
+                "Responde de forma natural",
+                "Fala com confiança"
+            ]
+        },
+        "year2": {
+            "title": "Ano 2",
+            "subtitle": "Ler, escrever e expandir",
+            "lead": "Com a base oral construída, a leitura surge naturalmente.",
+            "italic": "Seu filho expande o inglês para leitura e escrita, consolidando a fluência completa no idioma.",
+            "bullets": [
+                "Inicia leitura com compreensão",
+                "Reconhece palavras e padrões",
+                "Começa a escrever frases",
+                "Amplia vocabulário ativamente"
+            ],
+            "outcomes": [
+                "Lê com compreensão",
+                "Escreve frases completas",
+                "Avança continuamente no idioma"
+            ]
+        },
+        "footerCta": {
+            "year1": "Ano 1",
+            "year2": "Ano 2",
+            "ariaLabel": "Progressão Ano 1 e Ano 2"
+        }
+    },
+    "reviews": {
+        "title": "O Que Dizem as Famílias",
+        "subtitle": "Depoimentos verificados de famílias reais"
+    },
     "invitation": {
         "badge": "CONVITE EXCLUSIVO",
         "title": "Convite às Famílias Fundadoras",
@@ -160,19 +229,27 @@
             },
             {
                 "question": "Quanto tempo por dia é necessário?",
-                "answer": "O mais importante no Rise Up Kids é o contato frequente com o inglês, não longas sessões.\n\nA maioria das crianças interage com o idioma cerca de 20 a 30 minutos nos dias de uso, com pelo menos 5 contatos semanais, por meio de vídeos, atividades ou aulas ao vivo.\n\nEssa frequência permite que o inglês se torne natural ao longo do tempo."
+                "answer": "O mais importante no Rise Up Kids é o contato frequente com o inglês, não longas sessões.\n\nA criança é aconselhada a interagir cerca de 20 a 30 minutos por dia na plataforma/app, 5 vezes por semana. Também damos instruções de como seu filho pode ter atividades em inglês no cotidiano.\n\nEssa frequência permite que o inglês se torne natural ao longo do tempo."
             },
             {
                 "question": "Meu filho não sabe nada de inglês. É adequado?",
-                "answer": "Sim. O Rise Up Kids foi desenvolvido especialmente para iniciantes.\n\nA criança começa pela compreensão, com apoio visual e linguagem guiada, e progride naturalmente até a fala, respeitando seu ritmo individual."
+                "answer": "Sim. Rise Up Kids foi desenvolvido especialmente para iniciantes.\n\nA criança começa pela compreensão, com apoio visual e linguagem guiada, e progride naturalmente até a fala, respeitando seu ritmo individual."
             },
             {
                 "question": "Como acompanho o progresso?",
                 "answer": "Os pais acompanham a evolução da criança ao longo da jornada por meio das atividades realizadas, participação e orientações pedagógicas quando aplicável."
             },
             {
-                "question": "O box físico está disponível para minha região?",
-                "answer": "O box físico é um complemento opcional disponível atualmente para famílias no Brasil no momento da matrícula.\n\nEle é preparado conforme o início da jornada da criança e integra a experiência pedagógica do programa, não sendo vendido separadamente."
+                "question": "O currículo utiliza algum material?",
+                "answer": "Sim. O currículo Rise Up Kids inclui experiências digitais e materiais físicos de baixo custo que ajudam a criança a participar plenamente das atividades do programa.\n\nAlguns desses materiais simples podem ser adquiridos pelas famílias, e a lista fica disponível dentro da plataforma.\n\nAlém disso, os pais têm acesso a materiais digitais incluídos no programa, que devem ser impressos para determinadas atividades da jornada.\n\nEnquanto muitas escolas de inglês cobram separadamente por livros ou materiais, no Rise Up Kids os materiais digitais estão incluídos sem custo adicional.\n\nPara algumas atividades, é necessário que os pais imprimam os materiais com antecedência, normalmente poucas páginas por vez."
+            },
+            {
+                "question": "Qual é a garantia?",
+                "answer": "Você pode experimentar o programa digital Rise Up Kids por 14 dias.\n\nSe não fizer sentido para sua família, devolvemos o valor do programa digital dentro desse período."
+            },
+            {
+                "question": "Meu filho pode usar o computador, celular ou TV?",
+                "answer": "Sim. O Rise Up Kids pode ser acessado pelo computador (plataforma), tablet ou celular (app).\n\nAs famílias também podem espelhar a tela na TV, permitindo que a criança participe das atividades com mais conforto e liberdade de movimento.\n\nMuitas atividades incluem movimento, interação e participação ativa, por isso usar a tela grande pode tornar a experiência ainda mais divertida."
             }
         ]
     },

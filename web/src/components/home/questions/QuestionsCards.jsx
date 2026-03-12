@@ -26,9 +26,10 @@ export default function QuestionsCards() {
             id={`question-${index}-title`}
             component="h3"
             sx={{
+              fontFamily: 'Quicksand, sans-serif',
               fontSize: { xs: '1.5rem', md: '1.875rem' },
               mb: 2,
-              fontWeight: 600,
+              fontWeight: 700,
               color: 'secondary.main',
             }}
           >
@@ -37,11 +38,12 @@ export default function QuestionsCards() {
           <Typography
             component="p"
             sx={{
+              fontFamily: 'Quicksand, sans-serif',
               fontSize: '1.25rem',
               color: 'grey.700',
               lineHeight: 1.6,
               fontWeight: 600,
-              opacity: 0.8,
+              opacity: 0.9,
               whiteSpace: 'pre-line',
             }}
           >

@@ -131,6 +131,75 @@
         "footerPhysical": "Disponible en formato físico en Brasil.",
         "footerDigital": "Versión digital completa para otros países."
     },
+    "develop": {
+        "title": "Dentro de la experiencia Rise Up Kids",
+        "subtitle": "El niño desarrolla mucho más que un idioma.",
+        "cards": {
+            "curiosity": {
+                "title": "Curiosidad activa",
+                "desc": "El inglés despierta interés, exploración y placer en descubrir."
+            },
+            "persistence": {
+                "title": "Persistencia gentil",
+                "desc": "El niño continúa practicando con confianza, incluso cuando aún está aprendiendo."
+            },
+            "growth": {
+                "title": "Mentalidad de crecimiento",
+                "desc": "El niño se siente seguro para explorar, cometer errores y continuar aprendiendo."
+            },
+            "autonomy": {
+                "title": "Autonomía en desarrollo",
+                "desc": "El niño participa, explora y avanza con creciente independencia."
+            }
+        }
+    },
+    "english": {
+        "title": "El recorrido del inglés en Rise Up Kids",
+        "subtitle": "Cómo aprenden realmente los niños",
+        "year1": {
+            "title": "Año 1",
+            "subtitle": "Comprender y expresarse",
+            "lead": "Primero, el niño comprende. Después, empieza a comunicarse.",
+            "italic": "Tu hijo aprende el \"esqueleto\" del inglés: cómo funcionan las frases y cómo comunicarse con sentido.",
+            "bullets": [
+                "Escucha en contexto significativo",
+                "Participa en actividades interactivas",
+                "Repite de forma natural lo que aprende",
+                "Empieza a hablar con confianza"
+            ],
+            "outcomes": [
+                "Comprende el inglés de forma natural",
+                "Responde de forma natural",
+                "Habla con confianza"
+            ]
+        },
+        "year2": {
+            "title": "Año 2",
+            "subtitle": "Leer, escribir y ampliar",
+            "lead": "Con la base oral construida, la lectura surge de forma natural.",
+            "italic": "Tu hijo amplía el inglés hacia la lectura y la escritura, consolidando la fluidez completa en el idioma.",
+            "bullets": [
+                "Inicia la lectura con comprensión",
+                "Reconoce palabras y patrones",
+                "Empieza a escribir frases",
+                "Amplía el vocabulario de forma activa"
+            ],
+            "outcomes": [
+                "Lee con comprensión",
+                "Escribe frases completas",
+                "Avanza de forma continua en el idioma"
+            ]
+        },
+        "footerCta": {
+            "year1": "Año 1",
+            "year2": "Año 2",
+            "ariaLabel": "Progresión Año 1 y Año 2"
+        }
+    },
+    "reviews": {
+        "title": "Lo que dicen las familias",
+        "subtitle": "Testimonios verificados de familias reales"
+    },
     "invitation": {
         "badge": "INVITACIÓN EXCLUSIVA",
         "title": "Invitación a las Familias Fundadoras",
@@ -160,7 +229,7 @@
             },
             {
                 "question": "¿Cuánto tiempo al día es necesario?",
-                "answer": "Lo más importante en Rise Up Kids es el contacto frecuente con el inglés, no sesiones largas.\n\nLa mayoría de los niños interactúan con el idioma entre 20 y 30 minutos los días de uso, con al menos 5 contactos semanales, mediante vídeos, actividades o clases en vivo.\n\nEsta frecuencia permite que el inglés se vuelva natural con el tiempo."
+                "answer": "Lo más importante en Rise Up Kids es el contacto frecuente con el inglés, no sesiones largas.\n\nSe recomienda que el niño interactúe entre 20 y 30 minutos al día en la plataforma/app, 5 veces por semana. También damos indicaciones de cómo su hijo puede tener actividades en inglés en el día a día.\n\nEsta frecuencia permite que el inglés se vuelva natural con el tiempo."
             },
             {
                 "question": "Mi hijo no sabe nada de inglés. ¿Es adecuado?",
@@ -171,8 +240,16 @@
                 "answer": "Los padres siguen la evolución del niño a lo largo del proceso mediante las actividades realizadas, la participación y las orientaciones pedagógicas cuando corresponda."
             },
             {
-                "question": "¿El box físico está disponible para mi región?",
-                "answer": "El box físico es un complemento opcional disponible actualmente para familias en Brasil en el momento de la matrícula.\n\nSe prepara según el inicio del recorrido del niño e integra la experiencia pedagógica del programa; no se vende por separado."
+                "question": "¿El currículo utiliza algún material?",
+                "answer": "Sí. El currículo Rise Up Kids incluye experiencias digitales y materiales físicos de bajo costo que ayudan al niño a participar plenamente de las actividades del programa.\n\nAlgunos de estos materiales sencillos pueden ser adquiridos por las familias, y la lista está disponible dentro de la plataforma.\n\nAdemás, los padres tienen acceso a materiales digitales incluidos en el programa, que deben imprimirse para determinadas actividades del recorrido.\n\nMientras muchas escuelas de inglés cobran por separado libros o materiales, en Rise Up Kids los materiales digitales están incluidos sin coste adicional.\n\nPara algunas actividades, es necesario que los padres impriman los materiales con antelación, normalmente pocas páginas cada vez."
+            },
+            {
+                "question": "¿Cuál es la garantía?",
+                "answer": "Puede probar el programa digital Rise Up Kids durante 14 días.\n\nSi no tiene sentido para su familia, devolvemos el valor del programa digital dentro de ese período."
+            },
+            {
+                "question": "¿Mi hijo puede usar el computador, celular o TV?",
+                "answer": "Sí. Rise Up Kids puede accederse por computador (plataforma), tablet o celular (app).\n\nLas familias también pueden reflejar la pantalla en el TV, permitiendo que el niño participe de las actividades con más comodidad y libertad de movimiento.\n\nMuchas actividades incluyen movimiento, interacción y participación activa, por lo que usar la pantalla grande puede hacer la experiencia aún más divertida."
             }
         ]
     },

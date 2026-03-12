@@ -131,6 +131,75 @@
         "footerPhysical": "Physical box available in Brazil.",
         "footerDigital": "Complete digital version for other countries."
     },
+    "develop": {
+        "title": "Inside the Rise Up Kids experience",
+        "subtitle": "The child develops much more than a language.",
+        "cards": {
+            "curiosity": {
+                "title": "Active curiosity",
+                "desc": "English awakens interest, exploration, and pleasure in discovering."
+            },
+            "persistence": {
+                "title": "Gentle persistence",
+                "desc": "The child continues practicing with confidence, even while still learning."
+            },
+            "growth": {
+                "title": "Growth mindset",
+                "desc": "The child feels safe to explore, make mistakes, and continue learning."
+            },
+            "autonomy": {
+                "title": "Developing autonomy",
+                "desc": "The child participates, explores, and advances with increasing independence."
+            }
+        }
+    },
+    "english": {
+        "title": "The English journey at Rise Up Kids",
+        "subtitle": "How children really learn",
+        "year1": {
+            "title": "Year 1",
+            "subtitle": "Understand and express",
+            "lead": "First, the child understands. Then they start to communicate.",
+            "italic": "Your child learns the \"skeleton\" of English—how sentences work and how to communicate with meaning.",
+            "bullets": [
+                "Listens in meaningful context",
+                "Takes part in interactive activities",
+                "Naturally repeats what they learn",
+                "Starts speaking with confidence"
+            ],
+            "outcomes": [
+                "Understands English naturally",
+                "Responds naturally",
+                "Speaks with confidence"
+            ]
+        },
+        "year2": {
+            "title": "Year 2",
+            "subtitle": "Read, write, and expand",
+            "lead": "With the oral foundation in place, reading emerges naturally.",
+            "italic": "Your child expands English into reading and writing, building full fluency in the language.",
+            "bullets": [
+                "Starts reading with comprehension",
+                "Recognizes words and patterns",
+                "Begins writing sentences",
+                "Actively expands vocabulary"
+            ],
+            "outcomes": [
+                "Reads with comprehension",
+                "Writes complete sentences",
+                "Progresses continuously in the language"
+            ]
+        },
+        "footerCta": {
+            "year1": "Year 1",
+            "year2": "Year 2",
+            "ariaLabel": "Year 1 and Year 2 progression"
+        }
+    },
+    "reviews": {
+        "title": "What Families Say",
+        "subtitle": "Verified testimonials from real families"
+    },
     "invitation": {
         "badge": "EXCLUSIVE INVITATION",
         "title": "Invitation to Founding Families",
@@ -160,7 +229,7 @@
             },
             {
                 "question": "How much time per day is needed?",
-                "answer": "What matters most in Rise Up Kids is frequent contact with English, not long sessions.\n\nMost children interact with the language for about 20 to 30 minutes on days they use it, with at least 5 weekly contacts, through videos, activities, or live classes.\n\nThis frequency allows English to become natural over time."
+                "answer": "What matters most in Rise Up Kids is frequent contact with English, not long sessions.\n\nThe child is advised to interact for about 20 to 30 minutes per day on the platform/app, 5 times per week. We also give guidance on how your child can have English activities in daily life.\n\nThis frequency allows English to become natural over time."
             },
             {
                 "question": "My child doesn't know any English. Is it suitable?",
@@ -171,8 +240,16 @@
                 "answer": "Parents follow the child's progress throughout the journey through completed activities, participation, and pedagogical guidance when applicable."
             },
             {
-                "question": "Is the physical box available for my region?",
-                "answer": "The physical box is an optional add-on currently available for families in Brazil at enrollment.\n\nIt is prepared according to the start of the child's journey and is part of the program's pedagogical experience; it is not sold separately."
+                "question": "Does the curriculum use any materials?",
+                "answer": "Yes. The Rise Up Kids curriculum includes digital experiences and low-cost physical materials that help the child take part fully in the program's activities.\n\nSome of these simple materials can be purchased by families, and the list is available inside the platform.\n\nIn addition, parents have access to digital materials included in the program, which should be printed for certain activities along the journey.\n\nWhile many English schools charge separately for books or materials, Rise Up Kids digital materials are included at no extra cost.\n\nFor some activities, parents need to print materials in advance, usually a few pages at a time."
+            },
+            {
+                "question": "What is the guarantee?",
+                "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't work for your family, we refund the digital program within that period."
+            },
+            {
+                "question": "Can my child use the computer, phone, or TV?",
+                "answer": "Yes. Rise Up Kids can be accessed on computer (platform), tablet, or phone (app).\n\nFamilies can also mirror the screen to the TV, so the child can take part in activities with more comfort and freedom of movement.\n\nMany activities include movement, interaction, and active participation, so using a larger screen can make the experience even more fun."
             }
         ]
     },
