@@ -214,6 +214,7 @@
             "whatsappPlaceholder": "+55 11 99999-9999",
             "ageLabel": "Idade da criança (anos)",
             "agePlaceholder": "ex: 5 anos",
+            "consentLabel": "Concordo em receber mensagens da Rise Up Kids (e-mail e WhatsApp) sobre o programa.",
             "submit": "Receber informações das Famílias Fundadoras",
             "sending": "Enviando…",
             "success": "Enviado!"

@@ -1,24 +1,26 @@
 import { useState } from 'react'
-import { Box, Button, CircularProgress, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, CircularProgress, Grid, TextField, Typography, Checkbox, FormControlLabel } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { submitInvitation } from '../../../services/invitationService.js'
 
 export default function InvitationForm() {
-    const { t } = useTranslation()
+    const { t, language } = useTranslation()
     const [values, setValues] = useState({
         name: '',
         email: '',
         whatsapp: '',
         age: '',
+        consent: false,
     })
     const [touched, setTouched] = useState({})
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
 
     const handleChange = (field) => (e) => {
-        setValues((prev) => ({ ...prev, [field]: e.target.value }))
+        const value = field === 'consent' ? e.target.checked : e.target.value
+        setValues((prev) => ({ ...prev, [field]: value }))
     }
 
     const handleBlur = (field) => () => {
@@ -27,8 +29,13 @@ export default function InvitationForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setTouched({ name: true, email: true, whatsapp: true, age: true })
-        const hasError = !values.name.trim() || !values.email.trim() || !values.whatsapp.trim() || !values.age.trim()
+        setTouched({ name: true, email: true, whatsapp: true, age: true, consent: true })
+        const hasError =
+            !values.name.trim() ||
+            !values.email.trim() ||
+            !values.whatsapp.trim() ||
+            !values.age.trim() ||
+            !values.consent
         if (hasError) return
 
         setLoading(true)
@@ -39,6 +46,8 @@ export default function InvitationForm() {
                 email: values.email.trim(),
                 whatsapp: values.whatsapp.trim(),
                 age: values.age.trim(),
+                language,
+                consent: values.consent,
             })
             setSuccess(true)
         } catch {
@@ -52,6 +61,7 @@ export default function InvitationForm() {
     const emailError = touched.email && !values.email.trim()
     const whatsappError = touched.whatsapp && !values.whatsapp.trim()
     const ageError = touched.age && !values.age.trim()
+    const consentError = touched.consent && !values.consent
 
     return (
         <Box
@@ -246,12 +256,35 @@ export default function InvitationForm() {
                     />
                 </Grid>
             </Grid>
+            <Box sx={{ my: 2 }}>
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            checked={values.consent}
+                            onChange={handleChange('consent')}
+                            color="primary"
+                            inputProps={{
+                                'aria-required': true,
+                                'aria-invalid': consentError,
+                            }}
+                        />
+                    }
+                    label={t('invitation.form.consentLabel')}
+                    sx={{
+                        '& .MuiFormControlLabel-label': {
+                            fontFamily: 'Quicksand, sans-serif',
+                            fontWeight: 600,
+                            opacity: 0.75,
+                        },
+                    }}
+                />
+            </Box>
             <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="warning"
-                disabled={loading || success}
+                disabled={loading || success || !values.consent}
                 startIcon={
                     success ? (
                         <CheckCircleIcon sx={{ color: '#FFD54F', width: 40, height: 40 }} aria-hidden />
