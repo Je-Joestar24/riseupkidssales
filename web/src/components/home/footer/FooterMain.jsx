@@ -21,8 +21,13 @@ export default function FooterMain() {
             }}
         >
             <Container maxWidth="lg">
-                <Grid container spacing={6} sx={{ mb: 6, display: 'flex'}} columns={12}>
-                    <Grid item xs={12} md={3} maxWidth={'24%'} display={'flex'} justifyContent={'center'} alignContent={'center'}>
+                <Grid
+                    container
+                    spacing={{ xs: 4, md: 6 }}
+                    sx={{ mb: { xs: 4, md: 6 } }}
+                    columns={12}
+                >
+                    <Grid item xs={12} md={3} sx={{ display: 'flex', marginRight: 'auto', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                         <Stack
                             alignItems={{ xs: 'center', md: 'flex-start' }}
                             spacing={0}
@@ -31,14 +36,20 @@ export default function FooterMain() {
                             <FooterSubtitle />
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} md={3} maxWidth={'24%'} display={'flex'} justifyContent={'center'} alignContent={'center'} marginX={'auto'}>
-                        <FooterHowItworks />
+                    <Grid item xs={12} md={3} sx={{ display: 'flex', marginRight: 'auto', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                        <Box sx={{ textAlign: { md: 'left' }, width: '100%' }}>
+                            <FooterHowItworks />
+                        </Box>
                     </Grid>
-                    <Grid item xs={12} md={3} maxWidth={'24%'} display={'flex'} justifyContent={'center'} alignContent={'center'} marginX={'auto'}>
-                        <FooterSupport />
+                    <Grid item xs={12} md={3} sx={{ display: 'flex', marginRight: 'auto', justifyContent: { xs: 'flex-start', md: 'flex-start' } }}>
+                        <Box sx={{ textAlign: 'left', width: '100%' }}>
+                            <FooterSupport />
+                        </Box>
                     </Grid>
-                    <Grid item xs={12} md={3} maxWidth={'24%'} display={'flex'} justifyContent={'center'} alignContent={'center'} marginX={'auto'}>
-                        <FooterTerms />
+                    <Grid item xs={12} md={3} sx={{ display: 'flex', marginRight: 'auto', justifyContent: { xs: 'flex-start', md: 'flex-start' } }}>
+                        <Box sx={{ textAlign: 'left', width: '100%' }}>
+                            <FooterTerms />
+                        </Box>
                     </Grid>
                 </Grid>
                 <FooterCopyright />

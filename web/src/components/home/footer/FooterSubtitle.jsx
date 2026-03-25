@@ -12,7 +12,8 @@ export default function FooterSubtitle() {
         color: 'grey.700',
         textAlign: { xs: 'center', md: 'left' },
         mt: 2,
-        fontWeight: 600
+        fontWeight: 600,
+        maxWidth: { xs: '100%', md: '250px' },
       }}
     >
       {t('footer.subtitle')}

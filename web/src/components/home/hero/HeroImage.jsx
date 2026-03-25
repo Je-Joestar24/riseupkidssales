@@ -14,19 +14,29 @@ export default function HeroImage() {
             sx={{
                 position: 'relative',
                 display: 'flex',
-                alignItems: 'self-start',
+                alignItems: 'flex-start',
                 justifyContent: 'center',
-                marginBottom: 'auto'
+                width: '100%',
             }}
         >
-            <Box sx={{ position: 'relative', marginBottom: 'auto', display: 'flex' }}>
+            <Box
+                sx={{
+                    position: 'relative',
+                    display: 'flex',
+                    width: '100%',
+                    maxWidth: 450,
+                    mx: 'auto',
+                    borderRadius: 3,
+                    overflow: 'hidden',
+                    aspectRatio: '1 / 1.618',
+                }}
+            >
                 <Box
                     aria-hidden
                     sx={{
                         position: 'absolute',
                         inset: 0,
                         opacity: 0.3,
-                        marginBottom: 'auto'
                     }}
                 >
                     {DECORATIONS.map(({ emoji, size, ...pos }, i) => (
@@ -50,9 +60,9 @@ export default function HeroImage() {
                     sx={{
                         position: 'relative',
                         zIndex: 1,
-                        height: 'auto',
-                        borderRadius: 3,
-                        width: '85%',
+                        display: 'block',
+                        width: '100%',
+                        height: '100%',
                         objectFit: 'cover',
                     }}
                 />

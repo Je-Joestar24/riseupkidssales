@@ -214,10 +214,10 @@
             "whatsappPlaceholder": "+55 11 99999-9999",
             "ageLabel": "Child's age (years)",
             "agePlaceholder": "e.g., 5 years",
-            "consentLabel": "I agree to receive messages from Rise Up Kids (email and WhatsApp) about the program.",
-            "submit": "Receive information from Founding Families",
+            "consentLabel": "I agree to receive messages (email/WhatsApp).",
+            "submit": "I want my child bilingual",
             "sending": "Sending…",
-            "success": "Sent!"
+            "success": "Done!"
         },
         "footer": "Limited to the first founding families"
     },
@@ -257,7 +257,7 @@
     "cta": {
         "title": "Don't let the development window pass",
         "description": "Childhood is the most powerful time to build language, confidence, and curiosity. Give your child the opportunity to grow up bilingual with joy, security, and consistency.",
-        "button": "Start My Child's Journey"
+        "button": "I want my child bilingual"
     },
     "footer": {
         "subtitle": "A childhood where English is natural, fun, and unforgettable.",

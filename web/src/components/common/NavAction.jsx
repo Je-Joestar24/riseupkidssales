@@ -6,7 +6,10 @@ function NavAction() {
 
   return (
     <Button
-      type="button"
+      component="a"
+      href="https://d233tsjzju911.cloudfront.net/login"
+      target="_blank"
+      rel="noopener noreferrer"
       variant="contained"
       color="secondary"
       aria-label={t('nav.login')}

@@ -10,9 +10,21 @@ const FEATURE_KEYS = [
 export default function HeroFeatures() {
   const { t } = useTranslation()
   return (
-    <Grid container spacing={2} role="list" aria-label="Rise Up Kids features">
+    <Grid
+      container
+      spacing={2}
+      role="list"
+      aria-label="Rise Up Kids features"
+      sx={{ flexWrap: 'nowrap' }}
+    >
       {FEATURE_KEYS.map(({ key, color }) => (
-        <Grid item xs={12} sm={4} key={key} sx={{ display: 'flex', justifyContent: 'center', maxWidth: '170px' }}>
+        <Grid
+          item
+          xs={4}
+          sm={4}
+          key={key}
+          sx={{ display: 'flex', justifyContent: 'center', minWidth: 0, width: '100%' }}
+        >
           <Paper
             component="article"
             role="listitem"
@@ -26,12 +38,13 @@ export default function HeroFeatures() {
               borderColor: color,
               bgcolor: 'white',
               boxShadow: 1,
+              overflowWrap: 'anywhere',
             }}
           >
             <Typography
               sx={{
                 fontSize: { xs: '1rem', md: '1.25rem', lg: '1rem' },
-                fontWeight: 600,
+                fontWeight: 700,
                 color,
                 mb: 0.5,
               }}
@@ -40,7 +53,7 @@ export default function HeroFeatures() {
             </Typography>
             <Typography
               variant="body2"
-              sx={{ color: 'text.secondary', fontSize: '0.75rem' }}
+              sx={{ color: 'text.secondary', fontSize: '0.75rem', fontWeight: 600 }}
             >
               {t(`hero.features.${key}.description`)}
             </Typography>

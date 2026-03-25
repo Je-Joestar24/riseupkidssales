@@ -18,7 +18,8 @@ export default function ExperienceList() {
         alignItems: 'flex-start',
         gap: 2,
         py: 1,
-        height: '100px',
+        height: 'auto',
+        minHeight: { xs: 0, sm: 72 },
       }}
     >
       <Box
@@ -46,10 +47,11 @@ export default function ExperienceList() {
       <Typography
         component="span"
         sx={{
-          fontSize: '1.25rem',
+          fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
           color: 'grey.700',
           lineHeight: 1.6,
-          fontWeight: 600
+          fontWeight: 600,
+          minWidth: 0,
         }}
       >
         {text}
@@ -58,11 +60,11 @@ export default function ExperienceList() {
   )
 
   return (
-    <Grid container spacing={4} sx={{ mt: 0, display: 'flex', justifyContent: 'space-between' }}>
-      <Grid item xs={12} md={6} spacing={4} width={'48%'}>
+    <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ mt: 0, justifyContent: 'space-between' }}>
+      <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
         {column1.map(renderRow)}
       </Grid>
-      <Grid item xs={12} md={6} spacing={4} width={'48%'}>
+      <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
         {column2.map(renderRow)}
       </Grid>
     </Grid>

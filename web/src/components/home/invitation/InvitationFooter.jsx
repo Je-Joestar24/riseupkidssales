@@ -9,9 +9,9 @@ export default function InvitationFooter() {
       component="p"
       sx={{
         textAlign: 'center',
-        mt: 5,
-        fontSize: '1.125rem',
-        color: 'grey.600',
+        mt: { xs: 3, md: 4 },
+        fontSize: { xs: '0.95rem', md: '1.05rem' },
+        color: 'grey.800',
         fontWeight: 600,
       }}
     >

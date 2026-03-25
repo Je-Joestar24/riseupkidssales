@@ -11,7 +11,7 @@ export default function ExtrasList() {
       aria-label={EXTRAS_KEYS.map((k) => t(`extras.${k}`)).join(', ')}
       sx={{
         backgroundColor: 'rgb(212, 230, 227)',
-        py: 6,
+        py: { xs: 3, sm: 4, md: 6 },
         boxShadow: 3,
       }}
     >
@@ -19,8 +19,8 @@ export default function ExtrasList() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr 1fr', md: 'repeat(5, 1fr)' },
-            gap: 3,
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(5, 1fr)' },
+            gap: { xs: 1.25, sm: 2, md: 3 },
             alignItems: 'center',
           }}
         >
@@ -30,7 +30,7 @@ export default function ExtrasList() {
               component="span"
               sx={{
                 textAlign: 'center',
-                fontSize: { xs: '1.875rem', md: '2.25rem' },
+                fontSize: { xs: '1.35rem', sm: '1.6rem', md: '2.25rem' },
                 fontWeight: 700,
                 color: 'rgba(107, 124, 147, 0.85)',
               }}

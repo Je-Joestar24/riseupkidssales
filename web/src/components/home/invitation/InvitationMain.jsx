@@ -12,7 +12,7 @@ export default function InvitationMain() {
       component="section"
       aria-labelledby="invitation-heading"
       sx={{
-        px: { xs: 1, md: 3 },
+        px: { xs: 0, md: 3 },
         py: 10,
         background: 'linear-gradient(to bottom right, #62caca, #85c2b9)',
       }}

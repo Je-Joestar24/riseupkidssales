@@ -214,10 +214,10 @@
             "whatsappPlaceholder": "+55 11 99999-9999",
             "ageLabel": "Edad del niño/a (años)",
             "agePlaceholder": "p. ej., 5 años",
-            "consentLabel": "Acepto recibir mensajes de Rise Up Kids (correo y WhatsApp) sobre el programa.",
-            "submit": "Recibir información de las Familias Fundadoras",
+            "consentLabel": "Acepto recibir mensajes (correo/WhatsApp).",
+            "submit": "Quiero a mi hijo bilingüe",
             "sending": "Enviando…",
-            "success": "¡Enviado!"
+            "success": "¡Listo!"
         },
         "footer": "Limitado a las primeras familias fundadoras"
     },
@@ -257,7 +257,7 @@
     "cta": {
         "title": "No dejes pasar la ventana de desarrollo",
         "description": "La infancia es el momento más poderoso para formar lenguaje, confianza y curiosidad. Dale a tu hijo la oportunidad de crecer bilingüe con alegría, seguridad y constancia.",
-        "button": "Comenzar el viaje de mi hijo"
+        "button": "Quiero mi hijo bilingüe"
     },
     "footer": {
         "subtitle": "Una infancia donde el inglés es natural, divertido e inolvidable.",

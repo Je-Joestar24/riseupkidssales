@@ -68,20 +68,24 @@ export default function InvitationForm() {
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ '& > * + *': { mt: 3 } }}
+            sx={{ '& > * + *': { mt: { xs: 2, md: 2.5 } } }}
         >
-            <Grid container spacing={3} sx={{ justifyContent: 'space-evenly', marginBottom: 3 }}>
-                <Grid item xs={12} md={6} sx={{ width: { sm: '100%', md: '48%' } }}>
+            <Grid
+                container
+                spacing={{ xs: 2, md: 2.5 }}
+                sx={{ justifyContent: 'space-between', marginBottom: { xs: 2, md: 3 } }}
+            >
+                <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
                     <Typography
                         component="label"
                         htmlFor="invitation-name"
                         sx={{
                             display: 'block',
-                            fontSize: { xs: '1.125rem', md: '1.25rem' },
-                            mb: { xs: 1, md: 1.5 },
-                            color: 'black',
-                            opacity: 0.75,
-                            fontWeight: 600,
+                            fontSize: { xs: '1rem', md: '1.125rem' },
+                            mb: { xs: 0.75, md: 1 },
+                            color: 'grey.900',
+                            opacity: 0.9,
+                            fontWeight: 700,
                         }}
                     >
                         {t('invitation.form.nameLabel')}
@@ -98,8 +102,8 @@ export default function InvitationForm() {
                         variant="outlined"
                         sx={{
                             '& .MuiOutlinedInput-root': {
-                                fontSize: { xs: '1.125rem', md: '1.25rem' },
-                                px: { xs: 2, md: 3 },
+                                fontSize: { xs: '1rem', md: '1.125rem' },
+                                px: { xs: 1.75, md: 2.5 },
                                 fontWeight: 600,
                                 borderRadius: 2,
                                 bgcolor: 'white',
@@ -119,17 +123,17 @@ export default function InvitationForm() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={6} sx={{ width: { sm: '100%', md: '48%' } }}>
+                <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
                     <Typography
                         component="label"
                         htmlFor="invitation-email"
                         sx={{
                             display: 'block',
-                            fontSize: { xs: '1.125rem', md: '1.25rem' },
-                            mb: { xs: 1, md: 1.5 },
-                            color: 'grey.700',
-                            opacity: 0.75,
-                            fontWeight: 600,
+                            fontSize: { xs: '1rem', md: '1.125rem' },
+                            mb: { xs: 0.75, md: 1 },
+                            color: 'grey.900',
+                            opacity: 0.9,
+                            fontWeight: 700,
                         }}
                     >
                         {t('invitation.form.emailLabel')}
@@ -146,8 +150,8 @@ export default function InvitationForm() {
                         variant="outlined"
                         sx={{
                             '& .MuiOutlinedInput-root': {
-                                fontSize: { xs: '1.125rem', md: '1.25rem' },
-                                px: { xs: 2, md: 3 },
+                                fontSize: { xs: '1rem', md: '1.125rem' },
+                                px: { xs: 1.75, md: 2.5 },
                                 borderRadius: 2,
                                 bgcolor: 'white',
                                 '& fieldset': { borderWidth: 2, borderColor: 'secondary.main' },
@@ -166,17 +170,17 @@ export default function InvitationForm() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={6} sx={{ width: { sm: '100%', md: '48%' } }}>
+                <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
                     <Typography
                         component="label"
                         htmlFor="invitation-whatsapp"
                         sx={{
                             display: 'block',
-                            fontSize: { xs: '1.125rem', md: '1.25rem' },
-                            mb: { xs: 1, md: 1.5 },
-                            color: 'grey.700',
-                            opacity: 0.75,
-                            fontWeight: 600,
+                            fontSize: { xs: '1rem', md: '1.125rem' },
+                            mb: { xs: 0.75, md: 1 },
+                            color: 'grey.900',
+                            opacity: 0.9,
+                            fontWeight: 700,
                         }}
                     >
                         {t('invitation.form.whatsappLabel')}
@@ -192,8 +196,8 @@ export default function InvitationForm() {
                         variant="outlined"
                         sx={{
                             '& .MuiOutlinedInput-root': {
-                                fontSize: { xs: '1.125rem', md: '1.25rem' },
-                                px: { xs: 2, md: 3 },
+                                fontSize: { xs: '1rem', md: '1.125rem' },
+                                px: { xs: 1.75, md: 2.5 },
                                 borderRadius: 2,
                                 bgcolor: 'white',
                                 fontWeight: 600,
@@ -208,17 +212,17 @@ export default function InvitationForm() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={6} sx={{ width: { sm: '100%', md: '48%' } }}>
+                <Grid item xs={12} md={6} sx={{ width: { xs: '100%', md: '48%' } }}>
                     <Typography
                         component="label"
                         htmlFor="invitation-age"
                         sx={{
                             display: 'block',
-                            fontSize: { xs: '1.125rem', md: '1.25rem' },
-                            mb: { xs: 1, md: 1.5 },
-                            color: 'grey.700',
-                            opacity: 0.75,
-                            fontWeight: 600,
+                            fontSize: { xs: '1rem', md: '1.125rem' },
+                            mb: { xs: 0.75, md: 1 },
+                            color: 'grey.900',
+                            opacity: 0.9,
+                            fontWeight: 700,
                         }}
                     >
                         {t('invitation.form.ageLabel')}
@@ -235,8 +239,8 @@ export default function InvitationForm() {
                         variant="outlined"
                         sx={{
                             '& .MuiOutlinedInput-root': {
-                                fontSize: { xs: '1.125rem', md: '1.25rem' },
-                                px: { xs: 2, md: 3 },
+                                fontSize: { xs: '1rem', md: '1.125rem' },
+                                px: { xs: 1.75, md: 2.5 },
                                 borderRadius: 2,
                                 bgcolor: 'white',
                                 fontWeight: 600,
@@ -256,7 +260,7 @@ export default function InvitationForm() {
                     />
                 </Grid>
             </Grid>
-            <Box sx={{ my: 2 }}>
+            <Box sx={{ my: { xs: 1.5, md: 2 } }}>
                 <FormControlLabel
                     control={
                         <Checkbox
@@ -274,7 +278,9 @@ export default function InvitationForm() {
                         '& .MuiFormControlLabel-label': {
                             fontFamily: 'Quicksand, sans-serif',
                             fontWeight: 600,
-                            opacity: 0.75,
+                            opacity: 0.9,
+                            color: 'grey.900',
+                            fontSize: { xs: '0.95rem', md: '1rem' },
                         },
                     }}
                 />
@@ -285,20 +291,10 @@ export default function InvitationForm() {
                 variant="contained"
                 color="warning"
                 disabled={loading || success || !values.consent}
-                startIcon={
-                    success ? (
-                        <CheckCircleIcon sx={{ color: '#FFD54F', width: 40, height: 40 }} aria-hidden />
-                    ) : (
-                        <StarIcon
-                            sx={{ color: '#FFD54F', width: 40, height: 40, stroke: '#FFD54F', strokeWidth: 2 }}
-                            aria-hidden
-                        />
-                    )
-                }
                 sx={{
-                    py: { xs: 2, md: 3 },
-                    px: { xs: 4, md: 6 },
-                    fontSize: { xs: '1.5rem', md: '1.875rem' },
+                    py: { xs: 1.5, md: 2.25 },
+                    px: { xs: 2.5, md: 5 },
+                    fontSize: { xs: '1.2rem', sm: '1.35rem', md: '1.75rem' },
                     borderRadius: 2,
                     boxShadow: 2,
                     color: 'white',
