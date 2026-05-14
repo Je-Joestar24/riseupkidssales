@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    ssr: {
+      target: 'node',
+      noExternal: [/^@mui\//, /^@emotion\//],
+    },
     server: {
       port: devPort,
       open: true,

@@ -1,4 +1,5 @@
 import { AppBar, Box, Container, Toolbar } from '@mui/material'
+import { NAV_APP_BAR_HEIGHT_PX } from '../../config/constants.js'
 import NavLogo from './NavLogo.jsx'
 import NavLanguages from './NavLanguages.jsx'
 import NavAction from './NavAction.jsx'
@@ -14,7 +15,7 @@ function NavHeaders() {
         color: 'text.primary',
         boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
         zIndex: (theme) => theme.zIndex.appBar + 1,
-        height: '250px',
+        height: `${NAV_APP_BAR_HEIGHT_PX}px`,
         borderRadius: '0px',
       }}
       role="banner"

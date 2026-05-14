@@ -113,7 +113,13 @@ function PaymentOptionButton({ option, selected, title, subtitle, onSelect }) {
   )
 }
 
-const appUrl = () => import.meta.env.VITE_APP_URL || window.location.origin
+/** Base URL for redirects; safe during SSR/SSG (no `window` on server). */
+const appUrl = () => {
+  const fromEnv = import.meta.env?.VITE_APP_URL
+  if (fromEnv && String(fromEnv).trim()) return String(fromEnv).replace(/\/+$/, '')
+  if (typeof window !== 'undefined' && window.location?.origin) return window.location.origin
+  return ''
+}
 
 /**
  * PayPal does NOT provide an API to pre-check Pay in 4 eligibility.

@@ -1,15 +1,18 @@
 import { Button } from '@mui/material'
 import { useTranslation } from '../../hooks/useTranslation'
+import { LMS_LOGIN_URL } from '../../constants/env'
 
 function NavAction() {
   const { t } = useTranslation()
+  const isLmsEnabled = Boolean(LMS_LOGIN_URL)
 
   return (
     <Button
-      component="a"
-      href="https://d233tsjzju911.cloudfront.net/login"
-      target="_blank"
-      rel="noopener noreferrer"
+      component={isLmsEnabled ? 'a' : 'button'}
+      href={isLmsEnabled ? LMS_LOGIN_URL : undefined}
+      target={isLmsEnabled ? '_blank' : undefined}
+      rel={isLmsEnabled ? 'noopener noreferrer' : undefined}
+      disabled={!isLmsEnabled}
       variant="contained"
       color="secondary"
       aria-label={t('nav.login')}

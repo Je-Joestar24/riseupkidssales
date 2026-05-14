@@ -1,18 +1,13 @@
-// API configuration (mirrors main frontend behavior)
-const envApiUrl = (import.meta.env.VITE_API_URL || '').trim()
-const useRemoteApi = envApiUrl.startsWith('http')
+export { API_BASE_URL, BACKEND_BASE_URL } from '../constants/env'
 
-export const API_BASE_URL = useRemoteApi
-  ? envApiUrl.replace(/\/+$/, '')
-  : import.meta.env.DEV
-    ? '/api'
-    : envApiUrl || 'http://localhost:5000/api'
+// Marketing home: footer surface on `/` (client spec)
+export const HOME_FOOTER_BG = 'rgb(253, 232, 222)'
 
-export const BACKEND_BASE_URL = useRemoteApi
-  ? envApiUrl.replace(/\/api\/?$/, '').replace(/\/+$/, '')
-  : import.meta.env.DEV
-    ? ''
-    : envApiUrl.replace(/\/api\/?$/, '') || 'http://localhost:5000'
+/** Schools landing: footer surface on `/schools` */
+export const SCHOOLS_FOOTER_BG = 'rgb(244, 237, 216)'
+
+/** Must match `NavHeaders` AppBar height (used for full-viewport hero sections). */
+export const NAV_APP_BAR_HEIGHT_PX = 250
 
 // App meta
 export const APP_NAME = 'Rise Up Kids – Sales'

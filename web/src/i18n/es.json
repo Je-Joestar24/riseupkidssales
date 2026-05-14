@@ -2,6 +2,71 @@
     "nav": {
         "login": "Iniciar sesión"
     },
+    "parent": {
+        "pageTitle": "Para padres — Rise Up Kids",
+        "mainAria": "Rise Up Kids — contenido para padres"
+    },
+    "schools": {
+        "pageTitle": "Para Escuelas — Rise Up Kids",
+        "mainAria": "Rise Up Kids para escuelas e instituciones",
+        "hero": {
+            "sectionAria": "Presentación para colegios",
+            "title": "Una forma diferente de enseñar inglés en tu escuela",
+            "lead": "Donde los estudiantes no solo memorizan, entienden y responden.",
+            "body": "Más que un curso, una experiencia interactiva donde los niños aprenden haciendo.",
+            "ageLine": "Para niños a partir de 5 años.",
+            "cta": "Postula tu escuela →"
+        },
+        "experience": {
+            "sectionAria": "Experiencia del inglés en el aula",
+            "title": "La experiencia del inglés en acción",
+            "subtitle": "Un nuevo estándar de cómo el inglés es vivido, comprendido y utilizado en la escuela",
+            "imageAlt": "Rise Up Kids — La experiencia del inglés en acción"
+        },
+        "differentApproach": {
+            "sectionAria": "En qué se diferencia Rise Up Kids de los programas tradicionales de inglés",
+            "title": "Un enfoque diferente",
+            "p1": "Los programas tradicionales dependen en gran medida de la memorización y la traducción.",
+            "p2": "Rise Up Kids se construyó según cómo los niños adquieren el lenguaje de forma natural: a través del contexto, la interacción y la repetición con sentido.",
+            "p3": "Los estudiantes no solo aprenden inglés: llegan a entenderlo y usarlo con naturalidad.",
+            "p4": "Más que estudiar inglés, los estudiantes llegan a vivirlo con experiencias reales y lúdicas."
+        },
+        "applicationSectionAria": "Solicitud para colegios — contenido próximamente"
+    },
+    "videos": {
+        "pageTitle": "Biblioteca de Videos — Rise Up Kids",
+        "mainAria": "Biblioteca de videos Rise Up Kids"
+    },
+    "rhome": {
+        "pageTitle": "Rise Up Kids",
+        "hero": {
+            "sectionAria": "Destacado principal",
+            "title": "Aprendizaje de inglés que se siente natural, atractivo y real",
+            "subtitleGray": "Más que un curso, una experiencia interactiva donde los niños aprenden haciendo, para edades 5+.",
+            "subtitleTeal": "Para niños, para escuelas, para comunicación del mundo real",
+            "pillStructure": "Aprendizaje con estructura y libertad",
+            "pillContext": "Inglés en contexto real",
+            "pillInteractive": "Experiencias interactivas"
+        },
+        "links": {
+            "sectionAria": "Más formas de explorar Rise Up Kids",
+            "parents": {
+                "title": "Para Padres",
+                "description": "Descubre cómo Rise Up Kids puede transformar el aprendizaje de tu hijo en casa",
+                "cta": "Explorar para Padres"
+            },
+            "schools": {
+                "title": "Para Escuelas",
+                "description": "Soluciones educativas completas para instituciones educativas",
+                "cta": "Explorar para Escuelas"
+            },
+            "videos": {
+                "title": "Biblioteca de Videos",
+                "description": "Contenido educativo gratuito en inglés para todos los niños",
+                "cta": "Ver Videos"
+            }
+        }
+    },
     "hero": {
         "title": "Tu hijo bilingüe en 1 año, una infancia donde el inglés es natural.",
         "badge": "Metodología basada en inmersión natural",

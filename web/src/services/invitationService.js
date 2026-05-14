@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../axios'
 
 /**
  * Submit sales page invitation to Flodesk (no user account created).
@@ -6,7 +6,7 @@ import axios from 'axios'
  * @returns {Promise<Object>} API response with success and data
  */
 export async function submitInvitation(data) {
-  const response = await axios.post('/api/invitation', {
+  const response = await api.post('/invitation', {
     parentName: data.parentName,
     email: data.email,
     whatsapp: data.whatsapp,

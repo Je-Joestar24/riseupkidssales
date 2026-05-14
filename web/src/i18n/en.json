@@ -2,6 +2,71 @@
     "nav": {
         "login": "Login"
     },
+    "parent": {
+        "pageTitle": "For parents — Rise Up Kids",
+        "mainAria": "Rise Up Kids — content for parents"
+    },
+    "schools": {
+        "pageTitle": "For Schools — Rise Up Kids",
+        "mainAria": "Rise Up Kids for schools and institutions",
+        "hero": {
+            "sectionAria": "Schools programs introduction",
+            "title": "A different way to teach English in your school",
+            "lead": "Where students don't just memorize, they understand and respond.",
+            "body": "More than a course, an interactive experience where children learn by doing.",
+            "ageLine": "For children ages 5+.",
+            "cta": "Apply for your school →"
+        },
+        "experience": {
+            "sectionAria": "English experience in the classroom",
+            "title": "The English experience in action",
+            "subtitle": "A new standard for how English is lived, understood, and used in school",
+            "imageAlt": "Rise Up Kids — English experience in action"
+        },
+        "differentApproach": {
+            "sectionAria": "How Rise Up Kids differs from traditional English programs",
+            "title": "A different approach",
+            "p1": "Traditional programs largely depend on memorization and translation.",
+            "p2": "Rise Up Kids is built based on how children naturally acquire language: through context, interaction, and meaningful repetition.",
+            "p3": "Students don't just learn English, they come to understand and use it naturally.",
+            "p4": "More than studying English, students come to live it through real and playful experiences."
+        },
+        "applicationSectionAria": "School application — content coming soon"
+    },
+    "videos": {
+        "pageTitle": "Video Library — Rise Up Kids",
+        "mainAria": "Rise Up Kids video library"
+    },
+    "rhome": {
+        "pageTitle": "Rise Up Kids",
+        "hero": {
+            "sectionAria": "Main highlight",
+            "title": "English learning that feels natural, engaging, and real",
+            "subtitleGray": "More than a course, an interactive experience where children learn by doing, for ages 5+.",
+            "subtitleTeal": "For children, for schools, for real-world communication",
+            "pillStructure": "Learning with structure and freedom",
+            "pillContext": "English in real context",
+            "pillInteractive": "Interactive experiences"
+        },
+        "links": {
+            "sectionAria": "More ways to explore Rise Up Kids",
+            "parents": {
+                "title": "For Parents",
+                "description": "Discover how Rise Up Kids can transform your child's learning at home",
+                "cta": "Explore for Parents"
+            },
+            "schools": {
+                "title": "For Schools",
+                "description": "Complete educational solutions for educational institutions",
+                "cta": "Explore for Schools"
+            },
+            "videos": {
+                "title": "Video Library",
+                "description": "Free educational English content for all children",
+                "cta": "Watch Videos"
+            }
+        }
+    },
     "hero": {
         "title": "Your child bilingual in 1 year — a childhood where English is natural.",
         "badge": "Methodology based on natural immersion",

@@ -1,4 +1,6 @@
 import { Box, Container, Grid, Stack } from '@mui/material'
+import { useLocation } from 'react-router-dom'
+import { HOME_FOOTER_BG, SCHOOLS_FOOTER_BG } from '../../../config/constants.js'
 import FooterLogo from './FooterLogo.jsx'
 import FooterSubtitle from './FooterSubtitle.jsx'
 import FooterHowItworks from './FooterHowItworks.jsx'
@@ -7,13 +9,19 @@ import FooterTerms from './FooterTerms.jsx'
 import FooterCopyright from './FooterCopyright.jsx'
 
 export default function FooterMain() {
+    const { pathname } = useLocation()
+    const isHome = pathname === '/'
+    const isSchools = pathname === '/schools'
+
+    const footerBg = isHome ? HOME_FOOTER_BG : isSchools ? SCHOOLS_FOOTER_BG : 'background.paper'
+
     return (
         <Box
             component="footer"
             role="contentinfo"
             aria-label="Site footer"
             sx={{
-                bgcolor: 'background.paper',
+                bgcolor: footerBg,
                 py: 8,
                 px: { xs: 2, sm: 3 },
                 borderTop: '4px solid',
