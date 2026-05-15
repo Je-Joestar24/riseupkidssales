@@ -16,7 +16,7 @@ function NavLogo() {
       <Box
         component={Link}
         to="/"
-        aria-label="Rise Up Kids home"
+        aria-label="Go to homepage"
         sx={{
           position: 'relative',
           display: 'inline-flex',

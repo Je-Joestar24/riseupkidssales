@@ -6,6 +6,11 @@ import FooterMain from '../components/home/footer/FooterMain.jsx'
 import HeroSection from '../components/school/HeroSection/HeroSection.jsx'
 import EnglishExperienceSection from '../components/school/EnglishExperienceSection/EnglishExperienceSection.jsx'
 import DifferentApproachSection from '../components/school/DifferentApproach/DifferentApproachSection.jsx'
+import RiseUpKidsApproachSection from '../components/school/RiseUpKidsApproach/RiseUpKidsApproachSection.jsx'
+import HowStudentsLearnSection from '../components/school/HowStudentsLearnSection/HowStudentsLearnSection.jsx'
+import MeaningfulLearningSection from '../components/school/MeaningfulLearning/MeaningfulLearningSection.jsx'
+import TeachersPronunciationSection from '../components/school/TeachersPronunciation/TeachersPronunciationSection.jsx'
+import ImplementationSection from '../components/school/ImplementationSection/ImplementationSection.jsx'
 import '../assets/css/App.css'
 
 export default function SchoolsPage() {
@@ -25,6 +30,11 @@ export default function SchoolsPage() {
         <HeroSection />
         <EnglishExperienceSection />
         <DifferentApproachSection />
+        <RiseUpKidsApproachSection />
+        <HowStudentsLearnSection />
+        <MeaningfulLearningSection />
+        <TeachersPronunciationSection />
+        <ImplementationSection />
         <Box
           id="school-application"
           tabIndex={-1}

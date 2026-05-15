@@ -31,6 +31,66 @@
             "p3": "Los estudiantes no solo aprenden inglés: llegan a entenderlo y usarlo con naturalidad.",
             "p4": "Más que estudiar inglés, los estudiantes llegan a vivirlo con experiencias reales y lúdicas."
         },
+        "comparison": {
+            "sectionAria": "Comparación entre Rise Up Kids y el enfoque tradicional",
+            "title": "Comparación entre Rise Up Kids y el enfoque tradicional",
+            "colTraditional": "Tradicional",
+            "colRuk": "Rise Up Kids",
+            "row1": {
+                "traditional": "Énfasis en la memorización y la traducción",
+                "ruk": "Enfoque en la comprensión y el uso del idioma en contexto"
+            },
+            "row2": {
+                "traditional": "Alumnos pasivos enfocados en los ejercicios",
+                "ruk": "Estudiantes activos que responden e interactúan"
+            },
+            "row3": {
+                "traditional": "Lectura y escritura básica",
+                "ruk": "Primero comprensión auditiva, entonces lectura y escritura"
+            },
+            "row4": {
+                "traditional": "Contenido lineal e inflexible",
+                "ruk": "Aprendizaje continuo a través de la repetición en diferentes contextos"
+            }
+        },
+        "howStudentsLearn": {
+            "sectionAria": "Cómo aprenden los alumnos con Rise Up Kids",
+            "title": "Cómo aprenden los alumnos",
+            "card1": {
+                "title": "Primero la comprensión",
+                "description": "Los alumnos comprenden y responden antes de pasar a la lectura y la escritura."
+            },
+            "card2": {
+                "title": "Repetición en contextos variados",
+                "description": "Los alumnos revisan el lenguaje en diferentes situaciones, lo que refuerza el aprendizaje de forma natural."
+            },
+            "card3": {
+                "title": "Comunicación desde el principio",
+                "description": "Se anima a los alumnos a usar el inglés desde sus primeras experiencias."
+            }
+        },
+        "meaningfulLearning": {
+            "sectionAria": "Aprendizaje con sentido con Rise Up Kids",
+            "title": "Aprendizaje con sentido",
+            "p1": "El aprendizaje se produce a través de experiencias significativas e interactivas.",
+            "p2": "Diseñado para despertar la curiosidad y ayudar a los niños a conectar con el inglés y enamorarse del idioma de forma natural."
+        },
+        "teachersPronunciation": {
+            "sectionAria": "Profesores y pronunciación con Rise Up Kids",
+            "title": "Profesores y pronunciación",
+            "p1": "Los profesores siguen siendo el centro de la experiencia en el aula. Ofrecemos lecciones estructuradas y fáciles de seguir que les permiten enfocarse en lo que más importa: guiar y motivar a los alumnos.",
+            "p2": "Al mismo tiempo, los alumnos están constantemente expuestos a una pronunciación correcta a través de nuestro plan de estudios digital."
+        },
+        "implementation": {
+            "sectionAria": "Implementación del programa para colegios",
+            "title": "Implementación",
+            "item1": "Lecciones estructuradas de 50 minutos",
+            "item2": "Fácil integración en la rutina escolar",
+            "item3": "Planificación escolar simplificada para los profesores",
+            "p1": "Los profesores siguen una estructura clara, lo que garantiza lecciones organizadas y una experiencia coherente para los alumnos.",
+            "p2": "Ofrecemos un apoyo constante a lo largo de la implementación, asegurando que cada maestro se sienta listo para aplicar el programa con seguridad.",
+            "footer": "Con una exposición diaria constante, las escuelas pueden ofrecer una experiencia de inglés más inmersiva, al mismo tiempo que fomentan el desarrollo de un entorno bilingüe."
+        },
         "applicationSectionAria": "Solicitud para colegios — contenido próximamente"
     },
     "videos": {

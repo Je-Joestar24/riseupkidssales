@@ -31,6 +31,66 @@
             "p3": "Os alunos não apenas aprendem inglês — passam a compreendê-lo e a usá-lo com naturalidade.",
             "p4": "Mais do que estudar inglês, os alunos passam a vivenciá-lo através de experiências reais e lúdicas."
         },
+        "comparison": {
+            "sectionAria": "Comparação entre abordagem tradicional e Rise Up Kids",
+            "title": "Abordagem tradicional vs Rise Up Kids",
+            "colTraditional": "Tradicional",
+            "colRuk": "Rise Up Kids",
+            "row1": {
+                "traditional": "Foco em memorização e tradução",
+                "ruk": "Foco em compreensão e uso do idioma em contexto"
+            },
+            "row2": {
+                "traditional": "Alunos passivos, focados em exercícios",
+                "ruk": "Alunos ativos, respondendo e interagindo"
+            },
+            "row3": {
+                "traditional": "Leitura e escrita desde o início",
+                "ruk": "Compreensão oral primeiro, depois leitura e escrita"
+            },
+            "row4": {
+                "traditional": "Conteúdo linear e pouco flexível",
+                "ruk": "Aprendizado contínuo por meio de repetição em diferentes contextos"
+            }
+        },
+        "howStudentsLearn": {
+            "sectionAria": "Como os alunos aprendem com o Rise Up Kids",
+            "title": "Como os alunos aprendem",
+            "card1": {
+                "title": "Compreensão primeiro",
+                "description": "Os alunos entendem e respondem antes de avançar para leitura e escrita."
+            },
+            "card2": {
+                "title": "Repetição em contextos variados",
+                "description": "Os alunos revisitam a linguagem em diferentes contextos, reforçando o aprendizado de forma natural."
+            },
+            "card3": {
+                "title": "Comunicação desde o início",
+                "description": "Os alunos são encorajados a usar o inglês desde as primeiras experiências."
+            }
+        },
+        "meaningfulLearning": {
+            "sectionAria": "Aprendizado significativo com Rise Up Kids",
+            "title": "Aprendizado significativo",
+            "p1": "O aprendizado acontece através de experiências significativas e interativas.",
+            "p2": "Criado para despertar curiosidade e fazer com que as crianças se conectem e se encantem com o inglês, naturalmente."
+        },
+        "teachersPronunciation": {
+            "sectionAria": "Professores e pronúncia com Rise Up Kids",
+            "title": "Professores e pronúncia",
+            "p1": "Os professores permanecem no centro da sala de aula. Oferecemos lições estruturadas e fáceis de aplicar, permitindo que se concentrem no que mais importa: guiar e engajar os alunos.",
+            "p2": "Ao mesmo tempo, os alunos são expostos de forma consistente à pronúncia correta por meio do nosso currículo digital."
+        },
+        "implementation": {
+            "sectionAria": "Implementação do programa para escolas",
+            "title": "Implementação",
+            "item1": "Aulas estruturadas de 50 minutos",
+            "item2": "Integração simples à rotina da escola",
+            "item3": "Planejamento facilitado para os professores",
+            "p1": "Os professores seguem uma estrutura clara, garantindo aulas organizadas e uma experiência consistente para os alunos.",
+            "p2": "Oferecemos suporte próximo durante todo o período de implementação, garantindo que cada professor esteja preparado para aplicar o programa com confiança.",
+            "footer": "Com exposição consistente e diária, as escolas podem oferecer uma experiência de inglês mais imersiva, apoiando o desenvolvimento de um ambiente bilíngue."
+        },
         "applicationSectionAria": "Candidatura escolar — conteúdo em breve"
     },
     "videos": {

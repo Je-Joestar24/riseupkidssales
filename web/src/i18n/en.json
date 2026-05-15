@@ -31,6 +31,66 @@
             "p3": "Students don't just learn English, they come to understand and use it naturally.",
             "p4": "More than studying English, students come to live it through real and playful experiences."
         },
+        "comparison": {
+            "sectionAria": "Traditional approach compared with Rise Up Kids",
+            "title": "Traditional Approach vs. Rise Up Kids",
+            "colTraditional": "Traditional",
+            "colRuk": "Rise Up Kids",
+            "row1": {
+                "traditional": "Focus on memorization and translation",
+                "ruk": "Focus on comprehension and real-world language use in context"
+            },
+            "row2": {
+                "traditional": "Passive students focused on exercises",
+                "ruk": "Active students responding and interacting"
+            },
+            "row3": {
+                "traditional": "Reading and writing from the very beginning",
+                "ruk": "Listening comprehension first, followed by reading and writing"
+            },
+            "row4": {
+                "traditional": "Linear and inflexible content",
+                "ruk": "Continuous learning through repetition across different contexts"
+            }
+        },
+        "howStudentsLearn": {
+            "sectionAria": "How students learn with Rise Up Kids",
+            "title": "How Students Learn",
+            "card1": {
+                "title": "Comprehension First",
+                "description": "Students learn to understand and respond before advancing into reading and writing."
+            },
+            "card2": {
+                "title": "Repetition Across Contexts",
+                "description": "Students revisit language in different situations, reinforcing learning naturally and effectively."
+            },
+            "card3": {
+                "title": "Communication from the Beginning",
+                "description": "Children are encouraged to use English from their very first experiences."
+            }
+        },
+        "meaningfulLearning": {
+            "sectionAria": "Meaningful learning with Rise Up Kids",
+            "title": "Meaningful Learning",
+            "p1": "Learning happens through engaging and interactive experiences that carry real meaning.",
+            "p2": "Designed to spark curiosity and help children connect with and fall in love with English naturally."
+        },
+        "teachersPronunciation": {
+            "sectionAria": "Teachers and pronunciation with Rise Up Kids",
+            "title": "Teachers and Pronunciation",
+            "p1": "Teachers remain at the center of the classroom experience. We provide structured, easy-to-follow lessons that allow educators to focus on what matters most: guiding and engaging students.",
+            "p2": "At the same time, students are consistently exposed to correct pronunciation through our digital curriculum."
+        },
+        "implementation": {
+            "sectionAria": "Program implementation for schools",
+            "title": "Implementation",
+            "item1": "Structured 50-Minute Lessons",
+            "item2": "Simple Integration into the School Routine",
+            "item3": "Simplified Planning for Teachers",
+            "p1": "Teachers follow a clear structure, ensuring organized lessons and a consistent experience for students.",
+            "p2": "We provide close support throughout the implementation process, ensuring every teacher feels confident using the program.",
+            "footer": "With consistent daily exposure, schools can create a more immersive English experience and support the development of a bilingual environment."
+        },
         "applicationSectionAria": "School application — content coming soon"
     },
     "videos": {

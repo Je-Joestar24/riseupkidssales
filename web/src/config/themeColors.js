@@ -24,6 +24,11 @@ export const themeColors = {
   schoolHeroGradient: 'linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(212, 230, 227) 100%)',
   /** Schools hero lead paragraph (dark teal) */
   schoolHeroLeadText: '#406560',
+  /** Schools comparison table header */
+  schoolComparisonHeaderGradient:
+    'linear-gradient(to right, rgb(212, 230, 227), rgb(133, 194, 185))',
+  /** Schools card icon wells (mint) */
+  schoolIconWellMint: 'rgb(212, 230, 227)',
 
   // Text colors
   text: '#0f172a',
