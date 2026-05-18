@@ -1,14 +1,15 @@
 import { Box, Container, Typography } from '@mui/material'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 
-const EXTRAS_KEYS = ['joy', 'learning', 'growth', 'play', 'wonder']
-
 export default function ExtrasList() {
   const { t } = useTranslation()
+  const labels = t('extras.labels')
+  const items = Array.isArray(labels) ? labels : []
+
   return (
     <Box
       component="section"
-      aria-label={EXTRAS_KEYS.map((k) => t(`extras.${k}`)).join(', ')}
+      aria-label={items.join(', ')}
       sx={{
         backgroundColor: 'rgb(212, 230, 227)',
         py: { xs: 3, sm: 4, md: 6 },
@@ -24,9 +25,9 @@ export default function ExtrasList() {
             alignItems: 'center',
           }}
         >
-          {EXTRAS_KEYS.map((key) => (
+          {items.map((label) => (
             <Typography
-              key={key}
+              key={label}
               component="span"
               sx={{
                 textAlign: 'center',
@@ -35,7 +36,7 @@ export default function ExtrasList() {
                 color: 'rgba(107, 124, 147, 0.85)',
               }}
             >
-              {t(`extras.${key}`)}
+              {label}
             </Typography>
           ))}
         </Box>

@@ -91,11 +91,192 @@
             "p2": "We provide close support throughout the implementation process, ensuring every teacher feels confident using the program.",
             "footer": "With consistent daily exposure, schools can create a more immersive English experience and support the development of a bilingual environment."
         },
-        "applicationSectionAria": "School application — content coming soon"
+        "canExpect": {
+            "sectionAria": "What schools can expect from Rise Up Kids",
+            "title": "What Schools Can Expect",
+            "card1": {
+                "title": "Engaged and Participative Students",
+                "description": "Students actively participate in lessons, responding and interacting with the language from the very beginning."
+            },
+            "card2": {
+                "title": "Real English Usage in the Classroom",
+                "description": "Students begin to understand and use English in real situations, not only through exercises."
+            },
+            "card3": {
+                "title": "Visible Growth in Communication",
+                "description": "Progress becomes evident through students' responses, comprehension, and confidence when using the language."
+            },
+            "card4": {
+                "title": "A Strong Foundation for Language Development",
+                "description": "A consistent structure that supports long-term growth in reading, writing, and communication."
+            }
+        },
+        "educationSpecialists": {
+            "sectionAria": "What education specialists say about Rise Up Kids",
+            "badge": "SPECIALISTS",
+            "title": "What Education Specialists Say About the Rise Up Kids Methodology",
+            "subtitle": "Perspectives from education professionals on a more natural and effective approach to English learning.",
+            "grant": {
+                "name": "Dr. Grant Eckstein, Ph.D.",
+                "role": "Professor of Linguistics at Brigham Young University",
+                "credentials": "",
+                "quote": "As a scholar in applied linguistics and coordinator of a TESOL graduate program, I evaluate language learning programs through both research and practice. Rise Up Kids stands out as a program that successfully brings these together. Its design reflects well-established principles of second language acquisition, including meaningful input, careful scaffolding, and opportunities for engagement that are essential for young learners. These principles are thoughtfully embedded in the structure of the lessons. The quality of the materials is equally impressive. The videos and lessons are engaging, well-produced, and clearly designed to sustain children's attention while supporting real language development. What distinguishes Rise Up Kids most is its clear commitment to excellence. The program demonstrates both pedagogical expertise and a deep understanding of how children learn languages. I would confidently recommend it to educators and families seeking high-quality English instruction.",
+                "imageAlt": "Dr. Grant Eckstein, Ph.D."
+            },
+            "sarah": {
+                "name": "Sarah Schumutz",
+                "role": "Elementary School Teacher",
+                "credentials": "Specializations in Elementary Mathematics and Teaching English to Language Learners at BYU.",
+                "quote": "As an elementary educator with experience supporting multilingual learners, I understand how challenging it can be for children to truly acquire English, even when they are surrounded by the language every day. Many immigrant students in the United States still struggle to develop confidence and meaningful communication skills in English despite years of exposure. What impressed me about Rise Up Kids is how intentionally the program is designed to keep children actively engaged in the learning process. The lessons encourage participation, comprehension, movement, and interaction in ways that help language become meaningful and memorable for young learners. The structure behind the program is thoughtful and purposeful, while the videos and activities remain fun and age appropriate. Rise Up Kids creates the kind of learning environment that helps children feel successful, motivated, and genuinely connected to the language.",
+                "imageAlt": "Sarah Schumutz"
+            }
+        },
+        "getStarted": {
+            "sectionAria": "How schools get started with Rise Up Kids",
+            "title": "How Schools Get Started",
+            "steps": {
+                "step1": {
+                    "title": "1. Pilot Group",
+                    "description": "Start with a pilot classroom to experience the approach firsthand."
+                },
+                "step2": {
+                    "title": "2. Guided Implementation",
+                    "description": "Initial training with close support throughout the first weeks of implementation."
+                },
+                "step3": {
+                    "title": "3. Gradual Expansion",
+                    "description": "Expand the curriculum to additional classrooms after the first results."
+                }
+            },
+            "footer": "We work with a limited number of schools to provide close support and maintain quality."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "What age groups is the program designed for?",
+                    "answer": "Rise Up Kids is designed for children ages 5 to 10, focusing on comprehension, speaking, and natural language use. Through this approach, students begin to understand and communicate with greater confidence in the classroom."
+                },
+                {
+                    "question": "When do schools begin to see progress?",
+                    "answer": "The first signs are observed through student interactions, including faster responses, better comprehension, and more active class participation. With consistent exposure, students naturally begin to understand and use English with greater confidence."
+                },
+                {
+                    "question": "Do teachers need to be fluent in English?",
+                    "answer": "Teachers don't need to be native speakers, but should have a good level of English, preferably advanced. We provide clearly structured lessons and implementation support, allowing teachers to feel confident while students are consistently exposed to accurate pronunciation through the digital curriculum."
+                },
+                {
+                    "question": "How does the program fit into the school routine?",
+                    "answer": "The program is built around daily 50-minute lessons integrated into the school routine. The lesson structure makes implementation easy for teachers and ensures a consistent experience for students."
+                },
+                {
+                    "question": "How can parents follow their child's progress?",
+                    "answer": "Parents can track their children's progress through the LMS, where they have access to activities and learning development."
+                },
+                {
+                    "question": "What is the investment?",
+                    "answer": "The investment depends on the number of students and the school structure. During the initial conversation, we present a proposal tailored to your institution's needs and goals."
+                },
+                {
+                    "question": "How does implementation support work?",
+                    "answer": "We provide initial training and ongoing support during the first weeks of implementation, so teachers feel confident applying the program and the rollout is seamless."
+                }
+            ]
+        },
+        "developmentWindow": {
+            "sectionAria": "Development window for language learning",
+            "title": "Don't let the developmental window pass by.",
+            "subtitle": "Childhood is the most powerful time to build language, confidence, and curiosity. Give your child the opportunity to grow up bilingual with joy, security, and consistency.",
+            "cta": "Apply for your school →"
+        },
+        "applicationForm": {
+            "title": "Bring This Experience to Your School",
+            "sectionAria": "School application form",
+            "fields": {
+                "schoolName": "School Name",
+                "cityCountry": "City / Country",
+                "role": "Your Role",
+                "whatsapp": "WhatsApp (including country code)",
+                "email": "Professional Email",
+                "studentCount": "Number of Students",
+                "ageGroup": "Age Group",
+                "currentEnglish": "Do you currently offer English classes?",
+                "interest": "What sparked your interest in bringing this to your school?"
+            },
+            "rolePlaceholder": "--",
+            "roles": {
+                "owner": "Owner",
+                "principal": "Principal",
+                "coordinator": "Coordinator",
+                "teacher": "Teacher"
+            },
+            "placeholders": {
+                "whatsapp": "+55 11 98765-4321"
+            },
+            "currentEnglish": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "submit": "Submit Application →",
+            "footerNote": "We carefully review every application and will reach out for a brief conversation about your school and goals.",
+            "sending": "Sending…",
+            "success": "Application submitted!",
+            "error": "Something went wrong. Please try again."
+        },
+        "applicationSectionAria": "School application form"
     },
     "videos": {
         "pageTitle": "Video Library — Rise Up Kids",
-        "mainAria": "Rise Up Kids video library"
+        "mainAria": "Rise Up Kids video library",
+        "hero": {
+            "sectionAria": "Video library introduction",
+            "title": "Video Library",
+            "subtitle": "Educational English content for children",
+            "description": "Explore our carefully curated educational videos, created to make learning English engaging, meaningful, and enjoyable for children around the world."
+        },
+        "section": {
+            "title": "Our Videos",
+            "gridAria": "Educational video library grid"
+        },
+        "items": {
+            "colorsSong": {
+                "title": "Colors Song",
+                "playLabel": "Play Colors Song"
+            },
+            "numbersSong": {
+                "title": "Numbers 1-10",
+                "playLabel": "Play Numbers 1-10"
+            },
+            "farmAnimals": {
+                "title": "Farm Animals",
+                "playLabel": "Play Farm Animals"
+            },
+            "abcSong": {
+                "title": "ABC Song",
+                "playLabel": "Play ABC Song"
+            },
+            "familyMembers": {
+                "title": "Family Members",
+                "playLabel": "Play Family Members"
+            },
+            "shapesSong": {
+                "title": "Shapes Song",
+                "playLabel": "Play Shapes Song"
+            },
+            "daysOfWeek": {
+                "title": "Days of the Week",
+                "playLabel": "Play Days of the Week"
+            },
+            "weatherSong": {
+                "title": "Weather Song",
+                "playLabel": "Play Weather Song"
+            }
+        },
+        "cta": {
+            "title": "Ready to See Your Child Learn English Naturally?",
+            "description": "Rise Up Kids transforms English into a living, joyful, and unforgettable experience for children.",
+            "button": "Explore the Full Program →"
+        }
     },
     "rhome": {
         "pageTitle": "Rise Up Kids",
@@ -128,11 +309,11 @@
         }
     },
     "hero": {
-        "title": "Your child bilingual in 1 year — a childhood where English is natural.",
+        "title": "Your child becoming fluent in English, understanding and speaking naturally, without translation and without pressure. With consistent progress over 1 year.",
         "badge": "Methodology based on natural immersion",
-        "titlePart1": "Your child bilingual in 1 year, ",
-        "titlePart2": "a childhood where English is natural.",
-        "subtitle": "Rise Up Kids engages children (ages 5+) in meaningful English experiences, within an intentional and progressive framework that integrates smart technology, immersive content, and real human teaching—so English is understood, lived, and expressed with confidence.",
+        "titlePart1": "Your child becoming fluent in English, understanding and speaking naturally, without translation and without pressure. ",
+        "titlePart2": "With consistent progress over 1 year.",
+        "subtitle": "Rise Up Kids is an ecosystem for children 5 and up, offering immersive and meaningful experiences in English. Our intentional and progressive structure integrates technology, interactive activities, and real teachers, so English is understood, lived, and expressed with confidence.",
         "features": {
             "immersiveEnglish": {
                 "title": "Immersive English",
@@ -147,7 +328,7 @@
                 "description": "From understanding to expression"
             }
         },
-        "cta": "I Want to Be a Founding Family"
+        "cta": "I want my child bilingual"
     },
     "discover": {
         "title": "See how English becomes natural",
@@ -179,59 +360,59 @@
         "cta": "I WANT MY CHILD BILINGUAL"
     },
     "extras": {
-        "joy": "Joy",
-        "learning": "Learning",
-        "growth": "Growth",
-        "play": "Play",
-        "wonder": "Wonder"
+        "labels": [
+            "Joy",
+            "Confidence",
+            "Discovery",
+            "Wonder",
+            "Growth"
+        ]
     },
     "studies": {
-        "chip": "WHAT SCIENCE SHOWS",
-        "title": "The early years shape the relationship with language",
-        "subtitlePart1": "From 0 to 10 years, the brain shows ",
-        "subtitleHighlight": "greater plasticity",
-        "subtitlePart2": " to absorb languages. When contact with language happens early, understanding develops more naturally and easily."
+        "chip": "What research shows",
+        "title": "The early years shape how your child learns English for life.",
+        "subtitle": "Between ages 0 and 10, the brain is naturally prepared to absorb languages, and language is internalized almost automatically. When exposure happens early, English is no longer translated but understood naturally."
     },
     "methodology": {
-        "title": "Core + Exploration Methodology",
+        "title": "Methodology based on Structure and Exploration",
         "subtitle": "Pillars that support natural English learning in childhood.",
         "cards": {
             "immersive": {
-                "title": "Immersive English",
-                "tag": "Core",
-                "description": "Constant and natural exposure to English through stories, music, and meaningful contexts."
+                "title": "Immersion in English",
+                "tag": "",
+                "description": "Your child builds direct understanding of English, without translation, through stories, music, and meaningful experiences."
             },
             "exploration": {
                 "title": "Exploration",
-                "tag": "Non-linear paths",
-                "description": "The child explores topics of interest while developing vocabulary and comprehension."
+                "tag": "Guided by the child's interest",
+                "description": "Your child learns by exploring what sparks their curiosity, while developing vocabulary and comprehension naturally."
             },
             "integration": {
                 "title": "Integration",
-                "tag": "Holistic learning",
-                "description": "Natural connection between comprehension, expression, and confidence through meaningful practice."
+                "tag": "Learning, understanding, and expressing",
+                "description": "Comprehension, expression, and confidence develop together, so your child communicates with confidence."
             }
         }
     },
     "journey": {
-        "title": "How English grows in the child's journey",
-        "subtitle": "Language develops step by step — from comprehension to confident conversation.",
+        "title": "How English grows in your child's journey",
+        "subtitle": "Language develops step by step, from comprehension to confident conversation.",
         "cards": {
             "comprehension": {
                 "title": "COMPREHENSION",
-                "description": "Immersive contact with English through meaningful experiences."
+                "description": "Immersive exposure to English through meaningful experiences."
             },
             "interaction": {
-                "title": "INTERACTION",
-                "description": "Guided participation with teachers and language activities."
+                "title": "PARTICIPATION",
+                "description": "Guided participation with teachers, with practical activities in a safe environment."
             },
             "expression": {
                 "title": "EXPRESSION",
-                "description": "Natural beginning of speech when the language foundation is ready."
+                "description": "Speech emerges naturally when the language foundation is ready."
             },
             "speaking": {
-                "title": "SPEAKING",
-                "description": "Flows naturally in a structured and safe progression."
+                "title": "FLUENCY",
+                "description": "English flows naturally once a strong foundation of understanding and listening is in place."
             }
         }
     },
@@ -262,19 +443,19 @@
         "cards": {
             "curiosity": {
                 "title": "Active curiosity",
-                "desc": "English awakens interest, exploration, and pleasure in discovering."
+                "desc": "English sparks interest, invites exploration, and makes discovery enjoyable."
             },
             "persistence": {
-                "title": "Gentle persistence",
-                "desc": "The child continues practicing with confidence, even while still learning."
+                "title": "Consistency without force",
+                "desc": "The child keeps engaging with the language naturally, without pressure."
             },
             "growth": {
                 "title": "Growth mindset",
-                "desc": "The child feels safe to explore, make mistakes, and continue learning."
+                "desc": "The child feels safe to explore, make mistakes, and continue learning. They develop self-confidence."
             },
             "autonomy": {
                 "title": "Developing autonomy",
-                "desc": "The child participates, explores, and advances with increasing independence."
+                "desc": "The child participates, explores, and progresses with increasing independence."
             }
         }
     },
@@ -327,39 +508,39 @@
     },
     "invitation": {
         "badge": "EXCLUSIVE INVITATION",
-        "title": "Invitation to Founding Families",
-        "subtitle1": "We invite a group of founding families to the first Rise Up Kids experience.",
-        "subtitle2": "To check if it's suitable for your child, please request the information below.",
+        "title": "Invitation to Rise Up Kids Founding Families",
+        "subtitle1": "We are opening a selected group of families to participate in the founding phase of Rise Up Kids with an exclusive offer that will NEVER return.",
+        "subtitle2": "Founding families receive exclusive benefits while closely following their children's development. If you want this experience for your child, fill out the form below.",
         "form": {
-            "nameLabel": "Parent/Guardian Name",
+            "nameLabel": "Guardian's name",
             "namePlaceholder": "Your full name",
             "emailLabel": "Email",
-            "emailPlaceholder": "your_email@example.com",
+            "emailPlaceholder": "youremail@example.com",
             "whatsappLabel": "WhatsApp (optional)",
-            "whatsappPlaceholder": "+55 11 99999-9999",
+            "whatsappPlaceholder": "+1 555 123-4567",
             "ageLabel": "Child's age (years)",
-            "agePlaceholder": "e.g., 5 years",
+            "agePlaceholder": "e.g., 5 years old",
             "consentLabel": "I agree to receive messages (email/WhatsApp).",
             "submit": "I want my child bilingual",
             "sending": "Sending…",
             "success": "Done!"
         },
-        "footer": "Limited to the first founding families"
+        "footer": "Limited spots for founding families."
     },
     "questions": {
         "title": "Frequently Asked Questions",
         "items": [
             {
-                "question": "From what age can my child start?",
-                "answer": "Rise Up Kids is ideal for children aged 5 to 13, a phase of high openness to language development.\n\nChildren aged 4 can also participate with close parental supervision."
+                "question": "At what age can my child start?",
+                "answer": "Rise Up Kids is ideal for children ages 5 to 11, the stage with the highest openness to language learning.\n\nChildren aged 4 can also participate with close parental support, and learners up to 13 years old are also welcome."
             },
             {
                 "question": "How much time per day is needed?",
-                "answer": "What matters most in Rise Up Kids is frequent contact with English, not long sessions.\n\nThe child is advised to interact for about 20 to 30 minutes per day on the platform/app, 5 times per week. We also give guidance on how your child can have English activities in daily life.\n\nThis frequency allows English to become natural over time."
+                "answer": "The most important factor is frequent exposure to English, not long sessions. Your child can choose to study during Q&A sessions.\n\nWe recommend 20 to 30 minutes per day, about 5 times per week.\n\nWe also guide how to include English in your child's daily routine in a light and natural way."
             },
             {
                 "question": "My child doesn't know any English. Is it suitable?",
-                "answer": "Yes. Rise Up Kids was designed especially for beginners.\n\nThe child starts with comprehension, with visual support and guided language, and progresses naturally to speaking, at their own pace."
+                "answer": "Yes. Rise Up Kids was developed especially for beginners.\n\nThe child starts with comprehension, with visual support and guided language, and naturally progresses to speaking, respecting their pace."
             },
             {
                 "question": "How do I track progress?",
@@ -367,15 +548,15 @@
             },
             {
                 "question": "Does the curriculum use any materials?",
-                "answer": "Yes. The Rise Up Kids curriculum includes digital experiences and low-cost physical materials that help the child take part fully in the program's activities.\n\nSome of these simple materials can be purchased by families, and the list is available inside the platform.\n\nIn addition, parents have access to digital materials included in the program, which should be printed for certain activities along the journey.\n\nWhile many English schools charge separately for books or materials, Rise Up Kids digital materials are included at no extra cost.\n\nFor some activities, parents need to print materials in advance, usually a few pages at a time."
+                "answer": "Yes. The program includes digital experiences and simple, playful materials for hands-on activities.\n\nParents have access to digital materials included in the program, which can be printed when needed, meaning you do not need to pay for materials.\n\nSome additional materials may be purchased by families, always with guidance within the platform."
             },
             {
                 "question": "What is the guarantee?",
-                "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't work for your family, we refund the digital program within that period."
+                "answer": "You can try the Rise Up Kids digital program for 14 days.\n\nIf it doesn't make sense for your family, we refund the amount within that period."
             },
             {
-                "question": "Can my child use the computer, phone, or TV?",
-                "answer": "Yes. Rise Up Kids can be accessed on computer (platform), tablet, or phone (app).\n\nFamilies can also mirror the screen to the TV, so the child can take part in activities with more comfort and freedom of movement.\n\nMany activities include movement, interaction, and active participation, so using a larger screen can make the experience even more fun."
+                "question": "Can my child use a computer, phone, or TV?",
+                "answer": "Yes. Rise Up Kids can be accessed via computer, tablet, or phone.\n\nIt can also be mirrored on TV, allowing more comfort and freedom of movement during activities."
             }
         ]
     },

@@ -12,8 +12,13 @@ export default function FooterMain() {
     const { pathname } = useLocation()
     const isHome = pathname === '/'
     const isSchools = pathname === '/schools'
+    const isVideos = pathname === '/videos'
 
-    const footerBg = isHome ? HOME_FOOTER_BG : isSchools ? SCHOOLS_FOOTER_BG : 'background.paper'
+    const footerBg = isHome
+        ? HOME_FOOTER_BG
+        : isSchools || isVideos
+          ? SCHOOLS_FOOTER_BG
+          : 'background.paper'
 
     return (
         <Box

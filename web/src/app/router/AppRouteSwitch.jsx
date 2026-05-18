@@ -7,7 +7,7 @@ import PrivacyPolicyPage from '../../pages/PrivacyPolicyPage.jsx'
 
 const ParentPage = lazy(() => import('../../pages/ParentPage.jsx'))
 const SchoolsPage = lazy(() => import('../../pages/SchoolsPage.jsx'))
-const VideoLibraryPage = lazy(() => import('../../pages/VideoLibraryPage.jsx'))
+const VideoLibraryPage = lazy(() => import('../../pages/VideoLibrary.jsx'))
 
 const CheckoutPage = lazy(() => import('../../pages/CheckoutPage.jsx'))
 const CheckoutRegister = lazy(() => import('../../pages/CheckoutRegister.jsx'))

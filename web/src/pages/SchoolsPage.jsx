@@ -11,6 +11,11 @@ import HowStudentsLearnSection from '../components/school/HowStudentsLearnSectio
 import MeaningfulLearningSection from '../components/school/MeaningfulLearning/MeaningfulLearningSection.jsx'
 import TeachersPronunciationSection from '../components/school/TeachersPronunciation/TeachersPronunciationSection.jsx'
 import ImplementationSection from '../components/school/ImplementationSection/ImplementationSection.jsx'
+import SchoolCanExpectSection from '../components/school/SchoolCanExpect/SchoolCanExpectSection.jsx'
+import EducationSpecialistsSaySection from '../components/school/EducationSpecialistsSay/EducationSpecialistsSaySection.jsx'
+import GetStartedSection from '../components/school/GetStarted/GetStartedSection.jsx'
+import QuestionsSection from '../components/school/Questions/QuestionsSection.jsx'
+import ExperienceToSchoolSection from '../components/school/ExperienceToSchool/ExperienceToSchoolSection.jsx'
 import '../assets/css/App.css'
 
 export default function SchoolsPage() {
@@ -35,12 +40,11 @@ export default function SchoolsPage() {
         <MeaningfulLearningSection />
         <TeachersPronunciationSection />
         <ImplementationSection />
-        <Box
-          id="school-application"
-          tabIndex={-1}
-          sx={{ scrollMarginTop: { xs: 72, md: 88 } }}
-          aria-label={t('schools.applicationSectionAria')}
-        />
+        <SchoolCanExpectSection />
+        <EducationSpecialistsSaySection />
+        <GetStartedSection />
+        <QuestionsSection />
+        <ExperienceToSchoolSection />
       </Box>
       <FooterMain />
     </>

@@ -48,8 +48,8 @@ export default function InvitationMain() {
             }}
           >
             <InvitationForm />
-            <InvitationFooter />
           </Box>
+          <InvitationFooter />
         </Box>
       </Container>
     </Box>

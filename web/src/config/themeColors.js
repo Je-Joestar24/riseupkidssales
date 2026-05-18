@@ -20,6 +20,9 @@ export const themeColors = {
   bgOrangeGradient: 'linear-gradient(to right, rgb(233, 138, 104), rgb(233, 138, 104))',
   bgStudies: '#fde8de',
   bgMethodology: '#f4edd8',
+  /** Schools development window CTA section */
+  schoolDevelopmentWindowGradient:
+    'linear-gradient(to bottom right, rgb(233, 138, 104), rgb(253, 232, 222))',
   /** Schools landing hero: white → mint (matches #d4e6e3) */
   schoolHeroGradient: 'linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(212, 230, 227) 100%)',
   /** Schools hero lead paragraph (dark teal) */

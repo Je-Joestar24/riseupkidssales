@@ -91,11 +91,192 @@
             "p2": "Ofrecemos un apoyo constante a lo largo de la implementación, asegurando que cada maestro se sienta listo para aplicar el programa con seguridad.",
             "footer": "Con una exposición diaria constante, las escuelas pueden ofrecer una experiencia de inglés más inmersiva, al mismo tiempo que fomentan el desarrollo de un entorno bilingüe."
         },
-        "applicationSectionAria": "Solicitud para colegios — contenido próximamente"
+        "canExpect": {
+            "sectionAria": "Qué pueden esperar las escuelas de Rise Up Kids",
+            "title": "Qué pueden esperar las escuelas",
+            "card1": {
+                "title": "Alumnos activos y motivados",
+                "description": "Los alumnos participan activamente en clase, respondiendo e interactuando con el idioma desde el primer día."
+            },
+            "card2": {
+                "title": "Uso real del inglés en el aula",
+                "description": "Los alumnos comienzan a comprender y a utilizar el inglés en situaciones reales, no solo en ejercicios."
+            },
+            "card3": {
+                "title": "Progreso visible en la comunicación",
+                "description": "El progreso se hace evidente a través de las respuestas, la comprensión y la confianza utilizando el idioma."
+            },
+            "card4": {
+                "title": "Una base sólida para el desarrollo del lenguaje",
+                "description": "Una base sólida que respalda el crecimiento en lectura, escritura y comunicación."
+            }
+        },
+        "educationSpecialists": {
+            "sectionAria": "Lo que dicen los especialistas en educación sobre Rise Up Kids",
+            "badge": "ESPECIALISTAS",
+            "title": "Lo que dicen los especialistas en educación sobre la metodología de Rise Up Kids",
+            "subtitle": "Perspectivas de profesionales de la educación sobre un enfoque más natural y efectivo para aprender inglés.",
+            "grant": {
+                "name": "Dr. Grant Eckstein, Ph.D.",
+                "role": "Profesor de Lingüística de la Brigham Young University",
+                "credentials": "",
+                "quote": "Como académico en lingüística aplicada y coordinador de un programa de posgrado en TESOL, evalúo los programas de aprendizaje de idiomas a través de la investigación y la práctica. Rise Up Kids se destaca como un programa que logra unir ambos con éxito. Su diseño refleja principios bien establecidos de adquisición de segunda lengua, incluyendo input significativo, andamiaje cuidadoso y oportunidades de participación que son esenciales para los jóvenes aprendices. Estos principios están cuidadosamente incorporados en la estructura de las lecciones. La calidad de los materiales es igualmente impresionante. Los videos y lecciones son atractivos, bien producidos y claramente diseñados para mantener la atención de los niños mientras apoyan el desarrollo lingüístico real. Lo que más distingue a Rise Up Kids es su claro compromiso con la excelencia. El programa demuestra tanto experiencia pedagógica como una comprensión profunda de cómo los niños aprenden idiomas. Lo recomendaría con confianza a educadores y familias que buscan instrucción de inglés de alta calidad.",
+                "imageAlt": "Dr. Grant Eckstein, Ph.D."
+            },
+            "sarah": {
+                "name": "Sarah Schumutz",
+                "role": "Maestra de primaria",
+                "credentials": "Especializaciones en Matemáticas de Primaria y Enseñanza del Inglés a Estudiantes de Lengua Extranjera otorgadas por la BYU.",
+                "quote": "Como maestra de primaria con experiencia apoyando a estudiantes multilingües, entiendo lo difícil que puede ser para los niños adquirir inglés, incluso estando rodeados del idioma a diario. Muchos estudiantes inmigrantes en Estados Unidos aún luchan por desarrollar confianza y habilidades comunicativas significativas en inglés, a pesar de años de exposición. Lo que me impresionó de Rise Up Kids es la intencionalidad con la que el programa está diseñado para mantener a los niños activamente involucrados en el proceso de aprendizaje. Las lecciones fomentan la participación, la comprensión, el movimiento y la interacción, lo que ayuda a que el idioma sea significativo y memorable para los jóvenes estudiantes. La estructura del programa es reflexiva y tiene un propósito claro, mientras que los videos y las actividades son divertidos y apropiados para la edad. Rise Up Kids crea un entorno de aprendizaje que ayuda a los niños a sentirse exitosos, motivados y genuinamente conectados con el idioma.",
+                "imageAlt": "Sarah Schumutz"
+            }
+        },
+        "getStarted": {
+            "sectionAria": "Cómo empiezan las escuelas con Rise Up Kids",
+            "title": "Cómo empiezan las escuelas",
+            "steps": {
+                "step1": {
+                    "title": "1. Grupo piloto",
+                    "description": "Empieza con una clase piloto para experimentar el enfoque directamente"
+                },
+                "step2": {
+                    "title": "2. Implementación guiada",
+                    "description": "Capacitación inicial con apoyo continuo durante las primeras semanas de implementación"
+                },
+                "step3": {
+                    "title": "3. Expansión gradual",
+                    "description": "Expande el plan de estudios a otras clases tras los primeros resultados."
+                }
+            },
+            "footer": "Trabajamos con un número limitado de escuelas para brindar apoyo directo y mantener la calidad."
+        },
+        "faq": {
+            "title": "Preguntas frecuentes",
+            "items": [
+                {
+                    "question": "¿Para qué grupos de edad está diseñado el programa?",
+                    "answer": "Rise Up Kids está diseñado para niños de 5 a 10 años y se centra en la comprensión, la expresión oral y el uso natural del idioma. Gracias a este enfoque, los alumnos comienzan a entender y comunicarse con mayor seguridad dentro del aula."
+                },
+                {
+                    "question": "¿Cuándo se empieza a ver progreso?",
+                    "answer": "Los primeros indicios se observan a través de la interacción de los alumnos, incluyendo respuestas más rápidas, una mejor comprensión y una participación más activa en clase. Con una exposición constante, los alumnos comienzan naturalmente a entender y a usar el inglés con mayor confianza."
+                },
+                {
+                    "question": "¿Los maestros deben hablar inglés con fluidez?",
+                    "answer": "Los maestros no necesitan ser hablantes nativos, pero deben tener un buen nivel de inglés, preferiblemente avanzado. Ofrecemos lecciones claramente estructuradas y apoyo en la implementación, lo que les permite a los maestros sentirse seguros mientras los alumnos están expuestos de manera constante a una pronunciación precisa a través del plan de estudio digital."
+                },
+                {
+                    "question": "¿Cómo se integra el programa en la rutina escolar?",
+                    "answer": "El programa está diseñado en torno a lecciones diarias de 50 minutos integradas en la rutina escolar. La estructura de las lecciones facilita la implementación para los maestros y garantiza una experiencia consistente para los alumnos."
+                },
+                {
+                    "question": "¿Cómo pueden los padres seguir el progreso de los alumnos?",
+                    "answer": "Los padres pueden seguir el progreso de sus hijos a través del LMS, donde tienen acceso a las actividades y al desarrollo del aprendizaje."
+                },
+                {
+                    "question": "¿Cuánto es la inversión?",
+                    "answer": "La inversión depende del número de alumnos y de la estructura de la escuela. Durante la conversación inicial, presentamos una propuesta adaptada a las necesidades y objetivos de su institución."
+                },
+                {
+                    "question": "¿Cómo funciona el apoyo durante la implementación?",
+                    "answer": "Brindamos capacitación inicial y un acompañamiento constante durante las primeras semanas de implementación, para que los maestros sientan confianza aplicando el programa y la puesta en marcha sea impecable."
+                }
+            ]
+        },
+        "developmentWindow": {
+            "sectionAria": "Ventana de desarrollo para el aprendizaje de idiomas",
+            "title": "No dejes pasar esta etapa crucial del desarrollo.",
+            "subtitle": "La infancia es el momento más importante para desarrollar el lenguaje, la confianza y la curiosidad. Bríndele a tu hijo la oportunidad de crecer siendo bilingüe con alegría, seguridad y constancia.",
+            "cta": "Postula tu escuela →"
+        },
+        "applicationForm": {
+            "title": "Lleva esta experiencia a tu escuela",
+            "sectionAria": "Formulario de solicitud escolar",
+            "fields": {
+                "schoolName": "Nombre de la escuela",
+                "cityCountry": "Ciudad / País",
+                "role": "Tu cargo",
+                "whatsapp": "WhatsApp (con código de país)",
+                "email": "Correo electrónico profesional",
+                "studentCount": "Número de alumnos",
+                "ageGroup": "Rango de edad",
+                "currentEnglish": "¿Ofrecen actualmente clases de inglés?",
+                "interest": "¿Qué hizo que les interesara esto para su escuela?"
+            },
+            "rolePlaceholder": "--",
+            "roles": {
+                "owner": "Propietario(a)",
+                "principal": "Director(a)",
+                "coordinator": "Coordinador(a)",
+                "teacher": "Maestro(a)"
+            },
+            "placeholders": {
+                "whatsapp": "+55 11 98765-4321"
+            },
+            "currentEnglish": {
+                "yes": "Sí",
+                "no": "No"
+            },
+            "submit": "Enviar solicitud →",
+            "footerNote": "Revisamos cada solicitud cuidadosamente y nos contactaremos para mantener una breve conversación sobre su escuela y sus objetivos.",
+            "sending": "Enviando…",
+            "success": "¡Solicitud enviada!",
+            "error": "Algo salió mal. Inténtalo de nuevo."
+        },
+        "applicationSectionAria": "Formulario de solicitud escolar"
     },
     "videos": {
         "pageTitle": "Biblioteca de Videos — Rise Up Kids",
-        "mainAria": "Biblioteca de videos Rise Up Kids"
+        "mainAria": "Biblioteca de videos Rise Up Kids",
+        "hero": {
+            "sectionAria": "Introducción a la biblioteca de videos",
+            "title": "Biblioteca de videos",
+            "subtitle": "Contenido educativo en inglés para niños",
+            "description": "Explora nuestros videos educativos cuidadosamente seleccionados, contenido de calidad creado para niños de todo el mundo."
+        },
+        "section": {
+            "title": "Nuestros Videos",
+            "gridAria": "Cuadrícula de la biblioteca de videos educativos"
+        },
+        "items": {
+            "colorsSong": {
+                "title": "Colors Song",
+                "playLabel": "Reproducir Colors Song"
+            },
+            "numbersSong": {
+                "title": "Numbers 1-10",
+                "playLabel": "Reproducir Numbers 1-10"
+            },
+            "farmAnimals": {
+                "title": "Farm Animals",
+                "playLabel": "Reproducir Farm Animals"
+            },
+            "abcSong": {
+                "title": "ABC Song",
+                "playLabel": "Reproducir ABC Song"
+            },
+            "familyMembers": {
+                "title": "Family Members",
+                "playLabel": "Reproducir Family Members"
+            },
+            "shapesSong": {
+                "title": "Shapes Song",
+                "playLabel": "Reproducir Shapes Song"
+            },
+            "daysOfWeek": {
+                "title": "Days of the Week",
+                "playLabel": "Reproducir Days of the Week"
+            },
+            "weatherSong": {
+                "title": "Weather Song",
+                "playLabel": "Reproducir Weather Song"
+            }
+        },
+        "cta": {
+            "title": "¿Quieres ver a tu hijo aprendiendo inglés de forma natural?",
+            "description": "Rise Up Kids convierte el inglés en una experiencia vibrante, divertida e inolvidable para los niños.",
+            "button": "Explora el programa completo →"
+        }
     },
     "rhome": {
         "pageTitle": "Rise Up Kids",
@@ -128,11 +309,11 @@
         }
     },
     "hero": {
-        "title": "Tu hijo bilingüe en 1 año, una infancia donde el inglés es natural.",
+        "title": "Logra que tu hijo aprenda inglés con fluidez, y que lo entienda y hable de forma natural, sin traducciones ni presiones.",
         "badge": "Metodología basada en inmersión natural",
-        "titlePart1": "Tu hijo bilingüe en 1 año, ",
-        "titlePart2": "una infancia donde el inglés es natural.",
-        "subtitle": "Rise Up Kids involucra a los niños (a partir de 5 años) en experiencias significativas en inglés, dentro de una estructura intencional y progresiva que integra tecnología inteligente, contenido inmersivo y enseñanza humana real, para que el inglés sea comprendido, vivido y expresado con confianza.",
+        "titlePart1": "Logra que tu hijo aprenda inglés con fluidez, ",
+        "titlePart2": "y que lo entienda y hable de forma natural, sin traducciones ni presiones.",
+        "subtitle": "Rise Up Kids es un ecosistema para niños de 5 años en adelante, que ofrece experiencias inmersivas y significativas en inglés. Nuestra estructura intencional y progresiva integra tecnología, actividades interactivas y profesores reales, para que el inglés se entienda, se viva y se exprese con confianza.",
         "features": {
             "immersiveEnglish": {
                 "title": "Inglés Inmersivo",
@@ -147,7 +328,7 @@
                 "description": "Del entendimiento a la expresión"
             }
         },
-        "cta": "Comenzar el Viaje de Mi Hijo"
+        "cta": "Quiero que mi hijo sea bilingüe"
     },
     "discover": {
         "title": "Mira cómo el inglés se vuelve natural",
@@ -179,59 +360,59 @@
         "cta": "QUIERO A MI HIJO BILINGÜE"
     },
     "extras": {
-        "joy": "Alegría",
-        "learning": "Aprendizaje",
-        "growth": "Crecimiento",
-        "play": "Juego",
-        "wonder": "Asombro"
+        "labels": [
+            "ALEGRÍA",
+            "CONFIANZA",
+            "DESCUBRIMIENTO",
+            "ASOMBRO",
+            "CRECIMIENTO"
+        ]
     },
     "studies": {
-        "chip": "LO QUE MUESTRA LA CIENCIA",
-        "title": "Los primeros años moldean la relación con el idioma",
-        "subtitlePart1": "De 0 a 10 años, el cerebro presenta ",
-        "subtitleHighlight": "mayor plasticidad",
-        "subtitlePart2": " para absorber idiomas. Cuando el contacto con el lenguaje ocurre temprano, la comprensión se desarrolla con más naturalidad y facilidad."
+        "chip": "LO QUE DICEN LAS INVESTIGACIONES",
+        "title": "Los primeros años moldean cómo tu hijo aprende inglés durante toda su vida.",
+        "subtitle": "Entre los 0 y los 10 años, el cerebro está naturalmente preparado para absorber idiomas, y el lenguaje se internaliza casi automáticamente. Cuando la exposición ocurre temprano, el inglés deja de traducirse y se entiende de forma natural."
     },
     "methodology": {
-        "title": "Metodología Core + Exploration",
+        "title": "Metodología basada en estructura y exploración",
         "subtitle": "Pilares que sostienen el aprendizaje natural del inglés en la infancia.",
         "cards": {
             "immersive": {
-                "title": "Inglés Inmersivo",
-                "tag": "Core",
-                "description": "Exposición constante y natural al inglés a través de historias, música y contextos significativos."
+                "title": "Inmersión en inglés",
+                "tag": "",
+                "description": "Tu hijo desarrolla una comprensión directa del inglés, sin traducción, a través de historias, música y experiencias significativas."
             },
             "exploration": {
-                "title": "Exploration",
-                "tag": "Caminos no lineales",
-                "description": "El niño explora temas de su interés mientras desarrolla vocabulario y comprensión."
+                "title": "Exploración",
+                "tag": "Guiada por el interés del niño",
+                "description": "Tu hijo aprende explorando lo que despierta su curiosidad, mientras desarrolla vocabulario y comprensión de forma natural."
             },
             "integration": {
                 "title": "Integración",
-                "tag": "Aprendizaje holístico",
-                "description": "Conexión natural entre comprensión, expresión y confianza a través de la práctica significativa."
+                "tag": "Aprender, entender y expresar",
+                "description": "La comprensión, la expresión y la confianza se desarrollan juntas, para que tu hijo se comunique con confianza."
             }
         }
     },
     "journey": {
-        "title": "Cómo el inglés crece en el viaje del niño",
-        "subtitle": "El lenguaje se desarrolla paso a paso — de la comprensión a la conversación confiada.",
+        "title": "Cómo crece el inglés en el proceso de tu hijo",
+        "subtitle": "El dominio del idioma se desarrolla paso a paso, desde la comprensión hasta la conversación fluida",
         "cards": {
             "comprehension": {
                 "title": "COMPRENSIÓN",
-                "description": "Contacto inmersivo con el inglés por experiencias significativas."
+                "description": "Exposición inmersiva al inglés a través de experiencias significativas."
             },
             "interaction": {
-                "title": "INTERACCIÓN",
-                "description": "Participación guiada con profesores y actividades de lenguaje."
+                "title": "PARTICIPACIÓN",
+                "description": "Participación guiada con profesores, mediante actividades prácticas en un entorno seguro."
             },
             "expression": {
                 "title": "EXPRESIÓN",
-                "description": "Inicio natural del habla cuando la base del lenguaje está lista."
+                "description": "El habla surge de forma natural cuando la base del idioma está lista."
             },
             "speaking": {
-                "title": "SPEAKING",
-                "description": "Fluye naturalmente en una progresión estructurada y segura."
+                "title": "FLUIDEZ",
+                "description": "El inglés fluye de forma natural cuando existe una base sólida de comprensión y escucha."
             }
         }
     },
@@ -262,19 +443,19 @@
         "cards": {
             "curiosity": {
                 "title": "Curiosidad activa",
-                "desc": "El inglés despierta interés, exploración y placer en descubrir."
+                "desc": "El inglés despierta interés, invita a explorar y hace que el descubrimiento sea agradable."
             },
             "persistence": {
-                "title": "Persistencia gentil",
-                "desc": "El niño continúa practicando con confianza, incluso cuando aún está aprendiendo."
+                "title": "Constancia sin presión",
+                "desc": "El niño sigue interactuando con el idioma de forma natural, sin presión."
             },
             "growth": {
                 "title": "Mentalidad de crecimiento",
-                "desc": "El niño se siente seguro para explorar, cometer errores y continuar aprendiendo."
+                "desc": "El niño se siente seguro para explorar, cometer errores y seguir aprendiendo. Desarrolla confianza en sí mismo."
             },
             "autonomy": {
-                "title": "Autonomía en desarrollo",
-                "desc": "El niño participa, explora y avanza con creciente independencia."
+                "title": "Desarrollo de la autonomía",
+                "desc": "El niño participa, explora y progresa con una independencia cada vez mayor."
             }
         }
     },
@@ -327,55 +508,55 @@
     },
     "invitation": {
         "badge": "INVITACIÓN EXCLUSIVA",
-        "title": "Invitación a las Familias Fundadoras",
-        "subtitle1": "Invitamos a un grupo de familias fundadoras a la primera experiencia Rise Up Kids.",
-        "subtitle2": "Para comprobar si es adecuado para su hijo/a, solicite la información a continuación.",
+        "title": "Invitación a las Familias Fundadoras de Rise Up Kids",
+        "subtitle1": "Estamos invitando a un grupo selecto de familias a participar en la fase inicial de Rise Up Kids con una oferta exclusiva que NUNCA volverá a repetirse.",
+        "subtitle2": "Las familias fundadoras reciben beneficios exclusivos mientras siguen el desarrollo de sus hijos. Si quieres esta experiencia para tu hijo, llena el siguiente formulario.",
         "form": {
-            "nameLabel": "Nombre del padre/madre/tutor",
-            "namePlaceholder": "Su nombre completo",
-            "emailLabel": "Correo electrónico",
-            "emailPlaceholder": "your_email@example.com",
+            "nameLabel": "Nombre del responsable",
+            "namePlaceholder": "Tu nombre completo",
+            "emailLabel": "E-mail",
+            "emailPlaceholder": "tuemail@ejemplo.com",
             "whatsappLabel": "WhatsApp (opcional)",
-            "whatsappPlaceholder": "+55 11 99999-9999",
-            "ageLabel": "Edad del niño/a (años)",
-            "agePlaceholder": "p. ej., 5 años",
+            "whatsappPlaceholder": "+34 912 345 678",
+            "ageLabel": "Edad del niño (años)",
+            "agePlaceholder": "ej: 5 años",
             "consentLabel": "Acepto recibir mensajes (correo/WhatsApp).",
-            "submit": "Quiero a mi hijo bilingüe",
+            "submit": "Quiero que mi hijo sea bilingüe",
             "sending": "Enviando…",
             "success": "¡Listo!"
         },
-        "footer": "Limitado a las primeras familias fundadoras"
+        "footer": "Cupos limitados para familias fundadoras."
     },
     "questions": {
         "title": "Preguntas Frecuentes",
         "items": [
             {
-                "question": "¿A partir de qué edad puede empezar mi hijo/a?",
-                "answer": "Rise Up Kids es ideal para niños de 5 a 13 años, una fase de gran apertura al desarrollo del idioma.\n\nLos niños de 4 años también pueden participar con supervisión cercana de los padres."
+                "question": "¿A qué edad puede comenzar mi hijo?",
+                "answer": "Rise Up Kids es ideal para niños de 5 a 11 años, la etapa con mayor apertura al aprendizaje de idiomas.\n\nLos niños de 4 años también pueden participar con el estrecho apoyo de sus padres, y los alumnos de hasta 13 años también son bienvenidos."
             },
             {
-                "question": "¿Cuánto tiempo al día es necesario?",
-                "answer": "Lo más importante en Rise Up Kids es el contacto frecuente con el inglés, no sesiones largas.\n\nSe recomienda que el niño interactúe entre 20 y 30 minutos al día en la plataforma/app, 5 veces por semana. También damos indicaciones de cómo su hijo puede tener actividades en inglés en el día a día.\n\nEsta frecuencia permite que el inglés se vuelva natural con el tiempo."
+                "question": "¿Cuánto tiempo al día se necesita?",
+                "answer": "El factor más importante es la exposición frecuente al inglés, no las largas duraciones de las sesiones.\n\nRecomendamos de 20 a 30 minutos al día, aproximadamente 5 veces por semana.\n\nTambién orientamos sobre cómo incluir el inglés en la rutina diaria de tu hijo de forma natural."
             },
             {
-                "question": "Mi hijo no sabe nada de inglés. ¿Es adecuado?",
-                "answer": "Sí. Rise Up Kids fue desarrollado especialmente para principiantes.\n\nEl niño comienza por la comprensión, con apoyo visual y lenguaje guiado, y progresa de forma natural hasta el habla, respetando su propio ritmo."
+                "question": "Mi hijo no sabe nada de inglés. ¿Hay algún problema?",
+                "answer": "No, ninguno. Rise Up Kids fue desarrollado especialmente para principiantes.\n\nEl niño comienza con la comprensión junto a apoyo visual y lenguaje guiado, y avanza de forma natural hacia la expresión oral, respetando su propio ritmo."
             },
             {
-                "question": "¿Cómo puedo seguir el progreso?",
-                "answer": "Los padres siguen la evolución del niño a lo largo del proceso mediante las actividades realizadas, la participación y las orientaciones pedagógicas cuando corresponda."
+                "question": "¿Cómo puedo seguir su progreso?",
+                "answer": "Los padres pueden seguir el progreso del niño a lo largo de todo el proceso a través de las actividades realizadas, su participación y la orientación pedagógica."
             },
             {
-                "question": "¿El currículo utiliza algún material?",
-                "answer": "Sí. El currículo Rise Up Kids incluye experiencias digitales y materiales físicos de bajo costo que ayudan al niño a participar plenamente de las actividades del programa.\n\nAlgunos de estos materiales sencillos pueden ser adquiridos por las familias, y la lista está disponible dentro de la plataforma.\n\nAdemás, los padres tienen acceso a materiales digitales incluidos en el programa, que deben imprimirse para determinadas actividades del recorrido.\n\nMientras muchas escuelas de inglés cobran por separado libros o materiales, en Rise Up Kids los materiales digitales están incluidos sin coste adicional.\n\nPara algunas actividades, es necesario que los padres impriman los materiales con antelación, normalmente pocas páginas cada vez."
+                "question": "¿El programa de estudio incluye materiales?",
+                "answer": "Sí. El programa incluye experiencias digitales y materiales simples y lúdicos para actividades prácticas.\n\nLos padres tienen acceso a los materiales digitales incluidos en el programa, que pueden imprimirse cuando sea necesario, lo que significa que no necesitas pagar por materiales.\n\nLas familias pueden adquirir algunos materiales adicionales, siempre siguiendo las indicaciones que se proporcionan en la plataforma."
             },
             {
                 "question": "¿Cuál es la garantía?",
-                "answer": "Puede probar el programa digital Rise Up Kids durante 14 días.\n\nSi no tiene sentido para su familia, devolvemos el valor del programa digital dentro de ese período."
+                "answer": "Puedes probar el programa digital de Rise Up Kids durante 14 días.\n\nSi no tiene sentido para tu familia, reembolsamos el monto dentro de ese período."
             },
             {
-                "question": "¿Mi hijo puede usar el computador, celular o TV?",
-                "answer": "Sí. Rise Up Kids puede accederse por computador (plataforma), tablet o celular (app).\n\nLas familias también pueden reflejar la pantalla en el TV, permitiendo que el niño participe de las actividades con más comodidad y libertad de movimiento.\n\nMuchas actividades incluyen movimiento, interacción y participación activa, por lo que usar la pantalla grande puede hacer la experiencia aún más divertida."
+                "question": "¿Puede mi hijo usar computadora, teléfono celular o TV?",
+                "answer": "Sí. Se puede acceder a Rise Up Kids a través de computadora, tablet o teléfono móvil.\n\nTambién puede proyectarse en la TV para mayor comodidad y libertad de movimiento."
             }
         ]
     },

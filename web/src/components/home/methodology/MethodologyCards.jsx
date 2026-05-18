@@ -78,7 +78,10 @@ export default function MethodologyCards() {
         gap: 5,
       }}
     >
-      {CARD_CONFIG.map(({ key, Icon, borderColor, iconBg, iconColor }) => (
+      {CARD_CONFIG.map(({ key, Icon, borderColor, iconBg, iconColor }) => {
+        const tag = t(`methodology.cards.${key}.tag`)
+
+        return (
         <Card
           key={key}
           component="article"
@@ -125,17 +128,19 @@ export default function MethodologyCards() {
           >
             {t(`methodology.cards.${key}.title`)}
           </Typography>
-          <Typography
-            component="p"
-            sx={{
-              fontSize: '1.125rem',
-              mb: 2,
-              color: iconColor,
-              fontWeight: 600
-            }}
-          >
-            {t(`methodology.cards.${key}.tag`)}
-          </Typography>
+          {tag ? (
+            <Typography
+              component="p"
+              sx={{
+                fontSize: '1.125rem',
+                mb: 2,
+                color: iconColor,
+                fontWeight: 600,
+              }}
+            >
+              {tag}
+            </Typography>
+          ) : null}
           <Typography
             component="p"
             sx={{
@@ -148,7 +153,8 @@ export default function MethodologyCards() {
             {t(`methodology.cards.${key}.description`)}
           </Typography>
         </Card>
-      ))}
+        )
+      })}
     </Box>
   )
 }
