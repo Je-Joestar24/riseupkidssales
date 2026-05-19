@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useTranslation } from '../hooks/useTranslation.js'
+import PageSeo from '../components/seo/PageSeo.jsx'
 import NavHeaders from '../components/common/NavHeaders.jsx'
 import FooterMain from '../components/home/footer/FooterMain.jsx'
 import HeroSectionMain from '../components/videoLibrary/HeroSection/HeroSectionMain.jsx'
@@ -10,10 +10,10 @@ import '../assets/css/App.css'
 
 export default function VideoLibrary() {
   const { t } = useTranslation()
-  useDocumentTitle(t('videos.pageTitle'))
 
   return (
     <>
+      <PageSeo seoKey="videos" />
       <NavHeaders />
       <Box
         className="app"

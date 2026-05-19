@@ -2,6 +2,26 @@
     "nav": {
         "login": "Iniciar sesión"
     },
+    "seo": {
+        "home": {
+            "title": "Rise Up Kids | Inglés Inmersivo para Niños de 5 a 13 Años",
+            "description": "Inglés inmersivo para niños de 5 a 13 años. Profesores reales, método alegre y progreso real desde US$ 12/mes. Rise Up Kids ayuda a los niños a aprender inglés de forma natural."
+        },
+        "parents": {
+            "title": "Rise Up Kids para Padres | Inglés Inmersivo para tu Hijo en Casa",
+            "description": "Inglés para niños en casa, de 5 a 13 años. Profesores reales, 20–30 minutos al día, desde US$ 12/mes. Nuestro programa de inglés infantil online ayuda a tu hijo a ser bilingüe en aproximadamente un año.",
+            "keywords": "inglés para niños en casa, programa de inglés infantil online, cómo enseñar inglés a niños, inglés inmersivo para niños"
+        },
+        "videos": {
+            "title": "Videos How To en Inglés para Niños | Rise Up Kids",
+            "description": "Videos How To gratuitos en inglés para niños y padres. Lecciones cortas y divertidas para aprender inglés en casa. Nuevos videos próximamente en Rise Up Kids."
+        },
+        "schools": {
+            "title": "Rise Up Kids para Escuelas | Programa de Inglés Inmersivo Institucional",
+            "description": "Programa de inglés inmersivo para escuelas e instituciones. Niños de 5 a 13 años con profesores reales, clases estructuradas y apoyo institucional. Solicita una demostración gratuita.",
+            "keywords": "programa de inglés para escuelas, inglés inmersivo para niños, inglés para colegios, programa institucional de inglés"
+        }
+    },
     "parent": {
         "pageTitle": "Para padres — Rise Up Kids",
         "mainAria": "Rise Up Kids — contenido para padres"
@@ -236,7 +256,8 @@
         },
         "section": {
             "title": "Nuestros Videos",
-            "gridAria": "Cuadrícula de la biblioteca de videos educativos"
+            "gridAria": "Cuadrícula de la biblioteca de videos educativos",
+            "empty": "Los videos How To en inglés estarán disponibles pronto. Vuelve pronto para lecciones gratuitas para niños y padres."
         },
         "items": {
             "colorsSong": {

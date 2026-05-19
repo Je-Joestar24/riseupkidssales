@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useTranslation } from '../hooks/useTranslation.js'
+import PageSeo from '../components/seo/PageSeo.jsx'
 import NavHeaders from '../components/common/NavHeaders.jsx'
 import HeroSection from '../components/home/hero/HeroSection.jsx'
 import ExtrasList from '../components/home/extras/ExtrasList.jsx'
@@ -22,10 +22,10 @@ import EducationSpecialistsSayMain from '../components/school/EducationSpecialis
 
 function ParentPage() {
   const { t } = useTranslation()
-  useDocumentTitle(t('parent.pageTitle'))
 
   return (
     <>
+      <PageSeo seoKey="parents" />
       <NavHeaders />
       <Box className="app" component="main" role="main" aria-label={t('parent.mainAria')}>
         <Box className="hero" component="section" aria-label="Rise Up Kids sales hero section">

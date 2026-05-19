@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useTranslation } from '../hooks/useTranslation.js'
+import PageSeo from '../components/seo/PageSeo.jsx'
 import NavHeaders from '../components/common/NavHeaders.jsx'
 import FooterMain from '../components/home/footer/FooterMain.jsx'
 import HeroSection from '../components/school/HeroSection/HeroSection.jsx'
@@ -20,10 +20,10 @@ import '../assets/css/App.css'
 
 export default function SchoolsPage() {
   const { t } = useTranslation()
-  useDocumentTitle(t('schools.pageTitle'))
 
   return (
     <>
+      <PageSeo seoKey="schools" />
       <NavHeaders />
       <Box
         className="app"

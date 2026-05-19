@@ -2,6 +2,26 @@
     "nav": {
         "login": "Login"
     },
+    "seo": {
+        "home": {
+            "title": "Rise Up Kids | Inglês Imersivo para Crianças de 5 a 13 Anos",
+            "description": "Inglês imersivo para crianças de 5 a 13 anos. Professores reais, método envolvente e progresso significativo a partir de US$ 12/mês. O Rise Up Kids ajuda seu filho a aprender inglês de forma natural."
+        },
+        "parents": {
+            "title": "Rise Up Kids para Pais | Inglês Imersivo para seu Filho em Casa",
+            "description": "Inglês para crianças em casa, de 5 a 13 anos. Professores reais, 20–30 minutos por dia, a partir de US$ 12/mês. Nosso programa de inglês infantil online ajuda seu filho a se tornar bilíngue em cerca de um ano — descubra como ensinar inglês para crianças de forma natural.",
+            "keywords": "inglês para crianças em casa, programa de inglês infantil online, como ensinar inglês para crianças, inglês imersivo para crianças"
+        },
+        "videos": {
+            "title": "Como Fazer em Inglês para Crianças | Rise Up Kids",
+            "description": "Vídeos gratuitos de Como Fazer em inglês para crianças e pais. Aulas curtas e envolventes que tornam o aprendizado de inglês em casa divertido. Novos vídeos em breve no Rise Up Kids."
+        },
+        "schools": {
+            "title": "Rise Up Kids para Escolas | Programa de Inglês Imersivo Institucional",
+            "description": "Programa de inglês para escolas e instituições. Inglês imersivo para crianças de 5 a 13 anos com professores reais, aulas estruturadas e suporte institucional. Solicite uma demonstração gratuita.",
+            "keywords": "programa de inglês para escolas, inglês imersivo para crianças, inglês para escolas, programa institucional de inglês"
+        }
+    },
     "parent": {
         "pageTitle": "Para pais — Rise Up Kids",
         "mainAria": "Rise Up Kids — conteúdo para pais"
@@ -236,7 +256,8 @@
         },
         "section": {
             "title": "Nossos Vídeos",
-            "gridAria": "Grade da biblioteca de vídeos educativos"
+            "gridAria": "Grade da biblioteca de vídeos educativos",
+            "empty": "Os vídeos Como Fazer em inglês estarão disponíveis em breve. Volte em breve para aulas gratuitas para crianças e pais."
         },
         "items": {
             "colorsSong": {

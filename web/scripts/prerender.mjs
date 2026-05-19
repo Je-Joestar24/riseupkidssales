@@ -5,11 +5,31 @@ import { readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 import { PRERENDER_PATHS } from '../src/ssg/prerender-paths.js'
+import { getSeoKeyForPath } from '../src/seo/pageSeoRoutes.js'
+import { applySeoToHtml } from '../src/seo/buildSeoHeadMarkup.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const rootDir = join(__dirname, '..')
 const distDir = join(rootDir, 'dist')
 const serverDir = join(distDir, 'server')
+
+function readViteAppUrl() {
+  try {
+    const envText = readFileSync(join(rootDir, '.env'), 'utf-8')
+    for (const line of envText.split('\n')) {
+      const trimmed = line.trim()
+      if (trimmed.startsWith('VITE_APP_URL=')) {
+        return trimmed.slice('VITE_APP_URL='.length).trim().replace(/^["']|["']$/g, '')
+      }
+    }
+  } catch {
+    // optional .env
+  }
+  return process.env.VITE_APP_URL || 'https://riseup.kids'
+}
+
+const APP_URL = readViteAppUrl()
+const PRERENDER_LANGUAGE = 'pt'
 
 const template = readFileSync(join(distDir, 'index.html'), 'utf-8')
 
@@ -52,8 +72,21 @@ function writeHtmlForPath(pathname, html) {
 }
 
 for (const pathname of PRERENDER_PATHS) {
-  const { appHtml, emotionStyleTags, preloadedState } = render(pathname)
-  const html = injectIntoTemplate(template, { appHtml, emotionStyleTags, preloadedState })
+  const { appHtml, emotionStyleTags, preloadedState } = render(pathname, {
+    language: PRERENDER_LANGUAGE,
+  })
+  let html = injectIntoTemplate(template, { appHtml, emotionStyleTags, preloadedState })
+
+  const seoKey = getSeoKeyForPath(pathname)
+  if (seoKey) {
+    html = applySeoToHtml(html, {
+      pathname,
+      lang: PRERENDER_LANGUAGE,
+      seoKey,
+      appUrl: APP_URL,
+    })
+  }
+
   writeHtmlForPath(pathname, html)
-  console.log('SSG wrote', pathname)
+  console.log('SSG wrote', pathname, seoKey ? `(seo: ${seoKey}, lang: ${PRERENDER_LANGUAGE})` : '')
 }

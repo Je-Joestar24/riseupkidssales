@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useTranslation } from '../hooks/useTranslation.js'
+import PageSeo from '../components/seo/PageSeo.jsx'
 import NavHeaders from '../components/common/NavHeaders.jsx'
 import HeroSection from '../components/rhome/HeroSection/HeroSection.jsx'
 import LinksSection from '../components/rhome/LinksSection/LinksSection.jsx'
@@ -9,10 +9,10 @@ import '../assets/css/App.css'
 
 function HomePage() {
   const { t } = useTranslation()
-  useDocumentTitle(t('rhome.pageTitle'))
 
   return (
     <>
+      <PageSeo seoKey="home" />
       <NavHeaders />
       <Box className="app" component="main" role="main" aria-label="Rise Up Kids home">
         <HeroSection />

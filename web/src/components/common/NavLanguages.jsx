@@ -1,4 +1,5 @@
 import { Button, Stack, Typography } from '@mui/material'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../hooks/useLanguage'
 
 const languages = [
@@ -9,6 +10,23 @@ const languages = [
 
 function NavLanguages() {
   const { language, setLanguage } = useLanguage()
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleLanguageChange = (code) => {
+    setLanguage(code)
+    const params = new URLSearchParams(location.search)
+    if (code === 'pt') {
+      params.delete('lang')
+    } else {
+      params.set('lang', code)
+    }
+    const search = params.toString()
+    navigate(
+      { pathname: location.pathname, search: search ? `?${search}` : '' },
+      { replace: true },
+    )
+  }
 
   return (
     <Stack
@@ -25,7 +43,7 @@ function NavLanguages() {
           <Stack key={lang.code} direction="row" alignItems="center" spacing={0.75}>
             <Button
               type="button"
-              onClick={() => setLanguage(lang.code)}
+              onClick={() => handleLanguageChange(lang.code)}
               aria-pressed={isActive}
               aria-label={`Switch language to ${lang.label}`}
               sx={{

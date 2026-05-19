@@ -14,10 +14,13 @@ import { createEmotionCache } from './emotionCache.js'
 /**
  * Vite SSR entry: render the app for a given URL and return HTML + Emotion styles + Redux state.
  */
-export function render(url) {
+export function render(url, options = {}) {
+  const language = options.language ?? 'pt'
   const emotionCache = createEmotionCache()
   const { extractCriticalToChunks, constructStyleTagsFromChunks } = createEmotionServer(emotionCache)
-  const store = createAppStore()
+  const store = createAppStore({
+    language: { current: language },
+  })
 
   const appHtml = renderToString(
     <Provider store={store}>

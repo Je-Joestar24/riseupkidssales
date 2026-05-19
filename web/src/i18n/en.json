@@ -2,6 +2,26 @@
     "nav": {
         "login": "Login"
     },
+    "seo": {
+        "home": {
+            "title": "Rise Up Kids | Immersive English Program for Kids Ages 5-13",
+            "description": "Immersive English for children ages 5–13. Real teachers, a joyful method, and meaningful progress from $12/month. Rise Up Kids helps kids learn English naturally at home or school."
+        },
+        "parents": {
+            "title": "Rise Up Kids for Parents | Immersive English for Your Child at Home",
+            "description": "English for kids at home, ages 5–13. Real teachers, 20–30 minutes a day, from $12/month. Our online English program for children helps your child become bilingual within a year — learn how to teach English to kids naturally with Rise Up Kids.",
+            "keywords": "english for kids at home, online english program for children, how to teach english to kids, immersive english for children"
+        },
+        "videos": {
+            "title": "How To Videos in English for Kids | Rise Up Kids",
+            "description": "Free How To videos in English for kids and parents. Short, engaging lessons that make learning English at home fun. New videos added regularly on Rise Up Kids."
+        },
+        "schools": {
+            "title": "Rise Up Kids for Schools | Immersive English Program for Institutions",
+            "description": "Immersive English program for schools and institutions. Help students ages 5–13 learn English naturally with real teachers, structured lessons, and institutional support. Request a free demo today.",
+            "keywords": "immersive english program for schools, english program for schools, immersive english for children, school english curriculum"
+        }
+    },
     "parent": {
         "pageTitle": "For parents — Rise Up Kids",
         "mainAria": "Rise Up Kids — content for parents"
@@ -236,7 +256,8 @@
         },
         "section": {
             "title": "Our Videos",
-            "gridAria": "Educational video library grid"
+            "gridAria": "Educational video library grid",
+            "empty": "How To videos are coming soon. Check back for free English lessons for kids and parents."
         },
         "items": {
             "colorsSong": {

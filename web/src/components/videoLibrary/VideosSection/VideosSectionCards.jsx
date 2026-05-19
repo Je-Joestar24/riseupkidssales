@@ -1,10 +1,30 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { VIDEO_LIBRARY_ITEMS } from '../../../config/videoLibraryVideos.js'
 import VideosSectionCard from './VideosSectionCard.jsx'
 
 export default function VideosSectionCards() {
   const { t } = useTranslation()
+
+  if (VIDEO_LIBRARY_ITEMS.length === 0) {
+    return (
+      <Typography
+        component="p"
+        role="status"
+        sx={{
+          textAlign: 'center',
+          fontSize: { xs: '1.125rem', md: '1.25rem' },
+          fontWeight: 600,
+          color: 'grey.600',
+          maxWidth: 640,
+          mx: 'auto',
+          py: 4,
+        }}
+      >
+        {t('videos.section.empty')}
+      </Typography>
+    )
+  }
 
   return (
     <Box

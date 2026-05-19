@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://d233tsjzju911.cloudfront.net/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://d233tsjzju911.cloudfront.net/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://d233tsjzju911.cloudfront.net/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://d233tsjzju911.cloudfront.net/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://d233tsjzju911.cloudfront.net/"/>
+  </url>
+  <url>
+    <loc>https://d233tsjzju911.cloudfront.net/parents</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://d233tsjzju911.cloudfront.net/parents?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://d233tsjzju911.cloudfront.net/parents?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://d233tsjzju911.cloudfront.net/parents?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://d233tsjzju911.cloudfront.net/parents"/>
+  </url>
+  <url>
+    <loc>https://d233tsjzju911.cloudfront.net/schools</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://d233tsjzju911.cloudfront.net/schools?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://d233tsjzju911.cloudfront.net/schools?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://d233tsjzju911.cloudfront.net/schools?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://d233tsjzju911.cloudfront.net/schools"/>
+  </url>
+  <url>
+    <loc>https://d233tsjzju911.cloudfront.net/videos</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://d233tsjzju911.cloudfront.net/videos?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://d233tsjzju911.cloudfront.net/videos?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://d233tsjzju911.cloudfront.net/videos?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://d233tsjzju911.cloudfront.net/videos"/>
+  </url>
+</urlset>
