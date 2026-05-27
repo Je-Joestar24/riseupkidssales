@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Box, Typography, CircularProgress } from '@mui/material'
 import { useTranslation } from '../hooks/useTranslation.js'
-import { getCheckoutSessionDetails } from '../services/checkoutService.js'
+import { getCheckoutSessionDetails, verifyPagseguroCheckout } from '../services/checkoutService.js'
 import SuccessHeader from '../components/checkout/success/SuccessHeader.jsx'
 import SuccessCards from '../components/checkout/success/SuccessCards.jsx'
 import SuccessLMSLink from '../components/checkout/success/SuccessLMSLink.jsx'
@@ -25,6 +25,7 @@ export default function CheckoutSuccess() {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const sessionId = searchParams.get('session_id')
+  const checkoutIdFromQuery = searchParams.get('checkout_id')
   const [status, setStatus] = useState('loading') // 'loading' | 'success' | 'error'
 
   useEffect(() => {
@@ -41,12 +42,39 @@ export default function CheckoutSuccess() {
       return
     }
 
+    const isPagseguro =
+      provider === 'pagseguro' ||
+      (typeof window !== 'undefined' && window.sessionStorage?.getItem('checkout_provider') === 'pagseguro')
+    const storedCheckoutId =
+      typeof window !== 'undefined' ? window.sessionStorage?.getItem('pagseguro_checkout_id') : null
+    const pagseguroCheckoutId = (checkoutIdFromQuery || storedCheckoutId || '').trim()
+
+    let cancelled = false
+
+    if (isPagseguro) {
+      if (!pagseguroCheckoutId) {
+        navigate('/checkout/register', { replace: true })
+        return
+      }
+      verifyPagseguroCheckout(pagseguroCheckoutId)
+        .then(() => {
+          try {
+            sessionStorage.removeItem('checkout_provider')
+            sessionStorage.removeItem('pagseguro_checkout_id')
+          } catch (_) {}
+          if (!cancelled) setStatus('success')
+        })
+        .catch(() => {
+          if (!cancelled) navigate('/checkout/register', { replace: true })
+        })
+      return () => { cancelled = true }
+    }
+
     if (!sessionId || sessionId.trim() === '') {
       navigate('/checkout/register', { replace: true })
       return
     }
 
-    let cancelled = false
     getCheckoutSessionDetails(sessionId)
       .then(() => {
         if (!cancelled) setStatus('success')
@@ -56,7 +84,7 @@ export default function CheckoutSuccess() {
       })
 
     return () => { cancelled = true }
-  }, [sessionId, searchParams, navigate])
+  }, [sessionId, checkoutIdFromQuery, searchParams, navigate])
 
   if (status === 'loading') {
     return (

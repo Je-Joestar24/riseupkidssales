@@ -24,6 +24,7 @@ import { useCheckout } from '../../../hooks/useCheckout.js'
 import {
   registerAndCreateCheckoutSession,
   registerParent,
+  createPagseguroCheckout,
   localeToRegion,
   localeToCurrency,
   getPaypalTier,
@@ -160,6 +161,9 @@ function RgisterForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [paymentMethod, setPaymentMethod] = useState('card')
+  const [cpf, setCpf] = useState('')
+  const [phoneArea, setPhoneArea] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [paypalPlanType, setPaypalPlanType] = useState('yearly')
   const [payLaterAvailable, setPayLaterAvailable] = useState(null)
   const [paypalToken, setPaypalToken] = useState(null)
@@ -171,7 +175,39 @@ function RgisterForm() {
     e.preventDefault()
     setError(null)
     if (paymentMethod === 'pagseguro') {
-      setError(t('checkout.registerForm.pagseguroComingSoon') || 'PagSeguro coming soon.')
+      if (locale !== 'pt') {
+        setError(t('checkout.registerForm.onlyCardSupported') || 'Pague com cartão (Stripe) ou PayPal.')
+        return
+      }
+      if (!termsAccepted) {
+        setError(t('checkout.registerForm.termsAgreeBefore') || 'Please accept the terms to continue.')
+        return
+      }
+      setLoading(true)
+      try {
+        const { token } = await registerParent({
+          name: name.trim() || undefined,
+          email: email.trim(),
+          password,
+        })
+        const result = await createPagseguroCheckout({
+          token,
+          childCount,
+          addBox,
+          taxId: cpf,
+          phone: { area: phoneArea, number: phoneNumber },
+          termsVersion: DEFAULT_TERMS_VERSION,
+        })
+        try {
+          sessionStorage.setItem('checkout_provider', 'pagseguro')
+          sessionStorage.setItem('pagseguro_checkout_id', result.checkoutId)
+        } catch (_) {}
+        if (result.payUrl) window.location.href = result.payUrl
+      } catch (err) {
+        setError(err?.message || 'Something went wrong')
+      } finally {
+        setLoading(false)
+      }
       return
     }
     if (paymentMethod === 'paypal') {
@@ -416,6 +452,58 @@ function RgisterForm() {
           </Typography>
         </Box>
       </Box>
+
+      {/* PagBank (Brazil) extra fields */}
+      <Collapse in={paymentMethod === 'pagseguro'}>
+        <Box sx={{ mb: 4 }}>
+          <Typography
+            component="h3"
+            sx={{
+              fontSize: '1.1rem',
+              fontWeight: 700,
+              mb: 2,
+              color: PAGSEGURO_GREEN,
+            }}
+          >
+            {t('checkout.registerForm.paymentPagSeguro') || 'PagSeguro'}
+          </Typography>
+
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <TextField
+              label="CPF"
+              value={cpf}
+              onChange={(e) => setCpf(e.target.value)}
+              placeholder="000.000.000-00"
+              inputProps={{ inputMode: 'numeric', 'aria-label': 'CPF' }}
+              required={paymentMethod === 'pagseguro'}
+              fullWidth
+            />
+            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              <TextField
+                label="DDD"
+                value={phoneArea}
+                onChange={(e) => setPhoneArea(e.target.value)}
+                placeholder="11"
+                inputProps={{ inputMode: 'numeric', maxLength: 2, 'aria-label': 'DDD' }}
+                required={paymentMethod === 'pagseguro'}
+                sx={{ width: { xs: '100%', sm: 140 } }}
+              />
+              <TextField
+                label="Celular"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="9XXXXXXXX"
+                inputProps={{ inputMode: 'numeric', maxLength: 9, 'aria-label': 'Celular' }}
+                required={paymentMethod === 'pagseguro'}
+                sx={{ flex: 1, minWidth: { xs: '100%', sm: 240 } }}
+              />
+            </Box>
+            <Alert severity="info">
+              {t('checkout.select.installmentAvailable') || 'Parcelamento disponível'} — {t('checkout.select.taxesIncluded') || 'Impostos incluídos.'}
+            </Alert>
+          </Box>
+        </Box>
+      </Collapse>
 
       {/* Payment method */}
       <Box sx={{ mb: 3 }}>

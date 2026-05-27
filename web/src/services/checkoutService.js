@@ -239,6 +239,59 @@ export async function createCheckoutSession({ token, region, childCount, addBox 
   return { url: data.url, sessionId: data.sessionId }
 }
 
+/**
+ * Create PagBank (PagSeguro) hosted checkout for Brazil.
+ * Requires authenticated parent (Bearer token).
+ *
+ * @param {Object} opts
+ * @param {string} opts.token - JWT (Bearer)
+ * @param {number} opts.childCount - 1–10
+ * @param {boolean} [opts.addBox=false]
+ * @param {string} opts.taxId - CPF (can be formatted; digits only are used)
+ * @param {{ area: string, number: string }} opts.phone - BR mobile
+ * @param {string} [opts.termsVersion]
+ * @returns {Promise<{ checkoutId: string, payUrl: string, referenceId: string }>}
+ */
+export async function createPagseguroCheckout({ token, childCount, addBox = false, taxId, phone, termsVersion }) {
+  const base = getApiBaseUrl()
+  const res = await fetch(`${base}/pagseguro/create-checkout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({
+      childCount: Math.min(MAX_CHILDREN, Math.max(MIN_CHILDREN, Number(childCount) || 1)),
+      addBox: Boolean(addBox),
+      taxId,
+      phone,
+      ...(termsVersion ? { termsVersion } : {}),
+    }),
+  })
+  const data = await res.json().catch(() => ({}))
+  if (!res.ok) {
+    const msg = data.message || data.error || `Request failed (${res.status})`
+    throw new Error(msg)
+  }
+  if (!data.payUrl || !data.checkoutId) throw new Error('No PagBank checkout URL returned')
+  return { checkoutId: data.checkoutId, payUrl: data.payUrl, referenceId: data.referenceId }
+}
+
+/**
+ * Verify PagBank checkout after redirect and return user + token.
+ * @param {string} checkoutId - CHEC_...
+ * @returns {Promise<{ user: object, token: string }>}
+ */
+export async function verifyPagseguroCheckout(checkoutId) {
+  const base = getApiBaseUrl()
+  const res = await fetch(`${base}/pagseguro/checkout/${encodeURIComponent(checkoutId)}`)
+  const data = await res.json().catch(() => ({}))
+  if (!res.ok) {
+    throw new Error(data.message || data.error || 'Payment not completed yet.')
+  }
+  return { user: data.user, token: data.token }
+}
+
 /** Locale (pt/en/es) to Stripe region (br/us/eu) */
 export function localeToRegion(locale) {
   const map = { pt: 'br', en: 'us', es: 'eu' }
