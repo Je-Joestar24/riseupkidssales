@@ -32,6 +32,7 @@ import {
 } from '../../../services/checkoutService.js'
 import { PayPalScriptProvider, PayPalMessages, usePayPalScriptReducer } from '@paypal/react-paypal-js'
 import PayPalCheckout from '../PayPalCheckout.jsx'
+import { persistPagseguroCheckoutSession } from '../../../hooks/useCheckoutSuccessVerification.js'
 
 const ORANGE = 'rgb(242, 175, 16)'
 const BORDER_DEFAULT = 'rgb(229, 231, 235)'
@@ -171,14 +172,13 @@ function RgisterForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
+  const pagseguroSuccessUrl = `${appUrl()}/checkout/success?provider=pagseguro`
+  const pagseguroCancelUrl = `${appUrl()}/checkout/register`
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
     if (paymentMethod === 'pagseguro') {
-      if (locale !== 'pt') {
-        setError(t('checkout.registerForm.onlyCardSupported') || 'Pague com cartão (Stripe) ou PayPal.')
-        return
-      }
       if (!termsAccepted) {
         setError(t('checkout.registerForm.termsAgreeBefore') || 'Please accept the terms to continue.')
         return
@@ -196,12 +196,11 @@ function RgisterForm() {
           addBox,
           taxId: cpf,
           phone: { area: phoneArea, number: phoneNumber },
+          successUrl: pagseguroSuccessUrl,
+          cancelUrl: pagseguroCancelUrl,
           termsVersion: DEFAULT_TERMS_VERSION,
         })
-        try {
-          sessionStorage.setItem('checkout_provider', 'pagseguro')
-          sessionStorage.setItem('pagseguro_checkout_id', result.checkoutId)
-        } catch (_) {}
+        persistPagseguroCheckoutSession(result.checkoutId)
         if (result.payUrl) window.location.href = result.payUrl
       } catch (err) {
         setError(err?.message || 'Something went wrong')

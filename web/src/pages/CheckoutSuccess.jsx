@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
-import { useSearchParams, useNavigate } from 'react-router-dom'
-import { Box, Typography, CircularProgress } from '@mui/material'
+import { Box, Typography, CircularProgress, Alert, Button } from '@mui/material'
+import { Link as RouterLink } from 'react-router-dom'
 import { useTranslation } from '../hooks/useTranslation.js'
-import { getCheckoutSessionDetails, verifyPagseguroCheckout } from '../services/checkoutService.js'
+import { useCheckoutSuccessVerification } from '../hooks/useCheckoutSuccessVerification.js'
 import SuccessHeader from '../components/checkout/success/SuccessHeader.jsx'
 import SuccessCards from '../components/checkout/success/SuccessCards.jsx'
 import SuccessLMSLink from '../components/checkout/success/SuccessLMSLink.jsx'
@@ -20,71 +19,19 @@ function formatGuaranteeDeadline() {
   return d.toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
+function resolveErrorCopy(t, errorMessage) {
+  if (errorMessage === 'missing_checkout') {
+    return t('checkout.success.missingPagseguroCheckout')
+  }
+  if (errorMessage === 'payment_pending' || /not completed/i.test(errorMessage || '')) {
+    return t('checkout.success.paymentPending')
+  }
+  return errorMessage || t('checkout.success.paymentVerifyFailed')
+}
+
 export default function CheckoutSuccess() {
-  const [searchParams] = useSearchParams()
-  const navigate = useNavigate()
   const { t } = useTranslation()
-  const sessionId = searchParams.get('session_id')
-  const checkoutIdFromQuery = searchParams.get('checkout_id')
-  const [status, setStatus] = useState('loading') // 'loading' | 'success' | 'error'
-
-  useEffect(() => {
-    const provider = searchParams.get('provider')
-    const isPayPal =
-      provider === 'paypal' ||
-      (typeof window !== 'undefined' && window.sessionStorage?.getItem('checkout_provider') === 'paypal')
-
-    if (isPayPal) {
-      try {
-        sessionStorage.removeItem('checkout_provider')
-      } catch (_) {}
-      setStatus('success')
-      return
-    }
-
-    const isPagseguro =
-      provider === 'pagseguro' ||
-      (typeof window !== 'undefined' && window.sessionStorage?.getItem('checkout_provider') === 'pagseguro')
-    const storedCheckoutId =
-      typeof window !== 'undefined' ? window.sessionStorage?.getItem('pagseguro_checkout_id') : null
-    const pagseguroCheckoutId = (checkoutIdFromQuery || storedCheckoutId || '').trim()
-
-    let cancelled = false
-
-    if (isPagseguro) {
-      if (!pagseguroCheckoutId) {
-        navigate('/checkout/register', { replace: true })
-        return
-      }
-      verifyPagseguroCheckout(pagseguroCheckoutId)
-        .then(() => {
-          try {
-            sessionStorage.removeItem('checkout_provider')
-            sessionStorage.removeItem('pagseguro_checkout_id')
-          } catch (_) {}
-          if (!cancelled) setStatus('success')
-        })
-        .catch(() => {
-          if (!cancelled) navigate('/checkout/register', { replace: true })
-        })
-      return () => { cancelled = true }
-    }
-
-    if (!sessionId || sessionId.trim() === '') {
-      navigate('/checkout/register', { replace: true })
-      return
-    }
-
-    getCheckoutSessionDetails(sessionId)
-      .then(() => {
-        if (!cancelled) setStatus('success')
-      })
-      .catch(() => {
-        if (!cancelled) navigate('/checkout/register', { replace: true })
-      })
-
-    return () => { cancelled = true }
-  }, [sessionId, checkoutIdFromQuery, searchParams, navigate])
+  const { status, errorMessage } = useCheckoutSuccessVerification()
 
   if (status === 'loading') {
     return (
@@ -103,6 +50,36 @@ export default function CheckoutSuccess() {
         <Typography sx={{ mt: 2, color: 'text.secondary', fontWeight: 600 }}>
           {t('checkout.success.verifying')}
         </Typography>
+      </Box>
+    )
+  }
+
+  if (status === 'error') {
+    const message = resolveErrorCopy(t, errorMessage)
+    return (
+      <Box
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: BG_COLOR,
+          px: 2,
+        }}
+      >
+        <CheckoutHeader />
+        <Alert severity="warning" sx={{ maxWidth: 520, mb: 2 }}>
+          {message}
+        </Alert>
+        <Button
+          component={RouterLink}
+          to="/checkout/register"
+          variant="contained"
+          sx={{ fontWeight: 600 }}
+        >
+          {t('checkout.success.backToCheckout')}
+        </Button>
       </Box>
     )
   }
@@ -157,6 +134,7 @@ export default function CheckoutSuccess() {
             </Typography>
           </Box>
         </Box>
-      </Box></>
+      </Box>
+    </>
   )
 }

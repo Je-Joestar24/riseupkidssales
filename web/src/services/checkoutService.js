@@ -249,10 +249,21 @@ export async function createCheckoutSession({ token, region, childCount, addBox 
  * @param {boolean} [opts.addBox=false]
  * @param {string} opts.taxId - CPF (can be formatted; digits only are used)
  * @param {{ area: string, number: string }} opts.phone - BR mobile
+ * @param {string} [opts.successUrl] - PagBank redirect after payment (HTTPS)
+ * @param {string} [opts.cancelUrl] - PagBank return when user leaves without paying
  * @param {string} [opts.termsVersion]
  * @returns {Promise<{ checkoutId: string, payUrl: string, referenceId: string }>}
  */
-export async function createPagseguroCheckout({ token, childCount, addBox = false, taxId, phone, termsVersion }) {
+export async function createPagseguroCheckout({
+  token,
+  childCount,
+  addBox = false,
+  taxId,
+  phone,
+  successUrl,
+  cancelUrl,
+  termsVersion,
+}) {
   const base = getApiBaseUrl()
   const res = await fetch(`${base}/pagseguro/create-checkout`, {
     method: 'POST',
@@ -265,6 +276,8 @@ export async function createPagseguroCheckout({ token, childCount, addBox = fals
       addBox: Boolean(addBox),
       taxId,
       phone,
+      ...(successUrl ? { successUrl } : {}),
+      ...(cancelUrl ? { cancelUrl } : {}),
       ...(termsVersion ? { termsVersion } : {}),
     }),
   })
@@ -287,7 +300,10 @@ export async function verifyPagseguroCheckout(checkoutId) {
   const res = await fetch(`${base}/pagseguro/checkout/${encodeURIComponent(checkoutId)}`)
   const data = await res.json().catch(() => ({}))
   if (!res.ok) {
-    throw new Error(data.message || data.error || 'Payment not completed yet.')
+    const err = new Error(data.message || data.error || 'Payment not completed yet.')
+    err.pending = res.status === 400 || res.status === 402
+    err.checkoutStatus = data.status
+    throw err
   }
   return { user: data.user, token: data.token }
 }
