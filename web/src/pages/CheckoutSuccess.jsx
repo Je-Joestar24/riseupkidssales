@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Box, Typography, CircularProgress, Alert, Button } from '@mui/material'
 import { Link as RouterLink } from 'react-router-dom'
 import { useTranslation } from '../hooks/useTranslation.js'
@@ -31,7 +32,11 @@ function resolveErrorCopy(t, errorMessage) {
 
 export default function CheckoutSuccess() {
   const { t } = useTranslation()
-  const { status, errorMessage } = useCheckoutSuccessVerification()
+  const [clientReady, setClientReady] = useState(false)
+  useEffect(() => {
+    setClientReady(true)
+  }, [])
+  const { status, errorMessage } = useCheckoutSuccessVerification(clientReady)
 
   if (status === 'loading') {
     return (

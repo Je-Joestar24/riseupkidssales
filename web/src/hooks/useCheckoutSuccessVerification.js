@@ -56,9 +56,10 @@ async function verifyPagseguroWithRetry(checkoutId) {
 
 /**
  * Resolves checkout success for Stripe, PayPal, and PagSeguro.
+ * @param {boolean} [ready=true] — wait until client mount to avoid SSG/query hydration mismatch
  * @returns {{ status: 'loading' | 'success' | 'error', errorMessage: string | null }}
  */
-export function useCheckoutSuccessVerification() {
+export function useCheckoutSuccessVerification(ready = true) {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const [status, setStatus] = useState('loading')
@@ -68,6 +69,8 @@ export function useCheckoutSuccessVerification() {
   const provider = searchParams.get('provider')
 
   useEffect(() => {
+    if (!ready) return undefined
+
     let cancelled = false
 
     const run = async () => {
@@ -135,7 +138,7 @@ export function useCheckoutSuccessVerification() {
     return () => {
       cancelled = true
     }
-  }, [sessionId, provider, searchParams, navigate])
+  }, [ready, sessionId, provider, searchParams, navigate])
 
   return { status, errorMessage }
 }
