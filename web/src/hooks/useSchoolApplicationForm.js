@@ -1,6 +1,11 @@
 import { useCallback, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from './useTranslation.js'
-import { submitSchoolApplication } from '../services/schoolApplicationService.js'
+import {
+  submitSchoolApplicationForm,
+  clearSchoolApplicationError,
+  resetSchoolApplicationState,
+} from '../store/slices/schoolApplicationSlice.js'
 
 const INITIAL_VALUES = {
   schoolName: '',
@@ -17,20 +22,25 @@ const INITIAL_VALUES = {
 const REQUIRED_FIELDS = Object.keys(INITIAL_VALUES)
 
 export function useSchoolApplicationForm() {
+  const dispatch = useDispatch()
   const { language } = useTranslation()
+  const { loading, success, error: submitError } = useSelector(
+    (state) => state.schoolApplication,
+  )
+
   const [values, setValues] = useState(INITIAL_VALUES)
   const [touched, setTouched] = useState({})
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState(false)
 
-  const handleChange = useCallback((field) => (event) => {
-    setError(false)
-    setValues((prev) => ({
-      ...prev,
-      [field]: event.target.value,
-    }))
-  }, [])
+  const handleChange = useCallback(
+    (field) => (event) => {
+      dispatch(clearSchoolApplicationError())
+      setValues((prev) => ({
+        ...prev,
+        [field]: event.target.value,
+      }))
+    },
+    [dispatch],
+  )
 
   const handleBlur = useCallback((field) => () => {
     setTouched((prev) => ({ ...prev, [field]: true }))
@@ -51,32 +61,35 @@ export function useSchoolApplicationForm() {
 
       if (!validate()) return
 
-      setLoading(true)
-      setSuccess(false)
-      setError(false)
+      dispatch(clearSchoolApplicationError())
 
       try {
-        await submitSchoolApplication({
-          schoolName: values.schoolName.trim(),
-          cityCountry: values.cityCountry.trim(),
-          role: values.role,
-          whatsapp: values.whatsapp.trim(),
-          email: values.email.trim(),
-          studentCount: values.studentCount.trim(),
-          ageGroup: values.ageGroup.trim(),
-          currentEnglish: values.currentEnglish,
-          interest: values.interest.trim(),
-          language,
-        })
-        setSuccess(true)
+        await dispatch(
+          submitSchoolApplicationForm({
+            schoolName: values.schoolName.trim(),
+            cityCountry: values.cityCountry.trim(),
+            role: values.role,
+            whatsapp: values.whatsapp.trim(),
+            email: values.email.trim(),
+            studentCount: values.studentCount.trim(),
+            ageGroup: values.ageGroup.trim(),
+            currentEnglish: values.currentEnglish,
+            interest: values.interest.trim(),
+            language,
+          }),
+        ).unwrap()
       } catch {
-        setError(true)
-      } finally {
-        setLoading(false)
+        // Error stored in Redux slice
       }
     },
-    [language, validate, values],
+    [dispatch, language, validate, values],
   )
+
+  const resetForm = useCallback(() => {
+    setValues(INITIAL_VALUES)
+    setTouched({})
+    dispatch(resetSchoolApplicationState())
+  }, [dispatch])
 
   const isInvalid = useCallback(
     (field) => touched[field] && !values[field]?.toString().trim(),
@@ -87,10 +100,12 @@ export function useSchoolApplicationForm() {
     values,
     loading,
     success,
-    error,
+    error: Boolean(submitError),
+    errorMessage: submitError,
     handleChange,
     handleBlur,
     handleSubmit,
+    resetForm,
     isInvalid,
   }
 }

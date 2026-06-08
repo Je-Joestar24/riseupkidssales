@@ -62,6 +62,7 @@ export default function ExperienceForm() {
     loading,
     success,
     error,
+    errorMessage,
     handleChange,
     handleBlur,
     handleSubmit,
@@ -194,7 +195,7 @@ export default function ExperienceForm() {
         >
           <FormControlLabel
             value="yes"
-            control={<Radio required sx={{ '&.Mui-checked': { color: themeColors.primary } }} />}
+            control={<Radio sx={{ '&.Mui-checked': { color: themeColors.primary } }} />}
             label={
               <Typography sx={{ fontSize: '1.125rem', fontWeight: 600 }}>
                 {t('schools.applicationForm.currentEnglish.yes')}
@@ -233,7 +234,7 @@ export default function ExperienceForm() {
           role="alert"
           sx={{ color: 'error.main', textAlign: 'center', fontWeight: 600 }}
         >
-          {t('schools.applicationForm.error')}
+          {errorMessage || t('schools.applicationForm.error')}
         </Typography>
       )}
 
