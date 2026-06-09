@@ -42,10 +42,10 @@ function ParentPage() {
         <FamiliesMain />
 {/*         <Box component="section" aria-label="What families say">
           <ReviewsMain />
-        </Box> */}
+        </Box> 
         <Box component="section" aria-label="Experience Rise Up Kids">
           <ExperienceMain />
-        </Box>
+        </Box>*/}
         <InvitationMain />
         <Box component="section" aria-label="The English journey at Rise Up Kids">
           <EnglishMain />

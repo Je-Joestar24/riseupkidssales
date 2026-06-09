@@ -243,6 +243,12 @@
             "success": "Application submitted!",
             "error": "Something went wrong. Please try again."
         },
+        "whatsappCta": {
+            "sectionAria": "Contact Rise Up Kids on WhatsApp",
+            "prompt": "Prefer to speak with us directly?",
+            "button": "Talk to our team on WhatsApp",
+            "buttonAria": "Talk to our team on WhatsApp"
+        },
         "applicationSectionAria": "School application form"
     },
     "videos": {

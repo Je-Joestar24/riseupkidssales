@@ -243,6 +243,12 @@
             "success": "¡Solicitud enviada!",
             "error": "Algo salió mal. Inténtalo de nuevo."
         },
+        "whatsappCta": {
+            "sectionAria": "Contactar a Rise Up Kids por WhatsApp",
+            "prompt": "¿Prefiere hablar directamente con nuestro equipo?",
+            "button": "Hable con nuestro equipo por WhatsApp",
+            "buttonAria": "Hable con nuestro equipo por WhatsApp"
+        },
         "applicationSectionAria": "Formulario de solicitud escolar"
     },
     "videos": {

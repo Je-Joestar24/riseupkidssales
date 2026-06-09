@@ -16,6 +16,7 @@ import EducationSpecialistsSaySection from '../components/school/EducationSpecia
 import GetStartedSection from '../components/school/GetStarted/GetStartedSection.jsx'
 import QuestionsSection from '../components/school/Questions/QuestionsSection.jsx'
 import ExperienceToSchoolSection from '../components/school/ExperienceToSchool/ExperienceToSchoolSection.jsx'
+import WhatsAppCtaSection from '../components/school/WhatsAppCta/WhatsAppCtaSection.jsx'
 import '../assets/css/App.css'
 
 export default function SchoolsPage() {
@@ -45,6 +46,7 @@ export default function SchoolsPage() {
         <GetStartedSection />
         <QuestionsSection />
         <ExperienceToSchoolSection />
+        <WhatsAppCtaSection />
       </Box>
       <FooterMain />
     </>

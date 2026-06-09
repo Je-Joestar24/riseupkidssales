@@ -20,3 +20,6 @@ export const LMS_BASE_URL = raw(import.meta.env.VITE_LMS_URL)
 
 export const LMS_LOGIN_URL = LMS_BASE_URL ? new URL('login', LMS_BASE_URL).toString() : ''
 
+/** E.164 digits only (e.g. 5511999887766). Set VITE_SCHOOLS_WHATSAPP_NUMBER at build time. */
+export const SCHOOLS_WHATSAPP_PHONE = raw(import.meta.env.VITE_SCHOOLS_WHATSAPP_NUMBER).replace(/\D/g, '')
+
