@@ -11,5 +11,4 @@ export const PRERENDER_PATHS = [
   '/privacy-policy',
   '/checkout',
   '/checkout/register',
-  '/checkout/success',
 ]
