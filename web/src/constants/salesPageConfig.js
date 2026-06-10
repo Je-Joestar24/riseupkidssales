@@ -37,15 +37,15 @@ export const FOUNDER_WAITLIST_SECTION_ID = 'founder-waitlist'
 
 /**
  * Sales page release mode (build-time).
- * - prelaunch: waitlist copy, EN hidden, optional sections off (default)
+ * - prelaunch: waitlist copy, checkout → Flodesk, some sections off (default)
  * - launch: full sales page — set VITE_SALES_PAGE_MODE=launch when opening enrollment
  */
 export const SALES_PAGE_MODE = raw(import.meta.env.VITE_SALES_PAGE_MODE) === 'launch' ? 'launch' : 'prelaunch'
 
 export const isPrelaunchSalesPage = SALES_PAGE_MODE === 'prelaunch'
 
-/** Nav languages available in the current mode. EN returns at launch. */
-export const SALES_PAGE_LANGUAGES = isPrelaunchSalesPage ? ['pt', 'es'] : ['pt', 'en', 'es']
+/** All supported sales page languages — always visible in the nav (PT, EN, ES). */
+export const SALES_PAGE_LANGUAGES = ['pt', 'en', 'es']
 
 export const normalizeSalesPageLanguage = (code) =>
   SALES_PAGE_LANGUAGES.includes(code) ? code : 'pt'
