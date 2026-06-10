@@ -25,6 +25,7 @@ import {
   registerAndCreateCheckoutSession,
   registerParent,
   createPagseguroCheckout,
+  getPagseguroRedirectUrls,
   localeToRegion,
   localeToCurrency,
   getPaypalTier,
@@ -172,8 +173,7 @@ function RgisterForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const pagseguroSuccessUrl = `${appUrl()}/checkout/success?provider=pagseguro`
-  const pagseguroCancelUrl = `${appUrl()}/checkout/register`
+  const pagseguroRedirectUrls = getPagseguroRedirectUrls(appUrl())
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -196,8 +196,7 @@ function RgisterForm() {
           addBox,
           taxId: cpf,
           phone: { area: phoneArea, number: phoneNumber },
-          successUrl: pagseguroSuccessUrl,
-          cancelUrl: pagseguroCancelUrl,
+          ...pagseguroRedirectUrls,
           termsVersion: DEFAULT_TERMS_VERSION,
         })
         persistPagseguroCheckoutSession(result.checkoutId)

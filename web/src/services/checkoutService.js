@@ -239,6 +239,34 @@ export async function createCheckoutSession({ token, region, childCount, addBox 
   return { url: data.url, sessionId: data.sessionId }
 }
 
+/** PagBank only accepts public HTTPS redirect URLs (not localhost). */
+export function isPublicHttpsUrl(url) {
+  if (!url || typeof url !== 'string') return false
+  try {
+    const parsed = new URL(url.trim())
+    if (parsed.protocol !== 'https:') return false
+    const host = parsed.hostname.toLowerCase()
+    if (host === 'localhost' || host === '127.0.0.1') return false
+    return true
+  } catch {
+    return false
+  }
+}
+
+/**
+ * Redirect URLs for PagBank. Omits localhost so the API uses SALE_APP_BASE_URL on the server.
+ */
+export function getPagseguroRedirectUrls(appBaseUrl) {
+  const base = (appBaseUrl || '').replace(/\/+$/, '')
+  if (!isPublicHttpsUrl(`${base}/`)) {
+    return {}
+  }
+  return {
+    successUrl: `${base}/checkout/success?provider=pagseguro`,
+    cancelUrl: `${base}/checkout/register`,
+  }
+}
+
 /**
  * Create PagBank (PagSeguro) hosted checkout for Brazil.
  * Requires authenticated parent (Bearer token).
