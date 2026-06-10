@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material'
-import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 
 export default function InvitationFooter() {
-  const { t } = useTranslation()
+  const { footer } = useInvitationCopy()
 
   return (
     <Typography
@@ -15,7 +15,7 @@ export default function InvitationFooter() {
         fontWeight: 600,
       }}
     >
-      {t('invitation.footer')}
+      {footer}
     </Typography>
   )
 }

@@ -18,7 +18,8 @@ import InvitationMain from '../components/home/invitation/InvitationMain.jsx'
 import QuestionsMain from '../components/home/questions/QuestionsMain.jsx'
 import CtaMain from '../components/home/cta/CtaMain.jsx'
 import FooterMain from '../components/home/footer/FooterMain.jsx'
-import EducationSpecialistsSayMain from '../components/school/EducationSpecialistsSay/EducationSpecialistsSayMain.jsx';
+import EducationSpecialistsSayMain from '../components/school/EducationSpecialistsSay/EducationSpecialistsSayMain.jsx'
+import { salesPageSections } from '../constants/salesPageConfig.js'
 
 function ParentPage() {
   const { t } = useTranslation()
@@ -40,17 +41,21 @@ function ParentPage() {
           <DevelopMain />
         </Box>
         <FamiliesMain />
-{/*         <Box component="section" aria-label="What families say">
-          <ReviewsMain />
-        </Box> 
-        <Box component="section" aria-label="Experience Rise Up Kids">
-          <ExperienceMain />
-        </Box>*/}
+        {salesPageSections.reviews ? (
+          <Box component="section" aria-label="What families say">
+            <ReviewsMain />
+          </Box>
+        ) : null}
+        {salesPageSections.experience ? (
+          <Box component="section" aria-label="Experience Rise Up Kids">
+            <ExperienceMain />
+          </Box>
+        ) : null}
         <InvitationMain />
         <Box component="section" aria-label="The English journey at Rise Up Kids">
           <EnglishMain />
         </Box>
-        <QuestionsMain />
+        {salesPageSections.questions ? <QuestionsMain /> : null}
         <EducationSpecialistsSayMain/>
         <CtaMain />
         <FooterMain />

@@ -1,11 +1,10 @@
 import { Box, Button } from '@mui/material'
-import { Link } from 'react-router-dom'
 import { useTranslation } from '../../../hooks/useTranslation.js'
-
-const CHECKOUT_PATH = '/checkout'
+import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
 
 export default function DiscoverCta({ onClick, href, children }) {
   const { t } = useTranslation()
+  const { isExternal, buttonLinkProps } = useSalesCtaLink(href)
   const label = children ?? t('discover.cta')
   const buttonSx = {
     bgcolor: '#f2af10',
@@ -26,7 +25,7 @@ export default function DiscoverCta({ onClick, href, children }) {
     },
   }
 
-  if (onClick && !href) {
+  if (onClick && !href && !isExternal) {
     return (
       <Box sx={{ textAlign: 'center', mt: 5 }}>
         <Button type="button" onClick={onClick} sx={buttonSx} variant="contained" disableElevation>
@@ -36,12 +35,10 @@ export default function DiscoverCta({ onClick, href, children }) {
     )
   }
 
-  const to = href ?? CHECKOUT_PATH
   return (
     <Box sx={{ textAlign: 'center', mt: 5 }}>
       <Button
-        component={Link}
-        to={to}
+        {...buttonLinkProps}
         sx={buttonSx}
         variant="contained"
         disableElevation

@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { normalizeSalesPageLanguage } from '../../constants/salesPageConfig.js'
 
 const getLangFromUrl = () => {
   if (typeof window === 'undefined') return null
   const param = new URLSearchParams(window.location.search).get('lang')
-  if (param === 'pt' || param === 'en' || param === 'es') return param
+  if (param === 'pt' || param === 'en' || param === 'es') return normalizeSalesPageLanguage(param)
   return null
 }
 
@@ -15,7 +16,7 @@ const getInitialLanguage = () => {
   if (fromUrl) return fromUrl
   const stored = window.localStorage.getItem('lang')
   if (stored === 'pt' || stored === 'en' || stored === 'es') {
-    return stored
+    return normalizeSalesPageLanguage(stored)
   }
   return 'pt'
 }
@@ -29,7 +30,7 @@ const languageSlice = createSlice({
   initialState,
   reducers: {
     setLanguage(state, action) {
-      state.current = action.payload
+      state.current = normalizeSalesPageLanguage(action.payload)
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('lang', action.payload)
       }

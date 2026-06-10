@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material'
-import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 
 export default function InvitationTitle() {
-  const { t } = useTranslation()
+  const { title } = useInvitationCopy()
 
   return (
     <Typography
@@ -15,7 +15,7 @@ export default function InvitationTitle() {
         color: 'secondary.main',
       }}
     >
-      {t('invitation.title')}
+      {title}
     </Typography>
   )
 }

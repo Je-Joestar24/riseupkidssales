@@ -1,12 +1,13 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../hooks/useLanguage'
+import { SALES_PAGE_LANGUAGES } from '../../constants/salesPageConfig.js'
 
 const languages = [
   { code: 'pt', label: 'PT' },
   { code: 'en', label: 'EN' },
   { code: 'es', label: 'ES' },
-]
+].filter((lang) => SALES_PAGE_LANGUAGES.includes(lang.code))
 
 function NavLanguages() {
   const { language, setLanguage } = useLanguage()

@@ -1,13 +1,20 @@
 import { Box, Button, Container, Stack } from '@mui/material'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
+import { FOUNDER_WAITLIST_SECTION_ID } from '../../../constants/salesPageConfig.js'
 import CtaTitle from './CtaTitle.jsx'
 import CtaDescription from './CtaDescription.jsx'
 
 export default function CtaMain() {
   const { t } = useTranslation()
+  const { isExternal, openCta, buttonLinkProps } = useSalesCtaLink()
 
   const handleCtaClick = () => {
-    const form = document.getElementById('founder-form')
+    if (isExternal) {
+      openCta()
+      return
+    }
+    const form = document.getElementById(FOUNDER_WAITLIST_SECTION_ID)
     form?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -37,7 +44,7 @@ export default function CtaMain() {
           <Button
             variant="contained"
             color="warning"
-            onClick={handleCtaClick}
+            {...(isExternal ? buttonLinkProps : { onClick: handleCtaClick })}
             sx={{
               alignSelf: 'center',
               px: 8,

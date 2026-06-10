@@ -534,10 +534,19 @@
         "subtitle": "Depoimentos verificados de famílias reais"
     },
     "invitation": {
-        "badge": "CONVITE EXCLUSIVO",
-        "title": "Convite às Famílias Fundadoras do Rise Up Kids",
-        "subtitle1": "Participe do grupo de Famílias Fundadoras da experiência Rise Up Kids.",
-        "subtitle2": "Preencha os campos abaixo e receba um email com mais informações.",
+        "prelaunch": {
+            "badge": "LISTA DE ESPERA",
+            "title": "Lista de Espera das Famílias Fundadoras",
+            "subtitle": "Junte-se às famílias que acompanharão de perto os bastidores do Rise Up Kids e receberão acesso prioritário quando as inscrições forem abertas.",
+            "footer": "Vagas limitadas para as primeiras famílias fundadoras."
+        },
+        "launch": {
+            "badge": "CONVITE EXCLUSIVO",
+            "title": "Convite às Famílias Fundadoras do Rise Up Kids",
+            "subtitle1": "Participe do grupo de Famílias Fundadoras da experiência Rise Up Kids.",
+            "subtitle2": "Preencha os campos abaixo e receba um email com mais informações.",
+            "footer": "Vagas limitadas para as primeiras famílias fundadoras."
+        },
         "form": {
             "nameLabel": "Nome do responsável",
             "namePlaceholder": "Seu nome completo",
@@ -548,11 +557,11 @@
             "ageLabel": "Idade da criança (anos)",
             "agePlaceholder": "ex: 5 anos",
             "consentLabel": "Concordo em receber mensagens (e-mail/WhatsApp).",
-            "submit": "Quero meu filho bilíngue",
+            "submitPrelaunch": "Entrar na lista de espera",
+            "submitLaunch": "Quero meu filho bilíngue",
             "sending": "Enviando…",
             "success": "Pronto!"
-        },
-        "footer": "Vagas limitadas para as primeiras famílias fundadoras."
+        }
     },
     "questions": {
         "title": "Perguntas Frequentes",

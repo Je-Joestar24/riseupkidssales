@@ -8,7 +8,7 @@ import InvitationFooter from './InvitationFooter.jsx'
 export default function InvitationMain() {
   return (
     <Box
-      id="founder-form"
+      id="founder-waitlist"
       component="section"
       aria-labelledby="invitation-heading"
       sx={{

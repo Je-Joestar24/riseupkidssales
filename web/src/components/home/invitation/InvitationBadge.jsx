@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 
 export default function InvitationBadge() {
-  const { t } = useTranslation()
+  const { badge } = useInvitationCopy()
 
   return (
     <Box
@@ -26,7 +26,7 @@ export default function InvitationBadge() {
           color: 'white',
         }}
       >
-        {t('invitation.badge')}
+        {badge}
       </Typography>
     </Box>
   )

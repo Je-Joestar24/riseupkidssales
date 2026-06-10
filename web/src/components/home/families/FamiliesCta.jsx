@@ -1,13 +1,11 @@
 import { Box, Button } from '@mui/material'
-import { Link } from 'react-router-dom'
 import { useTranslation } from '../../../hooks/useTranslation.js'
-
-const CHECKOUT_PATH = '/checkout'
+import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
 
 export default function FamiliesCta({ onClick, href }) {
   const { t } = useTranslation()
+  const { isExternal, buttonLinkProps } = useSalesCtaLink(href)
   const label = t('families.cta')
-  const to = href ?? CHECKOUT_PATH
   const buttonSx = {
     bgcolor: '#f2af10',
     color: 'white',
@@ -24,7 +22,7 @@ export default function FamiliesCta({ onClick, href }) {
     },
   }
 
-  if (onClick && !href) {
+  if (onClick && !href && !isExternal) {
     return (
       <Box sx={{ textAlign: 'center', mt: 8 }}>
         <Button
@@ -44,8 +42,7 @@ export default function FamiliesCta({ onClick, href }) {
   return (
     <Box sx={{ textAlign: 'center', mt: 8 }}>
       <Button
-        component={Link}
-        to={to}
+        {...buttonLinkProps}
         sx={buttonSx}
         variant="contained"
         disableElevation

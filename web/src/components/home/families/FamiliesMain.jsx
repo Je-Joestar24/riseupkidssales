@@ -17,7 +17,7 @@ export default function FamiliesMain(props) {
       <Container maxWidth="lg">
         <FamiliesHeader />
         <FamiliesCards />
-        <FamiliesCta onClick={props.onCtaClick} href={props.ctaHref ?? '/checkout'} />
+        <FamiliesCta onClick={props.onCtaClick} href={props.ctaHref} />
       </Container>
     </Box>
   )

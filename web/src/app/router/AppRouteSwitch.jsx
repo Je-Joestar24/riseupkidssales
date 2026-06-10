@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
 import HomePageBackButton from '../../components/common/HomePageBackButton.jsx'
+import PrelaunchCheckoutRedirect from '../../components/common/PrelaunchCheckoutRedirect.jsx'
 import LanguageQuerySync from './LanguageQuerySync.jsx'
 import HomePage from '../../pages/HomePage.jsx'
 import ParentPage from '../../pages/ParentPage.jsx'
@@ -15,25 +16,31 @@ const CheckoutSuccess = lazy(() => import('../../pages/CheckoutSuccess.jsx'))
 
 function CheckoutPageLazy() {
   return (
-    <Suspense fallback={null}>
-      <CheckoutPage />
-    </Suspense>
+    <PrelaunchCheckoutRedirect>
+      <Suspense fallback={null}>
+        <CheckoutPage />
+      </Suspense>
+    </PrelaunchCheckoutRedirect>
   )
 }
 
 function CheckoutRegisterLazy() {
   return (
-    <Suspense fallback={null}>
-      <CheckoutRegister />
-    </Suspense>
+    <PrelaunchCheckoutRedirect>
+      <Suspense fallback={null}>
+        <CheckoutRegister />
+      </Suspense>
+    </PrelaunchCheckoutRedirect>
   )
 }
 
 function CheckoutSuccessLazy() {
   return (
-    <Suspense fallback={null}>
-      <CheckoutSuccess />
-    </Suspense>
+    <PrelaunchCheckoutRedirect>
+      <Suspense fallback={null}>
+        <CheckoutSuccess />
+      </Suspense>
+    </PrelaunchCheckoutRedirect>
   )
 }
 

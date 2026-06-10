@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 
 export default function InvitationSubtitle() {
-  const { t } = useTranslation()
+  const { isPrelaunch, subtitle, subtitle1, subtitle2 } = useInvitationCopy()
 
   return (
     <Box
@@ -12,28 +12,44 @@ export default function InvitationSubtitle() {
         '& > p + p': { mt: 2 },
       }}
     >
-      <Typography
-        component="p"
-        sx={{
-          fontSize: '1.5rem',
-          color: 'grey.700',
-          lineHeight: 1.6,
-          fontWeight: 600,
-        }}
-      >
-        {t('invitation.subtitle1')}
-      </Typography>
-      <Typography
-        component="p"
-        sx={{
-          fontSize: '1.5rem',
-          color: 'grey.700',
-          lineHeight: 1.6,
-          fontWeight: 600,
-        }}
-      >
-        {t('invitation.subtitle2')}
-      </Typography>
+      {isPrelaunch ? (
+        <Typography
+          component="p"
+          sx={{
+            fontSize: '1.5rem',
+            color: 'grey.700',
+            lineHeight: 1.6,
+            fontWeight: 600,
+          }}
+        >
+          {subtitle}
+        </Typography>
+      ) : (
+        <>
+          <Typography
+            component="p"
+            sx={{
+              fontSize: '1.5rem',
+              color: 'grey.700',
+              lineHeight: 1.6,
+              fontWeight: 600,
+            }}
+          >
+            {subtitle1}
+          </Typography>
+          <Typography
+            component="p"
+            sx={{
+              fontSize: '1.5rem',
+              color: 'grey.700',
+              lineHeight: 1.6,
+              fontWeight: 600,
+            }}
+          >
+            {subtitle2}
+          </Typography>
+        </>
+      )}
     </Box>
   )
 }

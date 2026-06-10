@@ -1,15 +1,16 @@
 import { Button } from '@mui/material'
-import { Link } from 'react-router-dom'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
 
 const GOLD = '#f2af10'
 
 export default function HeroCTA() {
   const { t } = useTranslation()
+  const { buttonLinkProps } = useSalesCtaLink()
+
   return (
     <Button
-      component={Link}
-      to="/checkout"
+      {...buttonLinkProps}
       variant="contained"
       size="large"
       disableElevation

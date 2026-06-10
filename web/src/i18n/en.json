@@ -534,10 +534,19 @@
         "subtitle": "Verified testimonials from real families"
     },
     "invitation": {
-        "badge": "EXCLUSIVE INVITATION",
-        "title": "Invitation to Rise Up Kids Founding Families",
-        "subtitle1": "We are opening a selected group of families to participate in the founding phase of Rise Up Kids with an exclusive offer that will NEVER return.",
-        "subtitle2": "Founding families receive exclusive benefits while closely following their children's development. If you want this experience for your child, fill out the form below.",
+        "prelaunch": {
+            "badge": "WAITLIST",
+            "title": "Founding Families Waitlist",
+            "subtitle": "Join the families who will follow Rise Up Kids behind the scenes and receive priority access when enrollment opens.",
+            "footer": "Limited spots for the first founding families."
+        },
+        "launch": {
+            "badge": "EXCLUSIVE INVITATION",
+            "title": "Invitation to Rise Up Kids Founding Families",
+            "subtitle1": "We are opening a selected group of families to participate in the founding phase of Rise Up Kids with an exclusive offer that will NEVER return.",
+            "subtitle2": "Founding families receive exclusive benefits while closely following their children's development. If you want this experience for your child, fill out the form below.",
+            "footer": "Limited spots for founding families."
+        },
         "form": {
             "nameLabel": "Guardian's name",
             "namePlaceholder": "Your full name",
@@ -548,11 +557,11 @@
             "ageLabel": "Child's age (years)",
             "agePlaceholder": "e.g., 5 years old",
             "consentLabel": "I agree to receive messages (email/WhatsApp).",
-            "submit": "I want my child bilingual",
+            "submitPrelaunch": "Join the waitlist",
+            "submitLaunch": "I want my child bilingual",
             "sending": "Sending…",
             "success": "Done!"
-        },
-        "footer": "Limited spots for founding families."
+        }
     },
     "questions": {
         "title": "Frequently Asked Questions",

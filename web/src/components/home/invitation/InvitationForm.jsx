@@ -3,10 +3,12 @@ import { Box, Button, CircularProgress, Grid, TextField, Typography, Checkbox, F
 import StarIcon from '@mui/icons-material/Star'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 import { submitInvitation } from '../../../services/invitationService.js'
 
 export default function InvitationForm() {
     const { t, language } = useTranslation()
+    const { submitLabel } = useInvitationCopy()
     const [values, setValues] = useState({
         name: '',
         email: '',
@@ -307,7 +309,7 @@ export default function InvitationForm() {
                     },
                     transition: 'box-shadow 0.2s ease, transform 0.2s ease',
                 }}
-                aria-label={success ? t('invitation.form.success') : t('invitation.form.submit')}
+                aria-label={success ? t('invitation.form.success') : submitLabel}
                 aria-busy={loading}
             >
                 {loading ? (
@@ -318,7 +320,7 @@ export default function InvitationForm() {
                 ) : success ? (
                     t('invitation.form.success')
                 ) : (
-                    t('invitation.form.submit')
+                    submitLabel
                 )}
             </Button>
         </Box>

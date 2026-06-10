@@ -534,10 +534,19 @@
         "subtitle": "Testimonios verificados de familias reales"
     },
     "invitation": {
-        "badge": "INVITACIÓN EXCLUSIVA",
-        "title": "Invitación a las Familias Fundadoras de Rise Up Kids",
-        "subtitle1": "Estamos invitando a un grupo selecto de familias a participar en la fase inicial de Rise Up Kids con una oferta exclusiva que NUNCA volverá a repetirse.",
-        "subtitle2": "Las familias fundadoras reciben beneficios exclusivos mientras siguen el desarrollo de sus hijos. Si quieres esta experiencia para tu hijo, llena el siguiente formulario.",
+        "prelaunch": {
+            "badge": "LISTA DE ESPERA",
+            "title": "Lista de Espera de las Familias Fundadoras",
+            "subtitle": "Únase a las familias que conocerán de cerca el detrás de escena de Rise Up Kids y recibirán acceso prioritario cuando se abran las inscripciones.",
+            "footer": "Cupos limitados para las primeras familias fundadoras."
+        },
+        "launch": {
+            "badge": "INVITACIÓN EXCLUSIVA",
+            "title": "Invitación a las Familias Fundadoras de Rise Up Kids",
+            "subtitle1": "Estamos invitando a un grupo selecto de familias a participar en la fase inicial de Rise Up Kids con una oferta exclusiva que NUNCA volverá a repetirse.",
+            "subtitle2": "Las familias fundadoras reciben beneficios exclusivos mientras siguen el desarrollo de sus hijos. Si quieres esta experiencia para tu hijo, llena el siguiente formulario.",
+            "footer": "Cupos limitados para familias fundadoras."
+        },
         "form": {
             "nameLabel": "Nombre del responsable",
             "namePlaceholder": "Tu nombre completo",
@@ -548,11 +557,11 @@
             "ageLabel": "Edad del niño (años)",
             "agePlaceholder": "ej: 5 años",
             "consentLabel": "Acepto recibir mensajes (correo/WhatsApp).",
-            "submit": "Quiero que mi hijo sea bilingüe",
+            "submitPrelaunch": "Unirse a la lista de espera",
+            "submitLaunch": "Quiero que mi hijo sea bilingüe",
             "sending": "Enviando…",
             "success": "¡Listo!"
-        },
-        "footer": "Cupos limitados para familias fundadoras."
+        }
     },
     "questions": {
         "title": "Preguntas Frecuentes",
