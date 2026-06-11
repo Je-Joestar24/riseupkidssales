@@ -1,4 +1,8 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Box, Container } from '@mui/material'
+import { FOUNDER_WAITLIST_SECTION_ID } from '../../../constants/salesPageConfig.js'
+import { scrollToInvitationSection } from '../../../hooks/useSalesCtaLink.js'
 import InvitationBadge from './InvitationBadge.jsx'
 import InvitationTitle from './InvitationTitle.jsx'
 import InvitationSubtitle from './InvitationSubtitle.jsx'
@@ -6,9 +10,17 @@ import InvitationForm from './InvitationForm.jsx'
 import InvitationFooter from './InvitationFooter.jsx'
 
 export default function InvitationMain() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash === `#${FOUNDER_WAITLIST_SECTION_ID}`) {
+      scrollToInvitationSection()
+    }
+  }, [location.hash])
+
   return (
     <Box
-      id="founder-waitlist"
+      id={FOUNDER_WAITLIST_SECTION_ID}
       component="section"
       aria-labelledby="invitation-heading"
       sx={{

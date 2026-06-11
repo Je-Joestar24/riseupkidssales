@@ -4,7 +4,7 @@ import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
 
 export default function FamiliesCta({ onClick, href }) {
   const { t } = useTranslation()
-  const { isExternal, buttonLinkProps } = useSalesCtaLink(href)
+  const { scrollsToInvitation, buttonLinkProps } = useSalesCtaLink(href)
   const label = t('families.cta')
   const buttonSx = {
     bgcolor: '#f2af10',
@@ -22,7 +22,7 @@ export default function FamiliesCta({ onClick, href }) {
     },
   }
 
-  if (onClick && !href && !isExternal) {
+  if (onClick && !href && !scrollsToInvitation) {
     return (
       <Box sx={{ textAlign: 'center', mt: 8 }}>
         <Button

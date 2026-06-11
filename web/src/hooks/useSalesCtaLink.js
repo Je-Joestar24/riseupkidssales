@@ -1,35 +1,42 @@
+import { useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import {
   CHECKOUT_PATH,
-  getPrelaunchWaitlistUrl,
+  FOUNDER_WAITLIST_SECTION_ID,
   isPrelaunchSalesPage,
 } from '../constants/salesPageConfig.js'
-import { useLanguage } from './useLanguage.js'
 
 const isExternalUrl = (href) => /^https?:\/\//i.test(href)
 
+export function scrollToInvitationSection() {
+  const section = document.getElementById(FOUNDER_WAITLIST_SECTION_ID)
+  section?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
 /**
- * Checkout CTA target: Flodesk waitlist (new tab) in prelaunch, /checkout at launch.
+ * Prelaunch: scroll to invitation section. Launch: navigate to /checkout.
  */
 export function useSalesCtaLink(overrideHref) {
-  const { language } = useLanguage()
-  const href =
-    overrideHref ??
-    (isPrelaunchSalesPage ? getPrelaunchWaitlistUrl(language) : CHECKOUT_PATH)
-  const isExternal = isExternalUrl(href)
+  const scrollsToInvitation = isPrelaunchSalesPage && !overrideHref
 
-  const openCta = () => {
-    window.open(href, '_blank', 'noopener,noreferrer')
-  }
+  const scrollToInvitation = useCallback(() => {
+    scrollToInvitationSection()
+  }, [])
 
-  const buttonLinkProps = isExternal
-    ? { component: 'a', href, target: '_blank', rel: 'noopener noreferrer' }
-    : { component: Link, to: href }
+  const buttonLinkProps = scrollsToInvitation
+    ? { type: 'button', onClick: scrollToInvitation }
+    : isExternalUrl(overrideHref)
+      ? {
+          component: 'a',
+          href: overrideHref,
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        }
+      : { component: Link, to: overrideHref ?? CHECKOUT_PATH }
 
   return {
-    href,
-    isExternal,
-    openCta,
+    scrollsToInvitation,
+    scrollToInvitation,
     buttonLinkProps,
   }
 }

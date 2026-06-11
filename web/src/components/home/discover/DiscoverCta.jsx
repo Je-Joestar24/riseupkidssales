@@ -4,7 +4,7 @@ import useSalesCtaLink from '../../../hooks/useSalesCtaLink.js'
 
 export default function DiscoverCta({ onClick, href, children }) {
   const { t } = useTranslation()
-  const { isExternal, buttonLinkProps } = useSalesCtaLink(href)
+  const { scrollsToInvitation, buttonLinkProps } = useSalesCtaLink(href)
   const label = children ?? t('discover.cta')
   const buttonSx = {
     bgcolor: '#f2af10',
@@ -25,7 +25,7 @@ export default function DiscoverCta({ onClick, href, children }) {
     },
   }
 
-  if (onClick && !href && !isExternal) {
+  if (onClick && !href && !scrollsToInvitation) {
     return (
       <Box sx={{ textAlign: 'center', mt: 5 }}>
         <Button type="button" onClick={onClick} sx={buttonSx} variant="contained" disableElevation>
