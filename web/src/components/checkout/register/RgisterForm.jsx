@@ -774,7 +774,7 @@ function RgisterForm() {
               {t('checkout.registerForm.termsAgreeBefore')}
               <Typography
                 component="a"
-                href="/terms/"
+                href="/terms/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ color: TEAL_LINK, textDecoration: 'underline' }}
@@ -784,7 +784,7 @@ function RgisterForm() {
               {t('checkout.registerForm.termsAgreeMiddle') || ' and '}
               <Typography
                 component="a"
-                href="/privacy/"
+                href="/privacy/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ color: TEAL_LINK, textDecoration: 'underline' }}
