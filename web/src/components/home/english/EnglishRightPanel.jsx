@@ -46,6 +46,7 @@ export default function EnglishRightPanel() {
   const { t } = useTranslation()
   const bullets = t('english.year2.bullets')
   const outcomes = t('english.year2.outcomes')
+  const italic = t('english.year2.italic', '')
   const bulletList = Array.isArray(bullets) ? bullets : []
   const outcomeList = Array.isArray(outcomes) ? outcomes : []
 
@@ -118,26 +119,25 @@ export default function EnglishRightPanel() {
       >
         {t(
           'english.year2.lead',
-          'With the oral foundation in place, reading emerges naturally.'
+          'With the oral foundation in place, reading emerges naturally. Your child expands into reading and writing, building full fluency in English.'
         )}
       </Typography>
 
-      <Typography
-        component="p"
-        sx={{
-          ...quicksand,
-          fontWeight: 600,
-          fontSize: '1.125rem',
-          color: 'text.secondary',
-          lineHeight: 1.6,
-          mb: 4,
-        }}
-      >
-        {t(
-          'english.year2.italic',
-          'Your child expands English into reading and writing, building full fluency in the language.'
-        )}
-      </Typography>
+      {italic ? (
+        <Typography
+          component="p"
+          sx={{
+            ...quicksand,
+            fontWeight: 600,
+            fontSize: '1.125rem',
+            color: 'text.secondary',
+            lineHeight: 1.6,
+            mb: 4,
+          }}
+        >
+          {italic}
+        </Typography>
+      ) : null}
 
       <Box component="ul" sx={{ m: 0, pl: 2.5, listStyle: 'none', mb: 4 }}>
         {bulletList.map((text, i) => (

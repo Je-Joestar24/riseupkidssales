@@ -33,7 +33,7 @@
             "sectionAria": "Schools programs introduction",
             "title": "A different way to teach English in your school",
             "lead": "Where students don't just memorize, they understand and respond.",
-            "body": "More than a course, an interactive experience where children learn by doing.",
+            "body": "More than a course, it's an interactive experience where children learn by doing.",
             "ageLine": "For children ages 5+.",
             "cta": "Apply for your school →"
         },
@@ -49,7 +49,7 @@
             "p1": "Traditional programs largely depend on memorization and translation.",
             "p2": "Rise Up Kids is built based on how children naturally acquire language: through context, interaction, and meaningful repetition.",
             "p3": "Students don't just learn English, they come to understand and use it naturally.",
-            "p4": "More than studying English, students come to live it through real and playful experiences."
+            "p4": "More than studying English, students come to live it through real, playful experiences."
         },
         "comparison": {
             "sectionAria": "Traditional approach compared with Rise Up Kids",
@@ -86,7 +86,7 @@
             },
             "card3": {
                 "title": "Communication from the Beginning",
-                "description": "Children are encouraged to use English from their very first experiences."
+                "description": "Children are encouraged to use English from their very first lesson."
             }
         },
         "meaningfulLearning": {
@@ -115,7 +115,7 @@
             "sectionAria": "What schools can expect from Rise Up Kids",
             "title": "What Schools Can Expect",
             "card1": {
-                "title": "Engaged and Participative Students",
+                "title": "Engaged, Participating Students",
                 "description": "Students actively participate in lessons, responding and interacting with the language from the very beginning."
             },
             "card2": {
@@ -194,7 +194,7 @@
                     "answer": "Parents can track their children's progress through the LMS, where they have access to activities and learning development."
                 },
                 {
-                    "question": "What is the investment?",
+                    "question": "What investment is required?",
                     "answer": "The investment depends on the number of students and the school structure. During the initial conversation, we present a proposal tailored to your institution's needs and goals."
                 },
                 {
@@ -355,13 +355,13 @@
                 "description": "From understanding to expression"
             }
         },
-        "cta": "I want my child bilingual"
+        "cta": "I want my child to be bilingual"
     },
     "discover": {
         "title": "See how English becomes natural",
         "subtitle": "Discover how children learn English naturally and joyfully",
         "subtitle2": "Immersive online English program for children ages 5 to 13.",
-        "cta": "I Want My Child Bilingual"
+        "cta": "I Want My Child to Be Bilingual"
     },
     "families": {
         "title": "Rise Up Kids Founding Families",
@@ -369,22 +369,22 @@
         "cards": {
             "priorityFollowUp": {
                 "title": "Priority follow-up",
-                "description": "Closer access to the pedagogical team during the initial phase of the program."
+                "description": "Get closer access to the pedagogical team during the initial phase of the program."
             },
             "frequentFeedback": {
                 "title": "Frequent individual feedback",
                 "description": "Personalized guidance and close follow-up on your child's progress."
             },
             "founderValueGuaranteed": {
-                "title": "Founder value guaranteed",
+                "title": "Founder price guaranteed",
                 "description": "Initial price preserved for current and future children, even after adjustments."
             },
             "reducedInitialClasses": {
-                "title": "Reduced initial classes",
+                "title": "Reduced initial class size",
                 "description": "More individual attention in the program's first classes."
             }
         },
-        "cta": "I WANT MY CHILD BILINGUAL"
+        "cta": "I WANT MY CHILD to be BILINGUAL"
     },
     "extras": {
         "labels": [
@@ -416,7 +416,7 @@
             },
             "integration": {
                 "title": "Integration",
-                "tag": "Learning, understanding, and expressing",
+                "tag": "Learning, understanding, and expressing.",
                 "description": "Comprehension, expression, and confidence develop together, so your child communicates with confidence."
             }
         }
@@ -431,7 +431,7 @@
             },
             "interaction": {
                 "title": "PARTICIPATION",
-                "description": "Guided participation with teachers, with practical activities in a safe environment."
+                "description": "Guided participation with teachers and practical activities in a safe environment."
             },
             "expression": {
                 "title": "EXPRESSION",
@@ -473,8 +473,8 @@
                 "desc": "English sparks interest, invites exploration, and makes discovery enjoyable."
             },
             "persistence": {
-                "title": "Consistency without force",
-                "desc": "The child keeps engaging with the language naturally, without pressure."
+                "title": "Consistency without pressure",
+                "desc": "The child continues engaging with the language naturally, without pressure."
             },
             "growth": {
                 "title": "Growth mindset",
@@ -493,9 +493,9 @@
             "title": "Year 1",
             "subtitle": "Understand and express",
             "lead": "First, the child understands. Then they start to communicate.",
-            "italic": "Your child learns the \"skeleton\" of English—how sentences work and how to communicate with meaning.",
+            "italic": "Your child learns the \"skeleton\" of English — how sentences work and how to communicate with meaning.",
             "bullets": [
-                "Listens in meaningful context",
+                "Listens to understand meaningful context",
                 "Takes part in interactive activities",
                 "Naturally repeats what they learn",
                 "Starts speaking with confidence"
@@ -509,8 +509,8 @@
         "year2": {
             "title": "Year 2",
             "subtitle": "Read, write, and expand",
-            "lead": "With the oral foundation in place, reading emerges naturally.",
-            "italic": "Your child expands English into reading and writing, building full fluency in the language.",
+            "lead": "With the oral foundation in place, reading emerges naturally. Your child expands into reading and writing, building full fluency in English.",
+            "italic": "",
             "bullets": [
                 "Starts reading with comprehension",
                 "Recognizes words and patterns",
@@ -558,7 +558,7 @@
             "agePlaceholder": "e.g., 5 years old",
             "consentLabel": "I agree to receive messages (email/WhatsApp).",
             "submitPrelaunch": "Join the waitlist",
-            "submitLaunch": "I want my child bilingual",
+            "submitLaunch": "I want my child to be bilingual",
             "sending": "Sending…",
             "success": "Done!"
         }
@@ -598,8 +598,8 @@
     },
     "cta": {
         "title": "Don't let the development window pass",
-        "description": "Childhood is the most powerful time to build language, confidence, and curiosity. Give your child the opportunity to grow up bilingual with joy, security, and consistency.",
-        "button": "I want my child bilingual"
+        "description": "Childhood is the most powerful time to build language skills, confidence, and curiosity. Give your child the opportunity to grow up bilingual with joy, security, and consistency.",
+        "button": "I want my child to be bilingual"
     },
     "footer": {
         "subtitle": "A childhood where English is natural, fun, and unforgettable.",
