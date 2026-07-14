@@ -763,6 +763,8 @@
             "paymentPagSeguroDesc": "Pague com PagSeguro",
             "termsAgreeBefore": "Concordo com os ",
             "termsLinkText": "Termos de Uso",
+            "termsAgreeMiddle": " e a ",
+            "privacyLinkText": "Política de Privacidade",
             "termsAgreeAfter": " e autorizo a cobrança da assinatura anual.",
             "submitButton": "Finalizar inscrição",
             "continueToPayPal": "Continuar para PayPal",

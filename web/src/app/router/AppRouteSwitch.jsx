@@ -8,7 +8,6 @@ import ParentPage from '../../pages/ParentPage.jsx'
 import SchoolsPage from '../../pages/SchoolsPage.jsx'
 import VideoLibraryPage from '../../pages/VideoLibrary.jsx'
 import PrivacySettingsPage from '../../pages/PrivacySettingsPage.jsx'
-import PrivacyPolicyPage from '../../pages/PrivacyPolicyPage.jsx'
 
 const CheckoutPage = lazy(() => import('../../pages/CheckoutPage.jsx'))
 const CheckoutRegister = lazy(() => import('../../pages/CheckoutRegister.jsx'))
@@ -44,14 +43,17 @@ function CheckoutSuccessLazy() {
   )
 }
 
-/** Shared between client (`useRoutes`) and SSR (`useRoutes` inside `StaticRouter`). */
+/**
+ * Shared between client (`useRoutes`) and SSR (`useRoutes` inside `StaticRouter`).
+ * /privacy and /terms are static HTML in public/ (source: web/legal/) — not React routes.
+ */
 export const appRouteObjects = [
   { path: '/', element: <HomePage /> },
   { path: '/parents', element: <ParentPage /> },
   { path: '/schools', element: <SchoolsPage /> },
   { path: '/videos', element: <VideoLibraryPage /> },
-  { path: '/privacy', element: <PrivacySettingsPage /> },
-  { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
+  { path: '/privacy-settings', element: <PrivacySettingsPage /> },
+  { path: '/privacy-policy', element: <Navigate to="/privacy" replace /> },
   { path: '/checkout', element: <CheckoutPageLazy /> },
   { path: '/checkout/register', element: <CheckoutRegisterLazy /> },
   { path: '/checkout/success', element: <CheckoutSuccessLazy /> },

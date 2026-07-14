@@ -773,10 +773,21 @@ function RgisterForm() {
             <Typography component="span" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
               {t('checkout.registerForm.termsAgreeBefore')}
               <Link
-                to="/privacy-policy"
+                to="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: TEAL_LINK, textDecoration: 'underline' }}
               >
                 {t('checkout.registerForm.termsLinkText')}
+              </Link>
+              {t('checkout.registerForm.termsAgreeMiddle') || ' and '}
+              <Link
+                to="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: TEAL_LINK, textDecoration: 'underline' }}
+              >
+                {t('checkout.registerForm.privacyLinkText') || 'Privacy Policy'}
               </Link>
               {t('checkout.registerForm.termsAgreeAfter')}
             </Typography>

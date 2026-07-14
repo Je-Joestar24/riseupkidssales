@@ -7,7 +7,7 @@ export default function PolicyLink() {
   return (
     <Button
       component="a"
-      href="/privacy-policy"
+      href="/privacy"
       endIcon={<ArrowForwardIcon sx={{ fontSize: 20 }} />}
       sx={{
         fontSize: '0.9375rem',

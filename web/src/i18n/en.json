@@ -759,6 +759,8 @@
             "paymentPagSeguroDesc": "Pay with PagSeguro",
             "termsAgreeBefore": "I agree to the ",
             "termsLinkText": "Terms of Use",
+            "termsAgreeMiddle": " and ",
+            "privacyLinkText": "Privacy Policy",
             "termsAgreeAfter": " and authorize the annual subscription charge.",
             "submitButton": "Complete enrollment",
             "continueToPayPal": "Continue to PayPal",

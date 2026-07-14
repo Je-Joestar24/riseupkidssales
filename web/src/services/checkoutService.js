@@ -419,8 +419,8 @@ export async function registerAndCreateCheckoutSession({
   })
 }
 
-/** Terms version accepted at checkout (must match backend). */
-export const DEFAULT_TERMS_VERSION = 'terms_v1_2026-02-10'
+/** Terms version accepted at checkout (must match backend legal/meta.json). */
+export const DEFAULT_TERMS_VERSION = '2026-07-14'
 
 /**
  * Verify Family Plan payment and get user + token (for success page).

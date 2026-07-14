@@ -1,0 +1,4 @@
+# Static legal pages for riseup.kids (Apple/Google crawlers)
+/privacy           /privacy/index.html   200
+/terms             /terms/index.html     200
+/privacy-policy    /privacy/index.html   301

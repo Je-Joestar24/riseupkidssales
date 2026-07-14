@@ -1,0 +1,61 @@
+Terms of Use — Rise Up Kids
+Last updated: July 14, 2026 · Version 2026-07-14
+
+1. Agreement
+These Terms of Use ("Terms") govern your access to and use of Rise Up Kids mobile applications, the parent web dashboard, and related services (the "Service") operated by Rise Up Kids ("we," "us," or "our").
+
+By creating an account, subscribing, or allowing a child to use the Service, you agree to these Terms and our Privacy Policy at https://riseup.kids/privacy. If you do not agree, do not use the Service.
+
+2. Eligibility and Parent Responsibility
+The Service is intended for use by parents and legal guardians who are at least 18 years old. You represent that you are a parent or legal guardian of each child profile you create.
+
+Children do not create their own accounts. You are responsible for supervising your child's use of the Service, the accuracy of information you provide, and activity conducted under your account.
+
+3. Accounts and Security
+• You must provide accurate registration information and keep your password confidential.
+• You are responsible for all activity under your account.
+• Notify us promptly at contact@riseup.kids if you suspect unauthorized access.
+
+4. Subscriptions and Payments
+Access to paid features requires an active subscription or family plan purchased through our checkout process. Payments are processed by third-party providers (Stripe, PagSeguro/PagBank, or PayPal depending on region). Prices, plan limits, and billing terms are shown at checkout.
+
+Except where required by law, payments are non-refundable once access is granted. Legacy Stripe subscription products, if applicable to your account, may cancel at the end of the current billing period when you delete your account.
+
+5. Acceptable Use
+• Use the Service only for personal, non-commercial family learning unless we agree otherwise in writing
+• Do not upload unlawful, harmful, or infringing content
+• Do not attempt to access other users' accounts or data
+• Do not reverse engineer, scrape, or disrupt the Service
+• Do not use the Service in violation of applicable law, including COPPA and child safety rules
+
+6. User Content and Moderation
+Content your child submits — such as Kids Wall posts, photos, and audio recordings — may be stored and reviewed by our team. Kids Wall posts require admin approval before being visible to other families.
+
+We may remove content or suspend access that violates these Terms or poses a safety risk.
+
+7. Intellectual Property
+The Service, including courses, videos, graphics, software, and branding, is owned by Rise Up Kids or our licensors. We grant you a limited, non-transferable license to use the Service for personal family use during an active subscription.
+
+8. Account Deletion and Termination
+You may request deletion of a child profile or your entire parent account from account settings in the mobile app or parent web dashboard. When you submit a deletion request, access is revoked immediately and personal data is permanently deleted within 30 days, subject to limited retention required by law or payment processors.
+
+We may suspend or terminate accounts that violate these Terms or create risk for users or the Service.
+
+9. Disclaimers
+The Service is provided "as is" and "as available." We do not guarantee uninterrupted or error-free operation. Educational outcomes depend on many factors outside our control.
+
+To the fullest extent permitted by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+10. Limitation of Liability
+To the fullest extent permitted by law, Rise Up Kids and its affiliates will not be liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, data, or goodwill arising from your use of the Service.
+
+11. Changes to These Terms
+We may update these Terms from time to time. Updated Terms will be posted at https://riseup.kids/terms with a revised "Last updated" date. Continued use after changes become effective constitutes acceptance of the updated Terms.
+
+When you accept Terms at checkout, we store the terms version you accepted.
+
+12. Governing Law and Contact
+These Terms are governed by the laws of the United States and the state in which Rise Up Kids operates, without regard to conflict-of-law rules.
+
+Questions: contact@riseup.kids
+Privacy Policy: https://riseup.kids/privacy
