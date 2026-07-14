@@ -8,6 +8,7 @@ import ParentPage from '../../pages/ParentPage.jsx'
 import SchoolsPage from '../../pages/SchoolsPage.jsx'
 import VideoLibraryPage from '../../pages/VideoLibrary.jsx'
 import PrivacySettingsPage from '../../pages/PrivacySettingsPage.jsx'
+import LegalStaticRedirect from '../../components/legal/LegalStaticRedirect.jsx'
 
 const CheckoutPage = lazy(() => import('../../pages/CheckoutPage.jsx'))
 const CheckoutRegister = lazy(() => import('../../pages/CheckoutRegister.jsx'))
@@ -45,7 +46,8 @@ function CheckoutSuccessLazy() {
 
 /**
  * Shared between client (`useRoutes`) and SSR (`useRoutes` inside `StaticRouter`).
- * /privacy and /terms are static HTML in public/ (source: web/legal/) — not React routes.
+ * /privacy and /terms are static HTML in dist/ (source: web/legal/) — LegalStaticRedirect
+ * forces a full page load so React does not hydrate over the legal pages.
  */
 export const appRouteObjects = [
   { path: '/', element: <HomePage /> },
@@ -53,7 +55,9 @@ export const appRouteObjects = [
   { path: '/schools', element: <SchoolsPage /> },
   { path: '/videos', element: <VideoLibraryPage /> },
   { path: '/privacy-settings', element: <PrivacySettingsPage /> },
-  { path: '/privacy-policy', element: <Navigate to="/privacy" replace /> },
+  { path: '/privacy', element: <LegalStaticRedirect page="privacy" /> },
+  { path: '/terms', element: <LegalStaticRedirect page="terms" /> },
+  { path: '/privacy-policy', element: <LegalStaticRedirect page="privacy" /> },
   { path: '/checkout', element: <CheckoutPageLazy /> },
   { path: '/checkout/register', element: <CheckoutRegisterLazy /> },
   { path: '/checkout/success', element: <CheckoutSuccessLazy /> },

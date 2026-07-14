@@ -1,0 +1,13 @@
+# Apache / cPanel — serve legal static HTML before React SPA fallback
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^privacy/?$ /privacy/index.html [L]
+  RewriteRule ^terms/?$ /terms/index.html [L]
+  RewriteRule ^privacy-policy/?$ /privacy/index.html [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

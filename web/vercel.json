@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/privacy", "dest": "/privacy/index.html" },
+    { "src": "/privacy/", "dest": "/privacy/index.html" },
+    { "src": "/terms", "dest": "/terms/index.html" },
+    { "src": "/terms/", "dest": "/terms/index.html" },
+    { "src": "/privacy-policy", "dest": "/privacy/index.html", "status": 301 },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

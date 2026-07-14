@@ -772,23 +772,25 @@ function RgisterForm() {
           label={
             <Typography component="span" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
               {t('checkout.registerForm.termsAgreeBefore')}
-              <Link
-                to="/terms"
+              <Typography
+                component="a"
+                href="/terms/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: TEAL_LINK, textDecoration: 'underline' }}
+                sx={{ color: TEAL_LINK, textDecoration: 'underline' }}
               >
                 {t('checkout.registerForm.termsLinkText')}
-              </Link>
+              </Typography>
               {t('checkout.registerForm.termsAgreeMiddle') || ' and '}
-              <Link
-                to="/privacy"
+              <Typography
+                component="a"
+                href="/privacy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: TEAL_LINK, textDecoration: 'underline' }}
+                sx={{ color: TEAL_LINK, textDecoration: 'underline' }}
               >
                 {t('checkout.registerForm.privacyLinkText') || 'Privacy Policy'}
-              </Link>
+              </Typography>
               {t('checkout.registerForm.termsAgreeAfter')}
             </Typography>
           }
