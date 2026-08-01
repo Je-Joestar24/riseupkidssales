@@ -31,6 +31,17 @@ function readViteAppUrl() {
 const APP_URL = readViteAppUrl()
 const PRERENDER_LANGUAGE = 'pt'
 
+const LEGAL_PAGE_TITLES = {
+  '/privacy': 'Privacy Policy | Rise Up Kids',
+  '/terms': 'Terms of Use | Rise Up Kids',
+}
+
+function applyLegalPageTitle(html, pathname) {
+  const title = LEGAL_PAGE_TITLES[pathname]
+  if (!title) return html
+  return html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+}
+
 const template = readFileSync(join(distDir, 'index.html'), 'utf-8')
 
 const serverEntryCandidates = ['entry-server.js', 'entry-server.mjs']
@@ -86,6 +97,8 @@ for (const pathname of PRERENDER_PATHS) {
       appUrl: APP_URL,
     })
   }
+
+  html = applyLegalPageTitle(html, pathname)
 
   writeHtmlForPath(pathname, html)
   console.log('SSG wrote', pathname, seoKey ? `(seo: ${seoKey}, lang: ${PRERENDER_LANGUAGE})` : '')

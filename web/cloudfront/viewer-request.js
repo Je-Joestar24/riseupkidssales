@@ -4,9 +4,9 @@
  * Attach to your distribution's DEFAULT cache behavior.
  * Runtime: cloudfront-js-2.0
  *
- * Ensures /privacy and /terms serve static HTML from S3 BEFORE the SPA fallback.
- * Without this, custom error responses (403/404 → /index.html) load React on legal URLs
- * and cause hydration error #418 or reload loops.
+ * Ensures /privacy and /terms serve SSG prerendered HTML from S3 BEFORE the SPA fallback.
+ * Without this, custom error responses (403/404 → /index.html) load the homepage shell
+ * on legal URLs and cause React hydration error #418.
  */
 function handler(event) {
   var request = event.request;

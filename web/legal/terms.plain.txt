@@ -1,5 +1,5 @@
 Terms of Use — Rise Up Kids
-Last updated: July 14, 2026 · Version 2026-07-14
+Last updated: August 1, 2026 · Version 2026-08-01
 
 1. Agreement
 These Terms of Use ("Terms") govern your access to and use of Rise Up Kids mobile applications, the parent web dashboard, and related services (the "Service") operated by Rise Up Kids ("we," "us," or "our").
@@ -29,7 +29,7 @@ Except where required by law, payments are non-refundable once access is granted
 • Do not use the Service in violation of applicable law, including COPPA and child safety rules
 
 6. User Content and Moderation
-Content your child submits — such as Kids Wall posts, photos, and audio recordings — may be stored and reviewed by our team. Kids Wall posts require admin approval before being visible to other families.
+Content your child submits — such as Kids Wall posts (Kids Wall is available on the Android app and Web only; not available on iOS), photos, and audio recordings — may be stored and reviewed by our team. Where Kids Wall is available, posts require admin approval before being visible to other families.
 
 We may remove content or suspend access that violates these Terms or poses a safety risk.
 

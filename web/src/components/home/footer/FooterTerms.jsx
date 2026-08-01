@@ -29,7 +29,7 @@ export default function FooterTerms() {
         <Box component="li">
           <Button
             component="a"
-            href="/terms/index.html"
+            href="/terms"
             sx={{
               display: 'inline-block',
               p: 0,
@@ -49,7 +49,7 @@ export default function FooterTerms() {
         <Box component="li">
           <Button
             component="a"
-            href="/privacy/index.html"
+            href="/privacy"
             sx={{
               display: 'inline-block',
               p: 0,

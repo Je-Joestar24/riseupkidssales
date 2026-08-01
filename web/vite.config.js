@@ -1,7 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
-import { legalStaticPagesPlugin } from './scripts/vite-legal-static-plugin.js'
-
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const devPort = parseInt(env.VITE_SALES_DEV_SERVER_PORT || env.VITE_DEV_SERVER_PORT || '4175', 10)
@@ -9,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = apiUrl.replace(/\/api\/?$/, '').replace(/\/+$/, '') || apiUrl
 
   return {
-    plugins: [react(), legalStaticPagesPlugin()],
+    plugins: [react()],
     ssr: {
       target: 'node',
       noExternal: [/^@mui\//, /^@emotion\//],

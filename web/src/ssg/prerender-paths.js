@@ -7,6 +7,8 @@ export const PRERENDER_PATHS = [
   '/parents',
   '/schools',
   '/videos',
+  '/privacy',
+  '/terms',
   '/privacy-settings',
   '/checkout',
   '/checkout/register',
