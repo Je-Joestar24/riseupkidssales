@@ -1,43 +1,44 @@
 Terms of Use — Rise Up Kids
-Last updated: August 1, 2026 · Version 2026-08-01
+Last updated: August 3, 2026 · Version 2026-08-03
 
 1. Agreement
-These Terms of Use ("Terms") govern your access to and use of Rise Up Kids mobile applications, the parent web dashboard, and related services (the "Service") operated by Rise Up Kids ("we," "us," or "our").
+These Terms of Use ("Terms") govern your access to and use of Rise Up Kids mobile applications, parent and school web tools, and related services (the "Service") operated by Rise Up Kids ("we," "us," or "our").
 
-By creating an account, subscribing, or allowing a child to use the Service, you agree to these Terms and our Privacy Policy at https://riseup.kids/privacy. If you do not agree, do not use the Service.
+By creating an account, subscribing, accessing a school program, or allowing a child to use the Service, you agree to these Terms and our Privacy Policy at https://riseup.kids/privacy. If you do not agree, do not use the Service.
 
-2. Eligibility and Parent Responsibility
-The Service is intended for use by parents and legal guardians who are at least 18 years old. You represent that you are a parent or legal guardian of each child profile you create.
+2. Eligibility and Adult Responsibility
+The Service is controlled by responsible adults. It is intended for parents and legal guardians (family use) and for schools, admins, and teachers (school programs) who are authorized to supervise children. You represent that you are an adult authorized to create or manage each child profile under your access.
 
-Children do not create their own accounts. You are responsible for supervising your child's use of the Service, the accuracy of information you provide, and activity conducted under your account.
+Children do not create their own accounts and do not control account settings. You are responsible for supervising children's use of the Service, the accuracy of information you provide, and activity conducted under accounts you control.
 
 3. Accounts and Security
 • You must provide accurate registration information and keep your password confidential.
-• You are responsible for all activity under your account.
+• You are responsible for all activity under accounts you control.
 • Notify us promptly at contact@riseup.kids if you suspect unauthorized access.
 
 4. Subscriptions and Payments
-Access to paid features requires an active subscription or family plan purchased through our checkout process. Payments are processed by third-party providers (Stripe, PagSeguro/PagBank, or PayPal depending on region). Prices, plan limits, and billing terms are shown at checkout.
+Access to paid features requires an active subscription, family plan, or school arrangement purchased or granted through our processes. Payments are processed by third-party providers (Stripe, PagSeguro/PagBank, or PayPal depending on region). Prices, plan limits, and billing terms are shown at checkout or in your school agreement.
 
 Except where required by law, payments are non-refundable once access is granted. Legacy Stripe subscription products, if applicable to your account, may cancel at the end of the current billing period when you delete your account.
 
 5. Acceptable Use
-• Use the Service only for personal, non-commercial family learning unless we agree otherwise in writing
+• Use the Service only for authorized family or school learning unless we agree otherwise in writing
 • Do not upload unlawful, harmful, or infringing content
+• Do not upload Kids Wall photos that show faces or body parts; Kids Wall is for sharing activities children are doing as they experience the language
 • Do not attempt to access other users' accounts or data
 • Do not reverse engineer, scrape, or disrupt the Service
 • Do not use the Service in violation of applicable law, including COPPA and child safety rules
 
 6. User Content and Moderation
-Content your child submits — such as Kids Wall posts (Kids Wall is available on the Android app and Web only; not available on iOS), photos, and audio recordings — may be stored and reviewed by our team. Where Kids Wall is available, posts require admin approval before being visible to other families.
+Content a child submits, such as Kids Wall posts (Kids Wall is available on the Android app and Web only; not available on iOS), photos, and audio recordings, may be stored and reviewed by our team.
 
-We may remove content or suspend access that violates these Terms or poses a safety risk.
+Kids Wall lets children share photos of the activities they are doing as they experience the language. Photos of faces and body parts are not allowed. Where Kids Wall is available, posts require admin approval before being visible to other families. We may reject or remove content that violates these rules or poses a safety risk, and we may suspend access when needed.
 
 7. Intellectual Property
-The Service, including courses, videos, graphics, software, and branding, is owned by Rise Up Kids or our licensors. We grant you a limited, non-transferable license to use the Service for personal family use during an active subscription.
+The Service, including courses, videos, graphics, software, and branding, is owned by Rise Up Kids or our licensors. We grant you a limited, non-transferable license to use the Service for authorized family or school use during an active subscription or school arrangement.
 
 8. Account Deletion and Termination
-You may request deletion of a child profile or your entire parent account from account settings in the mobile app or parent web dashboard. When you submit a deletion request, access is revoked immediately and personal data is permanently deleted within 30 days, subject to limited retention required by law or payment processors.
+Authorized adults may request deletion of a child profile or, where applicable, a parent account from account settings in the mobile app or web dashboard. When a deletion request is submitted, access is revoked immediately and personal data is permanently deleted within 30 days, subject to limited retention required by law or payment processors.
 
 We may suspend or terminate accounts that violate these Terms or create risk for users or the Service.
 
