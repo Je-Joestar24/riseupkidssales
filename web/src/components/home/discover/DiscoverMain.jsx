@@ -12,7 +12,7 @@ export default function DiscoverMain(props) {
     >
       <Container maxWidth="lg">
         <DiscoverHeader />
-        <DiscoverVideo videoId={props.videoId} autoplay={props.videoAutoplay} />
+        <DiscoverVideo autoplay={props.videoAutoplay} />
         <DiscoverCta onClick={props.onCtaClick} href={props.ctaHref}>
           {props.ctaLabel}
         </DiscoverCta>

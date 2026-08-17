@@ -41,7 +41,8 @@
             "sectionAria": "English experience in the classroom",
             "title": "The English experience in action",
             "subtitle": "A new standard for how English is lived, understood, and used in school",
-            "imageAlt": "Rise Up Kids — English experience in action"
+            "imageAlt": "Rise Up Kids — English experience in action",
+            "videoPlayLabel": "Play video: Rise Up Kids — English experience in action"
         },
         "differentApproach": {
             "sectionAria": "How Rise Up Kids differs from traditional English programs",
@@ -361,7 +362,17 @@
         "title": "See how English becomes natural",
         "subtitle": "Discover how children learn English naturally and joyfully",
         "subtitle2": "Immersive online English program for children ages 5 to 13.",
-        "cta": "I Want My Child to Be Bilingual"
+        "cta": "I Want My Child to Be Bilingual",
+        "videoTitle": "Rise Up Kids — How it works",
+        "videoPlayLabel": "Play video: Rise Up Kids — How it works",
+        "videoPauseLabel": "Pause video",
+        "videoReplayLabel": "Replay video",
+        "videoMuteLabel": "Mute",
+        "videoUnmuteLabel": "Unmute",
+        "videoFullscreenLabel": "Enter fullscreen",
+        "videoExitFullscreenLabel": "Exit fullscreen",
+        "videoSeekLabel": "Seek",
+        "videoVolumeLabel": "Volume"
     },
     "families": {
         "title": "Rise Up Kids Founding Families",

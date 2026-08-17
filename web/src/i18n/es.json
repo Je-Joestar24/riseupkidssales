@@ -41,7 +41,8 @@
             "sectionAria": "Experiencia del inglés en el aula",
             "title": "La experiencia del inglés en acción",
             "subtitle": "Un nuevo estándar de cómo el inglés es vivido, comprendido y utilizado en la escuela",
-            "imageAlt": "Rise Up Kids — La experiencia del inglés en acción"
+            "imageAlt": "Rise Up Kids — La experiencia del inglés en acción",
+            "videoPlayLabel": "Reproducir video: Rise Up Kids — La experiencia del inglés en acción"
         },
         "differentApproach": {
             "sectionAria": "En qué se diferencia Rise Up Kids de los programas tradicionales de inglés",
@@ -361,7 +362,17 @@
         "title": "Mira cómo el inglés se vuelve natural",
         "subtitle": "Descubre cómo los niños aprenden inglés de forma natural y alegre",
         "subtitle2": "Programa inmersivo de inglés online para niños de 5 a 13 años.",
-        "cta": "Quiero a mi hijo bilingüe"
+        "cta": "Quiero a mi hijo bilingüe",
+        "videoTitle": "Rise Up Kids — Cómo funciona",
+        "videoPlayLabel": "Reproducir video: Rise Up Kids — Cómo funciona",
+        "videoPauseLabel": "Pausar video",
+        "videoReplayLabel": "Reproducir de nuevo",
+        "videoMuteLabel": "Silenciar",
+        "videoUnmuteLabel": "Activar sonido",
+        "videoFullscreenLabel": "Pantalla completa",
+        "videoExitFullscreenLabel": "Salir de pantalla completa",
+        "videoSeekLabel": "Buscar en el video",
+        "videoVolumeLabel": "Volumen"
     },
     "families": {
         "title": "Familias Fundadoras Rise Up Kids",
