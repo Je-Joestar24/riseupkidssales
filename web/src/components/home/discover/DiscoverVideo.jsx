@@ -29,6 +29,7 @@ export default function DiscoverVideo({ autoplay = true }) {
         posterSrc={videoBackground}
         posterAlt={title}
         autoplay={autoplay}
+        bgcolor="transparent"
       />
     </Box>
   );

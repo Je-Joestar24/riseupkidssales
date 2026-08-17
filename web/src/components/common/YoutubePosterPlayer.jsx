@@ -26,6 +26,7 @@ export default function YoutubePosterPlayer({
   autoplay = true,
   showPlayButton = true,
   naturalPoster = false,
+  bgcolor = 'common.black',
 }) {
   const { isPlaying, embedUrl, startPlayback } = useYoutubePosterPlayer({
     videoId,
@@ -41,7 +42,7 @@ export default function YoutubePosterPlayer({
         borderRadius: 2,
         overflow: 'hidden',
         pt: useNaturalPoster ? 0 : '56.25%',
-        bgcolor: 'common.black',
+        bgcolor,
       }}
     >
       {!isPlaying ? (
