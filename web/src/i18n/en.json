@@ -140,7 +140,7 @@
             "grant": {
                 "name": "Dr. Grant Eckstein, Ph.D.",
                 "role": "Professor of Linguistics at Brigham Young University",
-                "credentials": "",
+                "credentials": "Provo, Utah, USA",
                 "quote": "As a scholar in applied linguistics and coordinator of a TESOL graduate program, I evaluate language learning programs through both research and practice. Rise Up Kids stands out as a program that successfully brings these together. Its design reflects well-established principles of second language acquisition, including meaningful input, careful scaffolding, and opportunities for engagement that are essential for young learners. These principles are thoughtfully embedded in the structure of the lessons. The quality of the materials is equally impressive. The videos and lessons are engaging, well-produced, and clearly designed to sustain children's attention while supporting real language development. What distinguishes Rise Up Kids most is its clear commitment to excellence. The program demonstrates both pedagogical expertise and a deep understanding of how children learn languages. I would confidently recommend it to educators and families seeking high-quality English instruction.",
                 "imageAlt": "Dr. Grant Eckstein, Ph.D."
             },
@@ -622,8 +622,8 @@
         "legal": "Legal",
         "termsOfUse": "Terms of Use",
         "privacyPolicy": "Privacy Policy",
-        "copyright": "© 2026 Rise Up Kids.",
-        "rightsReserved": "All rights reserved."
+        "copyright": "© 2026 Rise Up Kids. All rights reserved.",
+        "headquarters": "Headquartered in the United States."
     },
     "privacySettings": {
         "pageTitle": "Privacy Settings",

@@ -56,6 +56,7 @@ export function usePageSeo(seoKey) {
 
     upsertMetaTag('name', 'description', seo.description)
     upsertMetaTag('name', 'keywords', seo.keywords)
+    upsertMetaTag('name', 'p:domain_verify', '3393ad571f6109ef489500cf6b4688a1')
     upsertMetaTag('property', 'og:title', seo.title)
     upsertMetaTag('property', 'og:description', seo.description)
     upsertMetaTag('property', 'og:url', canonical)

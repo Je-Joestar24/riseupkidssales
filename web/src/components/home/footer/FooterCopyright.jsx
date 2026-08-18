@@ -11,19 +11,35 @@ export default function FooterCopyright() {
                 pt: 4,
                 borderTop: '4px solid',
                 borderColor: '#d4e6e3',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '5px',
             }}
         >
-            <Typography component="div" sx={{
-                fontSize: '1.125rem', color: 'grey.600',
-                fontWeight: 600
-            }}>
+            <Typography
+                component="p"
+                sx={{
+                    fontSize: { xs: '14px', sm: '16px' },
+                    color: 'grey.600',
+                    fontWeight: 400,
+                    lineHeight: 1.5,
+                    m: 0,
+                }}
+            >
                 {t('footer.copyright')}
             </Typography>
-            <Typography component="div" sx={{
-                fontSize: '1.125rem', color: 'grey.600',
-                fontWeight: 600
-            }}>
-                {t('footer.rightsReserved')}
+            <Typography
+                component="p"
+                sx={{
+                    fontSize: { xs: '14px', sm: '16px' },
+                    color: 'grey.600',
+                    fontWeight: 400,
+                    lineHeight: 1.5,
+                    m: 0,
+                }}
+            >
+                {t('footer.headquarters')}
             </Typography>
         </Box>
     )

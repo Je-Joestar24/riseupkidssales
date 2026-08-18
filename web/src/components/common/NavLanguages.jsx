@@ -1,6 +1,7 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../hooks/useLanguage'
+import { buildLanguageSearch } from '../../utils/salesLanguage.js'
 
 const languages = [
   { code: 'pt', label: 'PT' },
@@ -9,21 +10,17 @@ const languages = [
 ]
 
 function NavLanguages() {
-  const { language, setLanguage } = useLanguage()
+  const { language } = useLanguage()
   const navigate = useNavigate()
   const location = useLocation()
 
   const handleLanguageChange = (code) => {
-    setLanguage(code)
-    const params = new URLSearchParams(location.search)
-    if (code === 'pt') {
-      params.delete('lang')
-    } else {
-      params.set('lang', code)
-    }
-    const search = params.toString()
+    if (code === language) return
     navigate(
-      { pathname: location.pathname, search: search ? `?${search}` : '' },
+      {
+        pathname: location.pathname,
+        search: buildLanguageSearch(location.search, code),
+      },
       { replace: true },
     )
   }

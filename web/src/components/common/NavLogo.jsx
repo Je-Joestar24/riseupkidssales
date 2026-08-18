@@ -1,16 +1,18 @@
 import { Box } from '@mui/material'
 import { Link } from 'react-router-dom'
+import { NAV_HEADER_TRANSITION_MS } from '../../config/constants.js'
 import logo from '../../assets/images/small-logo.png'
 
-function NavLogo() {
+function NavLogo({ compact = false }) {
   return (
     <Box
       component="div"
       role="presentation"
       sx={{
         display: 'flex',
-        justifyContent: 'center',
-        py: 2,
+        justifyContent: compact ? 'flex-start' : 'center',
+        py: compact ? 0 : 2,
+        transition: `padding ${NAV_HEADER_TRANSITION_MS}ms ease`,
       }}
     >
       <Box
@@ -29,8 +31,9 @@ function NavLogo() {
           src={logo}
           alt="Rise Up Kids™"
           sx={{
-            height: 130,
+            height: compact ? 42 : 130,
             display: 'block',
+            transition: `height ${NAV_HEADER_TRANSITION_MS}ms ease`,
           }}
         />
         <Box
@@ -38,11 +41,15 @@ function NavLogo() {
           aria-hidden="true"
           sx={{
             position: 'absolute',
-            top: 12,
-            right: 135,
-            fontSize: 12,
+            top: compact ? 4 : 12,
+            right: compact ? 44 : 135,
+            fontSize: compact ? 8 : 12,
             fontWeight: 700,
             color: 'accent.main',
+            transition: (theme) =>
+              theme.transitions.create(['top', 'right', 'font-size'], {
+                duration: NAV_HEADER_TRANSITION_MS,
+              }),
           }}
         >
           ™
@@ -53,4 +60,3 @@ function NavLogo() {
 }
 
 export default NavLogo
-

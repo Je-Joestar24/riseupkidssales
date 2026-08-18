@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import { useTranslation } from '../../hooks/useTranslation'
 import { LMS_LOGIN_URL } from '../../constants/env'
 
-function NavAction() {
+function NavAction({ compact = false }) {
   const { t } = useTranslation()
   const isLmsEnabled = Boolean(LMS_LOGIN_URL)
 
@@ -17,13 +17,14 @@ function NavAction() {
       color="secondary"
       aria-label={t('nav.login')}
       sx={{
-        px: 3,
-        py: 1.5,
+        px: compact ? 2 : 3,
+        py: compact ? 0.75 : 1.5,
         borderRadius: 2,
-        fontSize: 16,
+        fontSize: compact ? 14 : 16,
         fontWeight: 700,
         textTransform: 'none',
         boxShadow: 'none',
+        transition: 'padding 0.25s ease, font-size 0.25s ease',
         '&:hover': {
           opacity: 0.9,
           boxShadow: '0 8px 20px rgba(0,0,0,0.12)',

@@ -34,6 +34,10 @@ export default defineConfig(({ mode }) => {
       port: devPort,
       open: true,
     },
+    test: {
+      environment: 'node',
+      include: ['src/tests/**/*.test.js'],
+    },
   }
 })
 

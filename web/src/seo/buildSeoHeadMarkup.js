@@ -49,6 +49,7 @@ export function applySeoToHtml(html, { pathname, lang, seoKey, appUrl }) {
   let out = upsertTitle(html, seo.title)
   out = upsertMeta(out, 'name', 'description', seo.description)
   out = upsertMeta(out, 'name', 'keywords', seo.keywords)
+  out = upsertMeta(out, 'name', 'p:domain_verify', '3393ad571f6109ef489500cf6b4688a1')
 
   out = upsertMeta(out, 'property', 'og:type', 'website')
   out = upsertMeta(out, 'property', 'og:site_name', 'Rise Up Kids')
