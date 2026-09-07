@@ -55,7 +55,8 @@ function ParentPage() {
         <Box component="section" aria-label="The English journey at Rise Up Kids">
           <EnglishMain />
         </Box>
-        {salesPageSections.questions ? <QuestionsMain /> : null}
+         <QuestionsMain />
+        
         <EducationSpecialistsSayMain/>
         <CtaMain />
         <FooterMain />
