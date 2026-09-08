@@ -941,5 +941,12 @@
         "s13P1": "Rise Up Kids may update this Privacy Policy to reflect improvements, legal changes or evolution of the service. The update date will be revised at the top of the document.",
         "s14Title": "14. Contact",
         "s14P1": "For questions about privacy or personal data:"
+    },
+    "cookieConsent": {
+        "ariaLabel": "Cookie consent",
+        "message": "We use cookies to measure our advertising and understand how families discover Rise Up Kids. You can accept or decline — declining does not affect your access.",
+        "privacyLink": "Read our Privacy Policy",
+        "accept": "Accept",
+        "decline": "Decline"
     }
 }

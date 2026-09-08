@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Box, Typography, CircularProgress, Alert, Button } from '@mui/material'
 import { Link as RouterLink } from 'react-router-dom'
 import { useTranslation } from '../hooks/useTranslation.js'
@@ -7,6 +7,12 @@ import SuccessHeader from '../components/checkout/success/SuccessHeader.jsx'
 import SuccessCards from '../components/checkout/success/SuccessCards.jsx'
 import SuccessLMSLink from '../components/checkout/success/SuccessLMSLink.jsx'
 import CheckoutHeader from '../components/common/CheckoutHeader.jsx'
+import {
+  clearPurchaseIntent,
+  currencyForLanguage,
+  readPurchaseIntent,
+  trackPurchase,
+} from '../analytics/checkoutTracking.js'
 
 const BG_COLOR = '#FCF9F3'
 const GUARANTEE_BG = '#F4EDD8'
@@ -31,12 +37,28 @@ function resolveErrorCopy(t, errorMessage) {
 }
 
 export default function CheckoutSuccess() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
   const [clientReady, setClientReady] = useState(false)
   useEffect(() => {
     setClientReady(true)
   }, [])
   const { status, errorMessage } = useCheckoutSuccessVerification(clientReady)
+
+  // Meta Pixel Purchase — once, only on a verified success. Value + currency come
+  // from the intent stashed at checkout (survives Stripe/PagSeguro redirects);
+  // fall back to the visitor's currency if that snapshot is missing.
+  const purchaseTracked = useRef(false)
+  useEffect(() => {
+    if (status !== 'success' || purchaseTracked.current) return
+    purchaseTracked.current = true
+    const intent = readPurchaseIntent()
+    trackPurchase({
+      value: intent?.value,
+      currency: intent?.currency || currencyForLanguage(language),
+      numItems: intent?.numItems,
+    })
+    clearPurchaseIntent()
+  }, [status, language])
 
   if (status === 'loading') {
     return (

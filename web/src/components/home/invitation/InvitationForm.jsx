@@ -5,6 +5,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 import { submitInvitation } from '../../../services/invitationService.js'
+import { trackMetaEvent } from '../../../analytics/metaPixel.js'
 
 export default function InvitationForm() {
     const { t, language } = useTranslation()
@@ -52,6 +53,7 @@ export default function InvitationForm() {
                 consent: values.consent,
             })
             setSuccess(true)
+            trackMetaEvent('Lead', { content_name: 'founding_families_waitlist' })
         } catch {
             setLoading(false)
         } finally {
