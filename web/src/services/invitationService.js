@@ -1,4 +1,5 @@
 import api from '../axios'
+import { executeRecaptcha } from './recaptchaService.js'
 
 /**
  * Submit sales page invitation to Flodesk (no user account created).
@@ -6,6 +7,7 @@ import api from '../axios'
  * @returns {Promise<Object>} API response with success and data
  */
 export async function submitInvitation(data) {
+  const captchaToken = await executeRecaptcha('invitation')
   const response = await api.post('/invitation', {
     parentName: data.parentName,
     email: data.email,
@@ -13,6 +15,7 @@ export async function submitInvitation(data) {
     age: data.age,
     language: data.language,
     consent: data.consent,
+    captchaToken,
   })
   return response.data
 }

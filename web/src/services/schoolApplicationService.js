@@ -1,4 +1,5 @@
 import api from '../axios'
+import { executeRecaptcha } from './recaptchaService.js'
 
 /**
  * Submit schools page application form.
@@ -16,6 +17,7 @@ import api from '../axios'
  * @returns {Promise<Object>} API response with success and data
  */
 export async function submitSchoolApplication(data) {
+  const captchaToken = await executeRecaptcha('school_application')
   const response = await api.post('/school-application', {
     schoolName: data.schoolName,
     cityCountry: data.cityCountry,
@@ -27,6 +29,7 @@ export async function submitSchoolApplication(data) {
     currentEnglish: data.currentEnglish,
     interest: data.interest,
     language: data.language,
+    captchaToken,
   })
   return response.data
 }

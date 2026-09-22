@@ -19,6 +19,14 @@ describe('Content-Security-Policy meta tag', () => {
     expect(html).toMatch(/object-src 'none'/)
   })
 
+  it('allows reCAPTCHA to load its script, call out, and render its badge iframe', () => {
+    const html = readFileSync(join(webRoot, 'index.html'), 'utf8')
+    expect(html).toMatch(/script-src[^;]*https:\/\/www\.google\.com/)
+    expect(html).toMatch(/script-src[^;]*https:\/\/www\.gstatic\.com/)
+    expect(html).toMatch(/connect-src[^;]*https:\/\/www\.google\.com/)
+    expect(html).toMatch(/frame-src[^;]*https:\/\/www\.google\.com/)
+  })
+
   it('survives SSG head processing for a marketing page', () => {
     const html = readFileSync(join(webRoot, 'index.html'), 'utf8')
     const out = applySeoToHtml(html, {

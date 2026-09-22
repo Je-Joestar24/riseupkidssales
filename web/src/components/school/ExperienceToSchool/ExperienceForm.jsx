@@ -13,6 +13,8 @@ import {
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useSchoolApplicationForm } from '../../../hooks/useSchoolApplicationForm.js'
 import { themeColors } from '../../../config/themeColors.js'
+import LeadConfirmationMessage from '../../shared/LeadConfirmationMessage.jsx'
+import { shouldPreviewConfirmation } from '../../../utils/leadConfirmationPreview.js'
 
 const ROLE_KEYS = ['owner', 'principal', 'coordinator', 'teacher']
 
@@ -68,6 +70,10 @@ export default function ExperienceForm() {
     handleSubmit,
     isInvalid,
   } = useSchoolApplicationForm()
+
+  if (success || shouldPreviewConfirmation(window.location.search)) {
+    return <LeadConfirmationMessage />
+  }
 
   return (
     <Box
@@ -242,7 +248,7 @@ export default function ExperienceForm() {
         type="submit"
         fullWidth
         variant="contained"
-        disabled={loading || success}
+        disabled={loading}
         aria-label={t('schools.applicationForm.submit')}
         aria-busy={loading}
         sx={{
@@ -268,8 +274,6 @@ export default function ExperienceForm() {
             <CircularProgress size={28} sx={{ color: 'common.white', mr: 1.5 }} aria-hidden />
             {t('schools.applicationForm.sending')}
           </>
-        ) : success ? (
-          t('schools.applicationForm.success')
         ) : (
           t('schools.applicationForm.submit')
         )}

@@ -563,7 +563,7 @@
             "namePlaceholder": "Your full name",
             "emailLabel": "Email",
             "emailPlaceholder": "youremail@example.com",
-            "whatsappLabel": "WhatsApp (optional)",
+            "whatsappLabel": "WhatsApp",
             "whatsappPlaceholder": "+1 555 123-4567",
             "ageLabel": "Child's age (years)",
             "agePlaceholder": "e.g., 5 years old",
@@ -571,8 +571,14 @@
             "submitPrelaunch": "Join the waitlist",
             "submitLaunch": "I want my child to be bilingual",
             "sending": "Sending…",
-            "success": "Done!"
+            "success": "Done!",
+            "error": "Something went wrong. Please try again."
         }
+    },
+    "leadConfirmation": {
+        "title": "You're part of this adventure! ⭐",
+        "message": "Check your email and click the confirmation button to join our list. Without that confirmation, you won't receive our updates.",
+        "spamNote": "Can't find the email? Check your spam folder. If it's there, move it to your inbox."
     },
     "questions": {
         "title": "Frequently Asked Questions",

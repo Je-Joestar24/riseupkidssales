@@ -6,6 +6,8 @@ import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 import { submitInvitation } from '../../../services/invitationService.js'
 import { trackMetaEvent } from '../../../analytics/metaPixel.js'
+import LeadConfirmationMessage from '../../shared/LeadConfirmationMessage.jsx'
+import { shouldPreviewConfirmation } from '../../../utils/leadConfirmationPreview.js'
 
 export default function InvitationForm() {
     const { t, language } = useTranslation()
@@ -20,10 +22,12 @@ export default function InvitationForm() {
     const [touched, setTouched] = useState({})
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
+    const [error, setError] = useState(false)
 
     const handleChange = (field) => (e) => {
         const value = field === 'consent' ? e.target.checked : e.target.value
         setValues((prev) => ({ ...prev, [field]: value }))
+        setError(false)
     }
 
     const handleBlur = (field) => () => {
@@ -43,6 +47,7 @@ export default function InvitationForm() {
 
         setLoading(true)
         setSuccess(false)
+        setError(false)
         try {
             await submitInvitation({
                 parentName: values.name.trim(),
@@ -54,8 +59,11 @@ export default function InvitationForm() {
             })
             setSuccess(true)
             trackMetaEvent('Lead', { content_name: 'founding_families_waitlist' })
-        } catch {
-            setLoading(false)
+        } catch (err) {
+            // Was previously silent — a submission failure (e.g. reCAPTCHA not configured, the
+            // API being unreachable) looked exactly like the button doing nothing at all.
+            console.error('[InvitationForm] submission failed:', err)
+            setError(true)
         } finally {
             setLoading(false)
         }
@@ -63,9 +71,12 @@ export default function InvitationForm() {
 
     const nameError = touched.name && !values.name.trim()
     const emailError = touched.email && !values.email.trim()
-    const whatsappError = touched.whatsapp && !values.whatsapp.trim()
     const ageError = touched.age && !values.age.trim()
     const consentError = touched.consent && !values.consent
+
+    if (success || shouldPreviewConfirmation(window.location.search)) {
+        return <LeadConfirmationMessage />
+    }
 
     return (
         <Box
@@ -289,12 +300,20 @@ export default function InvitationForm() {
                     }}
                 />
             </Box>
+            {error && (
+                <Typography
+                    role="alert"
+                    sx={{ color: 'error.main', textAlign: 'center', fontWeight: 600 }}
+                >
+                    {t('invitation.form.error')}
+                </Typography>
+            )}
             <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="warning"
-                disabled={loading || success || !values.consent}
+                disabled={loading || !values.consent}
                 sx={{
                     py: { xs: 1.5, md: 2.25 },
                     px: { xs: 2.5, md: 5 },
@@ -311,7 +330,7 @@ export default function InvitationForm() {
                     },
                     transition: 'box-shadow 0.2s ease, transform 0.2s ease',
                 }}
-                aria-label={success ? t('invitation.form.success') : submitLabel}
+                aria-label={submitLabel}
                 aria-busy={loading}
             >
                 {loading ? (
@@ -319,8 +338,6 @@ export default function InvitationForm() {
                         <CircularProgress size={28} sx={{ color: 'white', mr: 1.5 }} aria-hidden />
                         {t('invitation.form.sending')}
                     </>
-                ) : success ? (
-                    t('invitation.form.success')
                 ) : (
                     submitLabel
                 )}

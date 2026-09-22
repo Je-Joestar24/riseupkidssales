@@ -66,3 +66,20 @@ describe('cookie consent copy', () => {
     })
   }
 })
+
+describe('lead confirmation copy (shown after a successful invitation/school-application submission)', () => {
+  for (const [name, dict] of [
+    ['en', en],
+    ['pt', pt],
+    ['es', es],
+  ]) {
+    it(`is present in ${name} and tells the visitor to confirm by email, checking spam if needed`, () => {
+      expect(dict.leadConfirmation?.title).toBeTruthy()
+      expect(dict.leadConfirmation?.message).toBeTruthy()
+      expect(dict.leadConfirmation?.spamNote).toBeTruthy()
+      // Every locale must actually mention spam (not just have a truthy string) — this note is
+      // the one piece of copy the client specifically asked for.
+      expect(dict.leadConfirmation.spamNote.toLowerCase()).toMatch(/spam/)
+    })
+  }
+})
