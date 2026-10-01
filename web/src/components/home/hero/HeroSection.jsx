@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Stack } from '@mui/material'
 import Badge from './Badge.jsx'
 import HeroTitle from './HeroTitle.jsx'
+import HeroTagline from './HeroTagline.jsx'
 import HeroSubtitle from './HeroSubtitle.jsx'
 import HeroFeatures from './HeroFeatures.jsx'
 import HeroCTA from './HeroCTA.jsx'
@@ -25,6 +26,7 @@ export default function HeroSection() {
         <Grid item xs={12} md={6} sx={{ minWidth: 0, maxWidth: '570px' }}>
           <Stack spacing={4}>
             <HeroTitle />
+            <HeroTagline />
             <HeroSubtitle />
             <Box sx={{ mt: { xs: 2, md: 3 } }}>
               <HeroFeatures />

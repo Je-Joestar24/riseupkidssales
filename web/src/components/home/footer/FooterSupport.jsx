@@ -1,6 +1,5 @@
 import { Box, Link, Typography } from '@mui/material'
 import { useTranslation } from '../../../hooks/useTranslation.js'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 export default function FooterSupport() {
   const { t } = useTranslation()
@@ -48,7 +47,6 @@ export default function FooterSupport() {
           aria-label={email}
         >
           {email}
-          <ArrowForwardIcon sx={{ width: 20, height: 20 }} aria-hidden />
         </Link>
       </Box>
     </Box>

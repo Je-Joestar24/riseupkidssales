@@ -9,7 +9,7 @@
         },
         "parents": {
             "title": "Rise Up Kids para Padres | Inglés Inmersivo para tu Hijo en Casa",
-            "description": "Inglés para niños en casa, de 5 a 13 años. Profesores reales, 20–30 minutos al día. Nuestro programa de inglés infantil online ayuda a tu hijo a ser bilingüe en aproximadamente un año.",
+            "description": "Inglés para niños en casa, de 5 a 13 años. Profesores reales, 20–30 minutos al día. Nuestro programa de inglés infantil online ayuda a tu hijo a ser bilingüe de forma natural.",
             "keywords": "inglés para niños en casa, programa de inglés infantil online, cómo enseñar inglés a niños, inglés inmersivo para niños"
         },
         "videos": {
@@ -337,10 +337,11 @@
         }
     },
     "hero": {
-        "title": "Logra que tu hijo aprenda inglés con fluidez, y que lo entienda y hable de forma natural, sin traducciones ni presiones.",
+        "title": "Tu hijo bilingüe, de forma natural.",
         "badge": "Metodología basada en inmersión natural",
-        "titlePart1": "Logra que tu hijo aprenda inglés con fluidez, ",
-        "titlePart2": "y que lo entienda y hable de forma natural, sin traducciones ni presiones.",
+        "titlePart1": "Tu hijo bilingüe, ",
+        "titlePart2": "de forma natural.",
+        "tagline": "¿Cómo? Viviendo el inglés.",
         "subtitle": "Rise Up Kids es un ecosistema para niños de 5 años en adelante, que ofrece experiencias inmersivas y significativas en inglés. Nuestra estructura intencional y progresiva integra tecnología, actividades interactivas y profesores reales, para que el inglés se entienda, se viva y se exprese con confianza.",
         "features": {
             "immersiveEnglish": {
@@ -620,6 +621,7 @@
     },
     "footer": {
         "subtitle": "Una infancia donde el inglés es natural, divertido e inolvidable.",
+        "followUs": "Síguenos",
         "product": "Producto",
         "howItWorks": "Cómo funciona",
         "support": "Soporte",

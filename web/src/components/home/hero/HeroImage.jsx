@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import heroSrc from '../../../assets/images/hero.png'
+import heroSrc from '../../../assets/images/hero.jpeg'
 
 const DECORATIONS = [
     { top: 40, left: 40, emoji: '⭐', size: '3rem' },

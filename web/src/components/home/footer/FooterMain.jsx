@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { HOME_FOOTER_BG, SCHOOLS_FOOTER_BG } from '../../../config/constants.js'
 import FooterLogo from './FooterLogo.jsx'
 import FooterSubtitle from './FooterSubtitle.jsx'
+import FooterSocialIcons from './FooterSocialIcons.jsx'
 import FooterHowItworks from './FooterHowItworks.jsx'
 import FooterSupport from './FooterSupport.jsx'
 import FooterTerms from './FooterTerms.jsx'
@@ -47,6 +48,7 @@ export default function FooterMain() {
                         >
                             <FooterLogo />
                             <FooterSubtitle />
+                            <FooterSocialIcons />
                         </Stack>
                     </Grid>
                     <Grid item xs={12} md={3} sx={{ display: 'flex', marginRight: 'auto', justifyContent: { xs: 'center', md: 'flex-start' } }}>

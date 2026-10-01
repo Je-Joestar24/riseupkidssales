@@ -341,6 +341,7 @@
         "badge": "Methodology based on natural immersion",
         "titlePart1": "Your child becoming fluent in English, understanding and speaking naturally, without translation and without pressure. ",
         "titlePart2": "With consistent progress over 1 year.",
+        "tagline": "How? By living English.",
         "subtitle": "Rise Up Kids is an ecosystem for children 5 and up, offering immersive and meaningful experiences in English. Our intentional and progressive structure integrates technology, interactive activities, and real teachers, so English is understood, lived, and expressed with confidence.",
         "features": {
             "immersiveEnglish": {
@@ -620,6 +621,7 @@
     },
     "footer": {
         "subtitle": "A childhood where English is natural, fun, and unforgettable.",
+        "followUs": "Follow us",
         "product": "Product",
         "howItWorks": "How It Works",
         "support": "Support",
