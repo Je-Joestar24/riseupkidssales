@@ -25,7 +25,7 @@ const SOCIAL_LINKS = [
   { key: 'instagram', label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/riseupkids1' },
   { key: 'tiktok', label: 'TikTok', Icon: TikTokIcon, href: 'https://www.tiktok.com/@riseup.kids' },
   { key: 'pinterest', label: 'Pinterest', Icon: PinterestIcon, href: 'https://www.pinterest.com/riseupkids1/' },
-  { key: 'facebook', label: 'Facebook', Icon: FacebookIcon, href: null },
+  /* { key: 'facebook', label: 'Facebook', Icon: FacebookIcon, href: null }, */
 ]
 
 function SocialCircle({ label, Icon, href }) {

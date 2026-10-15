@@ -14,7 +14,7 @@ import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useSchoolApplicationForm } from '../../../hooks/useSchoolApplicationForm.js'
 import { themeColors } from '../../../config/themeColors.js'
 import LeadConfirmationMessage from '../../shared/LeadConfirmationMessage.jsx'
-import { shouldPreviewConfirmation } from '../../../utils/leadConfirmationPreview.js'
+import { usePreviewConfirmation } from '../../../hooks/usePreviewConfirmation.js'
 
 const ROLE_KEYS = ['owner', 'principal', 'coordinator', 'teacher']
 
@@ -70,8 +70,9 @@ export default function ExperienceForm() {
     handleSubmit,
     isInvalid,
   } = useSchoolApplicationForm()
+  const previewConfirmation = usePreviewConfirmation()
 
-  if (success || shouldPreviewConfirmation(window.location.search)) {
+  if (success || previewConfirmation) {
     return <LeadConfirmationMessage />
   }
 

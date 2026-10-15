@@ -581,6 +581,42 @@
         "message": "Check your email and click the confirmation button to join our list. Without that confirmation, you won't receive our updates.",
         "spamNote": "Can't find the email? Check your spam folder. If it's there, move it to your inbox."
     },
+    "experiencia": {
+        "pageTitle": "Rise Up Kids Experience",
+        "mainAria": "Free Rise Up Kids experience",
+        "loading": "Loading…",
+        "gate": {
+            "title": "Your Rise Up Kids Experience",
+            "text": "Enter the email you signed up with to watch.",
+            "placeholder": "Your email",
+            "button": "Enter",
+            "checking": "Checking...",
+            "hint": "Use the same email where you received the experience.",
+            "invalidEmail": "Enter a valid email.",
+            "verificationFailed": "We could not verify that. Please try again.",
+            "unavailable": "We could not check right now. Please try again in a moment."
+        },
+        "notRegistered": {
+            "title": "Haven't signed up yet?",
+            "button": "I want the experience"
+        },
+        "content": {
+            "title": "The Rise Up Kids Experience is here",
+            "sub1": "Your bilingual child, the natural way.",
+            "sub2": "How? By living English.",
+            "readyTitle": "Ready?",
+            "readyText": "In this free experience, your family will receive two Rise Up Kids videos and a printable recipe to follow the activity at home.",
+            "giftVideo1": "Video 1",
+            "giftVideo2": "Video 2",
+            "giftRecipe": "Printable recipe",
+            "free": "FREE",
+            "videoLabel": "Video",
+            "recipeButton": "Print the recipe here",
+            "joinTitle": "This is a small taste of the Rise Up Kids world.",
+            "joinText": "At Rise Up Kids you get access to many activities carefully prepared so your child succeeds in becoming bilingual.",
+            "joinButton": "Join Rise Up Kids"
+        }
+    },
     "questions": {
         "title": "Frequently Asked Questions",
         "items": [

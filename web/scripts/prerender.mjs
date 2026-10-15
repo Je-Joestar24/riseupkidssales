@@ -7,6 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'url'
 import { PRERENDER_PATHS } from '../src/ssg/prerender-paths.js'
 import { getSeoKeyForPath } from '../src/seo/pageSeoRoutes.js'
 import { applySeoToHtml } from '../src/seo/buildSeoHeadMarkup.js'
+import { applyHiddenPageHead } from '../src/seo/hiddenPageHead.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const rootDir = join(__dirname, '..')
@@ -99,6 +100,7 @@ for (const pathname of PRERENDER_PATHS) {
   }
 
   html = applyLegalPageTitle(html, pathname)
+  html = applyHiddenPageHead(html, pathname)
 
   writeHtmlForPath(pathname, html)
   console.log('SSG wrote', pathname, seoKey ? `(seo: ${seoKey}, lang: ${PRERENDER_LANGUAGE})` : '')

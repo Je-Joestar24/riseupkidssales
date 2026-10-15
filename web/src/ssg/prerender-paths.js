@@ -10,6 +10,9 @@ export const PRERENDER_PATHS = [
   '/privacy',
   '/terms',
   '/privacy-settings',
+  // Hidden freebie page: prerendered only as a neutral, non-gated shell (so the static host serves
+  // /experiencia/index.html instead of falling back to the home page). See hiddenPageHead.js.
+  '/experiencia',
   '/checkout',
   '/checkout/register',
 ]

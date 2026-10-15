@@ -7,7 +7,7 @@ import { useInvitationCopy } from '../../../hooks/useInvitationCopy.js'
 import { submitInvitation } from '../../../services/invitationService.js'
 import { trackMetaEvent } from '../../../analytics/metaPixel.js'
 import LeadConfirmationMessage from '../../shared/LeadConfirmationMessage.jsx'
-import { shouldPreviewConfirmation } from '../../../utils/leadConfirmationPreview.js'
+import { usePreviewConfirmation } from '../../../hooks/usePreviewConfirmation.js'
 
 export default function InvitationForm() {
     const { t, language } = useTranslation()
@@ -23,6 +23,7 @@ export default function InvitationForm() {
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
+    const previewConfirmation = usePreviewConfirmation()
 
     const handleChange = (field) => (e) => {
         const value = field === 'consent' ? e.target.checked : e.target.value
@@ -74,7 +75,7 @@ export default function InvitationForm() {
     const ageError = touched.age && !values.age.trim()
     const consentError = touched.consent && !values.consent
 
-    if (success || shouldPreviewConfirmation(window.location.search)) {
+    if (success || previewConfirmation) {
         return <LeadConfirmationMessage />
     }
 

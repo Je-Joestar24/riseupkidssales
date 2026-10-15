@@ -581,6 +581,42 @@
         "message": "Revisa tu correo electrónico y haz clic en el botón de confirmación para unirte a nuestra lista. Sin esa confirmación, no recibirás nuestras novedades.",
         "spamNote": "¿No encuentras el correo? Revisa la carpeta de spam. Si está allí, muévelo a la bandeja de entrada."
     },
+    "experiencia": {
+        "pageTitle": "Experiencia Rise Up Kids",
+        "mainAria": "Experiencia gratuita Rise Up Kids",
+        "loading": "Cargando…",
+        "gate": {
+            "title": "Tu Experiencia Rise Up Kids",
+            "text": "Escribe el correo con el que te registraste para ver los videos.",
+            "placeholder": "Tu correo",
+            "button": "Entrar",
+            "checking": "Verificando...",
+            "hint": "Usa el mismo correo en el que recibiste la experiencia.",
+            "invalidEmail": "Escribe un correo válido.",
+            "verificationFailed": "No pudimos verificar. Inténtalo de nuevo.",
+            "unavailable": "No pudimos verificar ahora. Inténtalo de nuevo en unos instantes."
+        },
+        "notRegistered": {
+            "title": "¿Todavía no te registraste?",
+            "button": "Quiero la experiencia"
+        },
+        "content": {
+            "title": "La Experiencia Rise Up Kids está aquí",
+            "sub1": "Tu hijo bilingüe, de forma natural.",
+            "sub2": "¿Cómo? Viviendo el inglés.",
+            "readyTitle": "¿Preparados?",
+            "readyText": "En esta experiencia gratuita, tu familia recibirá dos videos de Rise Up Kids y la receta para imprimir y acompañar la actividad en casa.",
+            "giftVideo1": "Video 1",
+            "giftVideo2": "Video 2",
+            "giftRecipe": "Receta para imprimir",
+            "free": "GRATIS",
+            "videoLabel": "Video",
+            "recipeButton": "Imprimir la receta aquí",
+            "joinTitle": "Esta es una pequeña muestra del mundito Rise Up Kids.",
+            "joinText": "En Rise Up Kids tienes acceso a diversas actividades cuidadosamente preparadas para que tu hijo tenga éxito al volverse bilingüe.",
+            "joinButton": "Únete a Rise Up Kids"
+        }
+    },
     "questions": {
         "title": "Preguntas Frecuentes",
         "items": [
@@ -621,7 +657,7 @@
     },
     "footer": {
         "subtitle": "Una infancia donde el inglés es natural, divertido e inolvidable.",
-        "followUs": "Síguenos",
+        "followUs": "Sigue la curiosidad",
         "product": "Producto",
         "howItWorks": "Cómo funciona",
         "support": "Soporte",
