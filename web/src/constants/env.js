@@ -24,12 +24,12 @@ export const LMS_LOGIN_URL = LMS_BASE_URL ? new URL('login', LMS_BASE_URL).toStr
 export const SCHOOLS_WHATSAPP_PHONE = raw(import.meta.env.VITE_SCHOOLS_WHATSAPP_NUMBER).replace(/\D/g, '')
 
 /**
- * Free Smoothie Experience page (/experiencia). All public links; a button whose link is empty is
- * simply not shown. Spanish falls back to the Portuguese form until a Spanish form exists.
+ * Free Smoothie Experience page (/experiencia). All public links. The sign-up button goes to our own
+ * embedded-form pages (/free in Portuguese, /gratis in Spanish — see seo/sharePages.js) unless overridden.
  */
-export const EXPERIENCE_SIGNUP_URL_PT = raw(import.meta.env.VITE_EXPERIENCE_SIGNUP_URL_PT)
-export const EXPERIENCE_SIGNUP_URL_ES = raw(import.meta.env.VITE_EXPERIENCE_SIGNUP_URL_ES)
-export const EXPERIENCE_JOIN_URL = raw(import.meta.env.VITE_EXPERIENCE_JOIN_URL) || 'https://riseup.kids'
+export const EXPERIENCE_SIGNUP_URL_PT = raw(import.meta.env.VITE_EXPERIENCE_SIGNUP_URL_PT) || '/free'
+export const EXPERIENCE_SIGNUP_URL_ES = raw(import.meta.env.VITE_EXPERIENCE_SIGNUP_URL_ES) || '/gratis'
+export const EXPERIENCE_JOIN_URL = raw(import.meta.env.VITE_EXPERIENCE_JOIN_URL)
 /** Hosted on our own domain (served from public/downloads). */
 export const EXPERIENCE_RECIPE_URL =
   raw(import.meta.env.VITE_EXPERIENCE_RECIPE_URL) || '/downloads/strawberry-banana-smoothie-recipe.pdf'

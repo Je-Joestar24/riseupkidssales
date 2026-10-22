@@ -4,6 +4,7 @@ import {
   experienceLanguage,
   isBunnyEmbedUrl,
   isPlausibleEmail,
+  pickJoinUrl,
   pickSignupUrl,
   readStoredToken,
   restoreAccess,
@@ -141,6 +142,26 @@ describe('pickSignupUrl', () => {
     expect(pickSignupUrl('es', { pt: 'https://form/pt', es: '' })).toBe('https://form/pt')
     expect(pickSignupUrl('pt', { pt: '', es: 'https://form/es' })).toBe('https://form/es')
     expect(pickSignupUrl('pt', {})).toBe('')
+  })
+})
+
+describe('pickJoinUrl — the join button', () => {
+  it('goes to the parents page, not the bare home page', () => {
+    expect(pickJoinUrl('pt')).toBe('/parents?lang=pt')
+    expect(pickJoinUrl('pt', '')).toBe('/parents?lang=pt')
+    expect(pickJoinUrl('pt', '   ')).toBe('/parents?lang=pt')
+    expect(pickJoinUrl('pt')).not.toBe('/')
+  })
+
+  it('keeps Spanish visitors on the Spanish parents page, and anything else on Portuguese', () => {
+    expect(pickJoinUrl('es')).toBe('/parents?lang=es')
+    expect(pickJoinUrl('en')).toBe('/parents?lang=pt')
+    expect(pickJoinUrl(undefined)).toBe('/parents?lang=pt')
+  })
+
+  it('uses a custom link from the settings exactly as given', () => {
+    expect(pickJoinUrl('pt', 'https://riseup.kids/parents?x=1')).toBe('https://riseup.kids/parents?x=1')
+    expect(pickJoinUrl('es', 'https://example.com/join')).toBe('https://example.com/join')
   })
 })
 

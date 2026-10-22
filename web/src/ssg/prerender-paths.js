@@ -13,6 +13,9 @@ export const PRERENDER_PATHS = [
   // Hidden freebie page: prerendered only as a neutral, non-gated shell (so the static host serves
   // /experiencia/index.html instead of falling back to the home page). See hiddenPageHead.js.
   '/experiencia',
+  // Share-link pages (embedded Flodesk form + link-preview tags). See sharePages.js.
+  '/free',
+  '/gratis',
   '/checkout',
   '/checkout/register',
 ]

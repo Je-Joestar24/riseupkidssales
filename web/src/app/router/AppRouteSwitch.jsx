@@ -11,6 +11,7 @@ import PrivacySettingsPage from '../../pages/PrivacySettingsPage.jsx'
 import LegalPrivacyPage from '../../pages/LegalPrivacyPage.jsx'
 import LegalTermsPage from '../../pages/LegalTermsPage.jsx'
 import ExperienciaPage from '../../pages/ExperienciaPage.jsx'
+import FreeSignupPage from '../../pages/FreeSignupPage.jsx'
 
 const CheckoutPage = lazy(() => import('../../pages/CheckoutPage.jsx'))
 const CheckoutRegister = lazy(() => import('../../pages/CheckoutRegister.jsx'))
@@ -60,6 +61,8 @@ export const appRouteObjects = [
   { path: '/privacy-settings', element: <PrivacySettingsPage /> },
   // Hidden free-freebie page: not linked from anywhere, noindex, not in the sitemap.
   { path: '/experiencia', element: <ExperienciaPage /> },
+  { path: '/free', element: <FreeSignupPage path="/free" /> },
+  { path: '/gratis', element: <FreeSignupPage path="/gratis" /> },
   { path: '/checkout', element: <CheckoutPageLazy /> },
   { path: '/checkout/register', element: <CheckoutRegisterLazy /> },
   { path: '/checkout/success', element: <CheckoutSuccessLazy /> },

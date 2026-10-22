@@ -82,6 +82,20 @@ export function pickSignupUrl(language, { pt = '', es = '' } = {}) {
   return preferred || pt || es || ''
 }
 
+export const DEFAULT_JOIN_PATH = '/parents'
+
+/**
+ * Where the "Participe da Rise Up Kids" button goes: the parents page (not the bare home page), in
+ * the language of the Experience page (Portuguese is set explicitly, so a remembered language on
+ * the visitor's device can't open it in another one). A custom link from the settings is used as given; the
+ * default is a relative link so it works on any host.
+ */
+export function pickJoinUrl(language, configured = '') {
+  const custom = typeof configured === 'string' ? configured.trim() : ''
+  if (custom) return custom
+  return `${DEFAULT_JOIN_PATH}?lang=${experienceLanguage(language)}`
+}
+
 /** HTTP status and server `code` of a failed request, if it was an HTTP error at all. */
 function describeError(error) {
   return { status: error?.response?.status ?? null, code: error?.response?.data?.code ?? null }

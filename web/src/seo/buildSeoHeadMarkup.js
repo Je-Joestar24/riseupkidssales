@@ -8,7 +8,7 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;')
 }
 
-function upsertMeta(html, attr, key, content) {
+export function upsertMeta(html, attr, key, content) {
   if (!content) return html
   const escaped = escapeHtml(content)
   const metaTag = `<meta ${attr}="${key}" content="${escaped}" />`
@@ -19,7 +19,7 @@ function upsertMeta(html, attr, key, content) {
   return html.replace('</head>', `  ${metaTag}\n</head>`)
 }
 
-function upsertTitle(html, title) {
+export function upsertTitle(html, title) {
   const escaped = escapeHtml(title)
   if (/<title>[^<]*<\/title>/i.test(html)) {
     return html.replace(/<title>[^<]*<\/title>/i, `<title>${escaped}</title>`)

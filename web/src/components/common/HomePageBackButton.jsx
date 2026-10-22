@@ -22,12 +22,12 @@ function HomeIcon() {
   )
 }
 
-// The home route itself, and the hidden free-experience page, which is a standalone page.
-const PATHS_WITHOUT_BACK_BUTTON = ['/', '/experiencia']
+// The home route itself, and the standalone free-experience pages.
+const PATHS_WITHOUT_BACK_BUTTON = ['/', '/experiencia', '/free', '/gratis']
 
 /**
  * Fixed lower-right icon link to marketing home (`/`). Hidden on the home route and on the
- * standalone /experiencia page.
+ * standalone /experiencia, /free and /gratis pages.
  */
 export default function HomePageBackButton() {
   const { pathname } = useLocation()

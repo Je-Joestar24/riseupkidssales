@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import '@fontsource/nunito/400.css'
 import '@fontsource/nunito/600.css'
 import '@fontsource/nunito/700.css'
@@ -8,8 +7,9 @@ import ExperienceContent from '../components/experience/ExperienceContent.jsx'
 import { useTranslation } from '../hooks/useTranslation.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useNoIndex } from '../hooks/useNoIndex.js'
+import { useHtmlLang } from '../hooks/useHtmlLang.js'
 import { useExperienceAccess } from '../hooks/useExperienceAccess.js'
-import { pickSignupUrl } from '../utils/experienceAccess.js'
+import { pickJoinUrl, pickSignupUrl } from '../utils/experienceAccess.js'
 import logoUrl from '../assets/images/experience/logo.png'
 import {
   EXPERIENCE_JOIN_URL,
@@ -17,19 +17,6 @@ import {
   EXPERIENCE_SIGNUP_URL_ES,
   EXPERIENCE_SIGNUP_URL_PT,
 } from '../constants/env.js'
-
-const HTML_LANG = { pt: 'pt-BR', es: 'es', en: 'en' }
-
-/** Keeps <html lang> in step with the page language, and puts it back on leaving. */
-function useHtmlLang(language) {
-  useEffect(() => {
-    const previous = document.documentElement.lang
-    document.documentElement.lang = HTML_LANG[language] || 'pt-BR'
-    return () => {
-      document.documentElement.lang = previous
-    }
-  }, [language])
-}
 
 /**
  * Free Smoothie Experience (/experiencia, ?lang=es for Spanish). Hidden on purpose: not in any menu,
@@ -63,7 +50,7 @@ export default function ExperienciaPage() {
         <ExperienceContent
           videos={access.videos}
           recipeUrl={EXPERIENCE_RECIPE_URL}
-          joinUrl={EXPERIENCE_JOIN_URL}
+          joinUrl={pickJoinUrl(language, EXPERIENCE_JOIN_URL)}
         />
       </main>
     )
