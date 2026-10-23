@@ -20,6 +20,7 @@ import CreditCardIcon from '@mui/icons-material/CreditCard'
 import ShieldIcon from '@mui/icons-material/Shield'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
+import { withLanguage } from '../../../utils/salesLanguage.js'
 import { useCheckout } from '../../../hooks/useCheckout.js'
 import {
   registerAndCreateCheckoutSession,
@@ -157,7 +158,7 @@ function PayLaterEligibilityCheck({ onResult }) {
 }
 
 function RgisterForm() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
   const { childCount, addBox, locale, planPricing } = useCheckout()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -173,7 +174,7 @@ function RgisterForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const pagseguroRedirectUrls = getPagseguroRedirectUrls(appUrl())
+  const pagseguroRedirectUrls = getPagseguroRedirectUrls(appUrl(), language)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -235,8 +236,8 @@ function RgisterForm() {
         childCount,
         addBox,
         termsVersion: DEFAULT_TERMS_VERSION,
-        successUrl: `${base}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancelUrl: `${base}/checkout/register`,
+        successUrl: withLanguage(`${base}/checkout/success?session_id={CHECKOUT_SESSION_ID}`, language),
+        cancelUrl: withLanguage(`${base}/checkout/register`, language),
       })
       if (url) window.location.href = url
     } catch (err) {
@@ -263,8 +264,8 @@ function RgisterForm() {
   )
   // Backend tier: Pay in 4 → 1_child, 2_children, 3_children; Yearly → 1_child_yearly, etc. (per currency)
   const showPayPalCheckout = paymentMethod === 'paypal' && paypalToken
-  const successUrl = `${appUrl()}/checkout/success`
-  const paypalSuccessUrl = `${appUrl()}/checkout/success?provider=paypal`
+  const successUrl = withLanguage(`${appUrl()}/checkout/success`, language)
+  const paypalSuccessUrl = withLanguage(`${appUrl()}/checkout/success?provider=paypal`, language)
   const goToPayPalSuccess = () => {
     try {
       sessionStorage.setItem('checkout_provider', 'paypal')
@@ -774,7 +775,7 @@ function RgisterForm() {
               {t('checkout.registerForm.termsAgreeBefore')}
               <Typography
                 component="a"
-                href="/terms"
+                href={withLanguage('/terms', language)}
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ color: TEAL_LINK, textDecoration: 'underline' }}
@@ -784,7 +785,7 @@ function RgisterForm() {
               {t('checkout.registerForm.termsAgreeMiddle') || ' and '}
               <Typography
                 component="a"
-                href="/privacy"
+                href={withLanguage('/privacy', language)}
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ color: TEAL_LINK, textDecoration: 'underline' }}

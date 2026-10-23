@@ -5,6 +5,7 @@
  */
 
 import axios from 'axios'
+import { withLanguage } from '../utils/salesLanguage.js'
 
 export const MIN_CHILDREN = 1
 /** Backend/config max; pricing data supports 1–10 */
@@ -256,14 +257,14 @@ export function isPublicHttpsUrl(url) {
 /**
  * Redirect URLs for PagBank. Omits localhost so the API uses SALE_APP_BASE_URL on the server.
  */
-export function getPagseguroRedirectUrls(appBaseUrl) {
+export function getPagseguroRedirectUrls(appBaseUrl, language) {
   const base = (appBaseUrl || '').replace(/\/+$/, '')
   if (!isPublicHttpsUrl(`${base}/`)) {
     return {}
   }
   return {
-    successUrl: `${base}/checkout/success?provider=pagseguro`,
-    cancelUrl: `${base}/checkout/register`,
+    successUrl: withLanguage(`${base}/checkout/success?provider=pagseguro`, language),
+    cancelUrl: withLanguage(`${base}/checkout/register`, language),
   }
 }
 

@@ -7,6 +7,7 @@ import SuccessHeader from '../components/checkout/success/SuccessHeader.jsx'
 import SuccessCards from '../components/checkout/success/SuccessCards.jsx'
 import SuccessLMSLink from '../components/checkout/success/SuccessLMSLink.jsx'
 import CheckoutHeader from '../components/common/CheckoutHeader.jsx'
+import { withLanguage } from '../utils/salesLanguage.js'
 import {
   clearPurchaseIntent,
   currencyForLanguage,
@@ -101,7 +102,7 @@ export default function CheckoutSuccess() {
         </Alert>
         <Button
           component={RouterLink}
-          to="/checkout/register"
+          to={withLanguage('/checkout/register', language)}
           variant="contained"
           sx={{ fontWeight: 600 }}
         >

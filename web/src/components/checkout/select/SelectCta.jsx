@@ -3,6 +3,7 @@ import { Button } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useCheckout } from '../../../hooks/useCheckout.js'
+import { withLanguage } from '../../../utils/salesLanguage.js'
 
 /**
  * Builds /checkout/register URL with optional query params for child count and box.
@@ -21,13 +22,13 @@ function getRegisterSearch(childCount, addBox) {
 }
 
 function SelectCta() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
   const navigate = useNavigate()
   const { childCount, addBox } = useCheckout()
 
   const handleContinue = () => {
     const search = getRegisterSearch(childCount, addBox)
-    navigate(`/checkout/register${search}`)
+    navigate(withLanguage(`/checkout/register${search}`, language))
   }
 
   return (

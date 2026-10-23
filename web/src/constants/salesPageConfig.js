@@ -44,6 +44,15 @@ export const SALES_PAGE_MODE = raw(import.meta.env.VITE_SALES_PAGE_MODE) === 'la
 
 export const isPrelaunchSalesPage = SALES_PAGE_MODE === 'prelaunch'
 
+/**
+ * Whether the checkout routes (/checkout, /checkout/register, /checkout/success) can be opened.
+ * Always in launch mode. In prelaunch they are open too unless VITE_CHECKOUT_PUBLIC=false, which
+ * sends visitors back to the waitlist. Only the routes are affected: the prelaunch sales page keeps
+ * its waitlist buttons, so the checkout is reached by its link until the buttons are switched over.
+ */
+export const isCheckoutPublic =
+  !isPrelaunchSalesPage || raw(import.meta.env.VITE_CHECKOUT_PUBLIC).toLowerCase() !== 'false'
+
 /** All supported sales page languages — always visible in the nav (PT, EN, ES). */
 export const SALES_PAGE_LANGUAGES = ['pt', 'en', 'es']
 

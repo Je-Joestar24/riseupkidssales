@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import { useTranslation } from './useTranslation.js'
+import { withLanguage } from '../utils/salesLanguage.js'
 import {
   getCheckoutSessionDetails,
   verifyPagseguroCheckout,
@@ -62,6 +64,7 @@ async function verifyPagseguroWithRetry(checkoutId) {
 export function useCheckoutSuccessVerification(ready = true) {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
+  const { language } = useTranslation()
   const [status, setStatus] = useState('loading')
   const [errorMessage, setErrorMessage] = useState(null)
 
@@ -119,7 +122,7 @@ export function useCheckoutSuccessVerification(ready = true) {
 
       const stripeSessionId = sessionId?.trim()
       if (!stripeSessionId) {
-        navigate('/checkout/register', { replace: true })
+        navigate(withLanguage('/checkout/register', language), { replace: true })
         return
       }
 
@@ -138,7 +141,7 @@ export function useCheckoutSuccessVerification(ready = true) {
     return () => {
       cancelled = true
     }
-  }, [ready, sessionId, provider, searchParams, navigate])
+  }, [ready, sessionId, provider, searchParams, navigate, language])
 
   return { status, errorMessage }
 }
