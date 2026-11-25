@@ -731,7 +731,6 @@
             "moreChildren": "3 ou mais Crianças",
             "childrenLabel": "Crianças",
             "perYear": "por ano",
-            "equivalentPerMonth": "Equivalente a R$63/mês",
             "annualCharge": "Cobrança anual",
             "installmentAvailable": "Parcelamento disponível",
             "continue": "Continuar",
@@ -749,7 +748,12 @@
             "materialsDescription": "Além do conteúdo digital, seu filho participa de experiências lúdicas e mão na massa por meio de atividades complementares guiadas que acompanham cada etapa do Rise Up Kids.",
             "childrenCount": "{{count}} Crianças",
             "orCashPriceFormat": "ou {{price}} à vista",
-            "paymentNote": "ou R$799 à vista"
+            "paymentNote": "ou opções flexíveis de pagamento disponíveis no checkout"
+        },
+        "pricing": {
+            "loading": "Carregando os valores…",
+            "error": "Não foi possível carregar os valores. Verifique sua conexão e tente novamente.",
+            "retry": "Tentar novamente"
         },
         "box": {
             "title": "Rise Up Kids Box",
@@ -859,10 +863,6 @@
             "title": "Resumo do Pedido",
             "oneChild": "1 Criança",
             "total": "Total",
-            "installment": "12x R$74,90",
-            "orCashPrice": "ou R$799 à vista",
-            "priceDisplayUsd": "$799",
-            "priceDisplayEur": "€799",
             "paymentNoteUs": "or flexible payment options available at checkout",
             "paymentNoteEu": "or pay in installments available at checkout",
             "securePayment": "Pagamento seguro com dados protegidos",

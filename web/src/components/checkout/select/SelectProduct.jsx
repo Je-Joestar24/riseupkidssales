@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useCheckout } from '../../../hooks/useCheckout.js'
+import PricingStatus from '../PricingStatus.jsx'
 import oneImage from '../../../assets/images/one.png'
 import twoImage from '../../../assets/images/two.png'
 import moreImage from '../../../assets/images/more.png'
@@ -23,7 +24,7 @@ function getPlanTitle(count, t) {
 
 function SelectProduct() {
   const { t } = useTranslation()
-  const { childCount, planPricing } = useCheckout()
+  const { childCount, planPricing, pricingReady } = useCheckout()
   const imageSrc = getPlanImage(childCount)
   const title = getPlanTitle(childCount, t)
   const priceLine2 = planPricing.line2 ?? t('checkout.select.paymentNote')
@@ -121,12 +122,12 @@ function SelectProduct() {
                 color: DARK_TEAL,
               }}
             >
-              {planPricing.line1}
+              {pricingReady ? planPricing.line1 : <PricingStatus />}
             </Typography>
           </Box>
           <Box sx={{ mb: 2 }}>
             <Typography sx={{ fontSize: '1rem', color: 'text.secondary', fontWeight: 600 }}>
-              {priceLine2}
+              {pricingReady ? priceLine2 : null}
             </Typography>
           </Box>
           {planPricing.discountFormatted && (

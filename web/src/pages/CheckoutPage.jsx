@@ -10,17 +10,18 @@ import { currencyForLanguage, stashPurchaseIntent } from '../analytics/checkoutT
 const CHECKOUT_PAGE_BG = 'rgb(252, 249, 243)'
 
 function CheckoutPage() {
-  const { locale, childCount, planPricing } = useCheckout()
+  const { locale, childCount, planPricing, pricingReady } = useCheckout()
 
   // Keep the Meta Pixel purchase-intent snapshot in step with the plan the
   // visitor is configuring; the Purchase event on /checkout/success reads it.
   useEffect(() => {
+    if (!pricingReady) return
     stashPurchaseIntent({
       value: planPricing.amount,
       currency: currencyForLanguage(locale),
       numItems: childCount,
     })
-  }, [locale, childCount, planPricing.amount])
+  }, [locale, childCount, planPricing.amount, pricingReady])
 
   return (
     <Box

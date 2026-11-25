@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Box } from '@mui/material'
 import CheckoutHeader from '../components/common/CheckoutHeader.jsx'
 import RegisterHeader from '../components/checkout/register/RegisterHead.jsx'
 import RegisterMain from '../components/checkout/register/RegisterMain.jsx'
-import { setChildCount, setAddBox } from '../store/slices/checkoutSlice.js'
-import { MIN_CHILDREN, MAX_CHILDREN_UI, getPlanPricing } from '../services/checkoutService.js'
+import { setChildCount } from '../store/slices/checkoutSlice.js'
+import { useCheckout } from '../hooks/useCheckout.js'
 import {
   currencyForLanguage,
   stashPurchaseIntent,
@@ -14,8 +14,9 @@ import {
 } from '../analytics/checkoutTracking.js'
 
 /**
- * Hydrate checkout store from URL search params (e.g. ?children=2&box=1).
- * Keeps child count and box selection when reloading or opening a shared link.
+ * Hydrate checkout store from URL search params (e.g. ?children=2).
+ * Keeps the child count when reloading or opening a shared link. The most children allowed comes from the
+ * backend prices; a count above it is brought inside the limit as soon as they are loaded.
  */
 function useCheckoutParams() {
   const [searchParams] = useSearchParams()
@@ -26,14 +27,12 @@ function useCheckoutParams() {
     if (childrenParam != null && childrenParam !== '') {
       const n = Number(childrenParam)
       if (Number.isFinite(n)) {
-        const clamped = Math.min(MAX_CHILDREN_UI, Math.max(MIN_CHILDREN, Math.floor(n)))
-        dispatch(setChildCount(clamped))
+        dispatch(setChildCount(Math.floor(n)))
       }
     }
-    const boxParam = searchParams.get('box')
-    if (boxParam != null) {
-      dispatch(setAddBox(boxParam === '1' || boxParam === 'true'))
-    }
+    // Activity box: switched off. It used to read the `box` parameter:
+    //   const boxParam = searchParams.get('box')
+    //   if (boxParam != null) dispatch(setAddBox(boxParam === '1' || boxParam === 'true'))
   }, [searchParams, dispatch])
 }
 
@@ -42,15 +41,15 @@ function useCheckoutParams() {
  * and refresh the purchase-intent snapshot the success page reads back.
  */
 function useInitiateCheckoutTracking() {
-  const language = useSelector((s) => s.language.current)
-  const childCount = useSelector((s) => s.checkout.childCount)
+  const { locale, childCount, planPricing, pricingReady } = useCheckout()
   const fired = useRef(false)
 
   useEffect(() => {
-    const pricing = getPlanPricing(language ?? 'pt', childCount)
+    // The value reported is the real price from the backend, so wait until it is known
+    if (!pricingReady) return
     const payload = {
-      value: pricing.amount,
-      currency: currencyForLanguage(language),
+      value: planPricing.amount,
+      currency: currencyForLanguage(locale),
       numItems: childCount,
     }
     if (!fired.current) {
@@ -59,12 +58,12 @@ function useInitiateCheckoutTracking() {
     } else {
       stashPurchaseIntent(payload)
     }
-  }, [language, childCount])
+  }, [locale, childCount, planPricing.amount, pricingReady])
 }
 
 /**
  * Checkout register step: configure account. Same layout as CheckoutPage with stepper header.
- * Accepts optional query params: children (number), box (1|0) to restore plan selection.
+ * Accepts an optional query param: children (number) to restore the plan selection.
  */
 function CheckoutRegister() {
   useCheckoutParams()

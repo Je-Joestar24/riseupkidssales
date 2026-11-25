@@ -6,17 +6,15 @@ import { useCheckout } from '../../../hooks/useCheckout.js'
 import { withLanguage } from '../../../utils/salesLanguage.js'
 
 /**
- * Builds /checkout/register URL with optional query params for child count and box.
+ * Builds /checkout/register URL with the child count as a query param.
  * Used so reload or shared link restores plan selection.
  */
-function getRegisterSearch(childCount, addBox) {
+function getRegisterSearch(childCount) {
   const params = new URLSearchParams()
   if (childCount != null && Number(childCount) >= 1) {
     params.set('children', String(childCount))
   }
-  if (addBox) {
-    params.set('box', '1')
-  }
+  // Activity box: switched off. It used to add `params.set('box', '1')` when the box was chosen.
   const search = params.toString()
   return search ? `?${search}` : ''
 }
@@ -24,10 +22,10 @@ function getRegisterSearch(childCount, addBox) {
 function SelectCta() {
   const { t, language } = useTranslation()
   const navigate = useNavigate()
-  const { childCount, addBox } = useCheckout()
+  const { childCount, pricingReady } = useCheckout()
 
   const handleContinue = () => {
-    const search = getRegisterSearch(childCount, addBox)
+    const search = getRegisterSearch(childCount)
     navigate(withLanguage(`/checkout/register${search}`, language))
   }
 
@@ -37,6 +35,7 @@ function SelectCta() {
       color="secondary"
       fullWidth
       disableElevation
+      disabled={!pricingReady}
       startIcon={null}
       endIcon={<ArrowForwardIcon sx={{ fontSize: 28 }} />}
       onClick={handleContinue}

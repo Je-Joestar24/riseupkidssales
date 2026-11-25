@@ -727,7 +727,6 @@
             "moreChildren": "3 or more Children",
             "childrenLabel": "Children",
             "perYear": "per year",
-            "equivalentPerMonth": "Equivalent to R$63/month",
             "annualCharge": "Annual charge",
             "installmentAvailable": "Installment available",
             "continue": "Continue",
@@ -746,6 +745,11 @@
             "childrenCount": "{{count}} Children",
             "orCashPriceFormat": "or {{price}} in cash",
             "paymentNote": "or flexible payment options available at checkout"
+        },
+        "pricing": {
+            "loading": "Loading prices…",
+            "error": "We could not load the prices. Check your connection and try again.",
+            "retry": "Try again"
         },
         "box": {
             "title": "Rise Up Kids Box",
@@ -855,10 +859,6 @@
             "title": "Order Summary",
             "oneChild": "1 Child",
             "total": "Total",
-            "installment": "$799",
-            "orCashPrice": "or flexible payment options available at checkout",
-            "priceDisplayUsd": "$799",
-            "priceDisplayEur": "€799",
             "paymentNoteUs": "or flexible payment options available at checkout",
             "paymentNoteEu": "or pay in installments available at checkout",
             "securePayment": "Secure payment with protected data",

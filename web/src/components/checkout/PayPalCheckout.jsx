@@ -17,9 +17,9 @@
  *     />
  *
  * How tier maps to backend:
- *   - tier must match backend valid tiers from paypalFamilyPlanPrices.json (18 prices: 3 currencies × 6 tiers each).
- *   - Base: "1_child", "2_children", "3_children" (Pay in 4 when available).
- *   - Yearly: "1_child_yearly", "2_children_yearly", "3_children_yearly" (when Pay in 4 not available in region).
+ *   - tier must match the backend valid tiers (built from the one price list: 3 currencies × 4 sizes × base + yearly).
+ *   - Base: "1_child" ... "4_children" (Pay in 4 when available).
+ *   - Yearly: "1_child_yearly" ... "4_children_yearly" (when Pay in 4 not available in region). Same price.
  *   - Format: "{tierKey}_{CURRENCY}" (e.g. "1_child_USD", "2_children_yearly_BRL").
  *   - Use getPaypalTier(childCount, currency, useYearly) from checkoutService to build tier.
  *   - Backend create-order validates tier and returns orderID; capture-order updates user subscription.

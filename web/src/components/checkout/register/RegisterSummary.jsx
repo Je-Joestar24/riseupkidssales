@@ -3,6 +3,7 @@ import LockIcon from '@mui/icons-material/Lock'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useCheckout } from '../../../hooks/useCheckout.js'
+import PricingStatus from '../PricingStatus.jsx'
 
 const TEAL_PRIMARY = 'rgb(44, 177, 166)'
 const TEAL_LIGHT = 'rgb(98, 202, 202)'
@@ -21,7 +22,7 @@ function getChildrenEnrolledLabel(childCount, t) {
  */
 function RegisterSummary() {
   const { t } = useTranslation()
-  const { childCount, planPricing, totalPricing } = useCheckout()
+  const { childCount, planPricing, totalPricing, pricingReady } = useCheckout()
   const includedItems = t('checkout.registerSummary.includedItems')
   const items = Array.isArray(includedItems) ? includedItems : []
 
@@ -68,7 +69,7 @@ function RegisterSummary() {
             {getChildrenEnrolledLabel(childCount, t)}
           </Typography>
           <Typography component="span" sx={{ fontSize: '1.125rem', fontWeight: 600, color: TEAL_LIGHT }}>
-            {planPricing.line1}
+            {pricingReady ? planPricing.line1 : <PricingStatus />}
           </Typography>
         </Box>
       </Box>
@@ -88,7 +89,7 @@ function RegisterSummary() {
           {t('checkout.registerSummary.total')}
         </Typography>
         <Typography component="span" sx={{ fontSize: '1.5rem', fontWeight: 600, color: TEAL_PRIMARY }}>
-          {totalPricing.line1}
+          {pricingReady ? totalPricing.line1 : null}
         </Typography>
       </Box>
 

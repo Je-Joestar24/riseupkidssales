@@ -3,6 +3,7 @@ import LockIcon from '@mui/icons-material/Lock'
 import CheckIcon from '@mui/icons-material/Check'
 import { useTranslation } from '../../../hooks/useTranslation.js'
 import { useCheckout } from '../../../hooks/useCheckout.js'
+import PricingStatus from '../PricingStatus.jsx'
 
 const GUARANTEE_BG = 'rgb(244, 237, 216)'
 
@@ -14,7 +15,7 @@ function getChildrenLabel(childCount, t) {
 
 function SelectSummary() {
   const { t } = useTranslation()
-  const { childCount, planPricing, totalPricing } = useCheckout()
+  const { childCount, planPricing, totalPricing, pricingReady } = useCheckout()
   const includedItems = t('checkout.summary.includedItems')
   const items = Array.isArray(includedItems) ? includedItems : []
   const paymentNote = t('checkout.select.paymentNote')
@@ -54,10 +55,10 @@ function SelectSummary() {
           </Typography>
           <Box sx={{ textAlign: 'right' }}>
             <Typography component="div" sx={{ fontSize: '1.125rem', fontWeight: 600, color: 'secondary.main' }}>
-              {planPricing.line1}
+              {pricingReady ? planPricing.line1 : <PricingStatus />}
             </Typography>
             <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
-              {planPricing.line2 ?? paymentNote}
+              {pricingReady ? (planPricing.line2 ?? paymentNote) : null}
             </Typography>
           </Box>
         </Box>
@@ -80,10 +81,10 @@ function SelectSummary() {
         </Typography>
         <Box sx={{ textAlign: 'right' }}>
           <Typography component="div" sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'secondary.main' }}>
-            {totalPricing.line1}
+            {pricingReady ? totalPricing.line1 : null}
           </Typography>
           <Typography component="div" sx={{ fontSize: '0.875rem', color: 'text.secondary', fontWeight: 600 }}>
-            {totalPricing.line2 ?? paymentNote}
+            {pricingReady ? (totalPricing.line2 ?? paymentNote) : null}
           </Typography>
         </Box>
       </Box>

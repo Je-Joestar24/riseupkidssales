@@ -159,7 +159,7 @@ function PayLaterEligibilityCheck({ onResult }) {
 
 function RgisterForm() {
   const { t, language } = useTranslation()
-  const { childCount, addBox, locale, planPricing } = useCheckout()
+  const { childCount, locale, planPricing, pricingReady } = useCheckout()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -179,6 +179,11 @@ function RgisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
+    if (!pricingReady) {
+      // The prices come from the backend: without them nothing is shown, so nothing is charged either
+      setError(t('checkout.pricing.error'))
+      return
+    }
     if (paymentMethod === 'pagseguro') {
       if (!termsAccepted) {
         setError(t('checkout.registerForm.termsAgreeBefore') || 'Please accept the terms to continue.')
@@ -194,7 +199,7 @@ function RgisterForm() {
         const result = await createPagseguroCheckout({
           token,
           childCount,
-          addBox,
+          // addBox,   // activity box: switched off
           taxId: cpf,
           phone: { area: phoneArea, number: phoneNumber },
           ...pagseguroRedirectUrls,
@@ -234,7 +239,7 @@ function RgisterForm() {
         password,
         region: localeToRegion(locale),
         childCount,
-        addBox,
+        // addBox,   // activity box: switched off
         termsVersion: DEFAULT_TERMS_VERSION,
         successUrl: withLanguage(`${base}/checkout/success?session_id={CHECKOUT_SESSION_ID}`, language),
         cancelUrl: withLanguage(`${base}/checkout/register`, language),
@@ -812,7 +817,7 @@ function RgisterForm() {
         variant="contained"
         size="large"
         startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <LockIcon />}
-        disabled={!termsAccepted || loading || showPayPalCheckout}
+        disabled={!termsAccepted || loading || showPayPalCheckout || !pricingReady}
         sx={{
           mt: 4,
           py: 2,
